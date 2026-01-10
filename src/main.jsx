@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "@redux/store";
-import { ToastContainer, toast, cssTransition } from "react-toastify";
+import { ToastContainer, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Hiệu ứng trượt từ trên xuống + mờ dần
@@ -29,7 +29,6 @@ createRoot(document.getElementById("root")).render(
         draggable
         limit={3}
         transition={slideDown}
- 
       />
     </PersistGate>
   </Provider>

@@ -10,6 +10,7 @@ import {
   Flag,
   Landmark,
 } from "lucide-react";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
 /* ===== ODOMETER: trượt xuống theo cặp from->to ===== */
@@ -85,7 +86,7 @@ const RotatingPhrase = ({ phrases, intervalMs = 5000, className = "" }) => {
           animate={isMobile ? { opacity: 1 } : { y: "0%", opacity: 1 }}
           exit={isMobile ? { opacity: 0 } : { y: "-100%", opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="leading-6 whitespace-normal break-words md:whitespace-nowrap"
+          className="leading-6 whitespace-normal break-word md:whitespace-nowrap"
         >
           {phrases[idx]}
         </motion.div>
@@ -109,7 +110,7 @@ const HeroSection = () => {
     "Di sản sống động hôm nay",
   ];
 
-  const [yearIndex, setYearIndex] = useState(0);
+  const [_yearIndex, setYearIndex] = useState(0);
   const [year, setYear] = useState(KEY_YEARS[0]);
   const [prevYear, setPrevYear] = useState(KEY_YEARS[0]);
 
@@ -136,17 +137,20 @@ const HeroSection = () => {
   const particlesRef = React.useRef(null);
   if (!particlesRef.current) {
     const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
-    particlesRef.current = Array.from({ length: DEFAULT_PARTICLE_COUNT }, () => {
-      const left = Math.random() * 100;
-      const top = Math.random() * 100;
-      const size = Math.random() < 0.15 ? 3 : Math.random() < 0.35 ? 2 : 1;
-      const dur = 10 + Math.random() * 24;
-      const delay = Math.random() * 10;
-      const opacity = 0.18 + Math.random() * 0.22;
-      const path = pick(["drift", "drift2", "drift3"]);
-      const sway = pick(["none", "swayX", "swayY"]);
-      return { left, top, size, dur, delay, opacity, path, sway };
-    });
+    particlesRef.current = Array.from(
+      { length: DEFAULT_PARTICLE_COUNT },
+      () => {
+        const left = Math.random() * 100;
+        const top = Math.random() * 100;
+        const size = Math.random() < 0.15 ? 3 : Math.random() < 0.35 ? 2 : 1;
+        const dur = 10 + Math.random() * 24;
+        const delay = Math.random() * 10;
+        const opacity = 0.18 + Math.random() * 0.22;
+        const path = pick(["drift", "drift2", "drift3"]);
+        const sway = pick(["none", "swayX", "swayY"]);
+        return { left, top, size, dur, delay, opacity, path, sway };
+      }
+    );
   }
   const particles = particlesRef.current;
 
@@ -218,7 +222,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-[77rem] mx-auto px-6 lg:px-0">
-        <div className="grid lg:grid-cols-[1.8fr_1.2fr] gap-12 items-center py-12 sm:py-16">
+        <div className="grid lg:grid-cols-[1.8fr_1.2fr] gap-12 items-center py-12 sm:py-14">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -237,8 +241,10 @@ const HeroSection = () => {
                 HÀNH TRÌNH 130+ NĂM CỨU NƯỚC &amp; XÂY DỰNG ĐẤT NƯỚC
               </motion.div>
 
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="block text-slate-200">TRANG GIỚI THIỆU MÔN HỌC</span>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                <span className="block text-slate-200">
+                  TRANG GIỚI THIỆU MÔN HỌC
+                </span>
                 <span className="block bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
                   TƯ TƯỞNG HỒ CHÍ MINH
                 </span>
@@ -265,7 +271,8 @@ const HeroSection = () => {
                 <span className="text-amber-400 font-medium">
                   vận dụng sáng tạo chủ nghĩa Mác–Lênin
                 </span>{" "}
-                vào điều kiện cụ thể, kế thừa truyền thống dân tộc và tiếp thu tinh hoa văn hóa nhân loại.
+                vào điều kiện cụ thể, kế thừa truyền thống dân tộc và tiếp thu
+                tinh hoa văn hóa nhân loại.
               </motion.p>
 
               <motion.p
@@ -278,7 +285,8 @@ const HeroSection = () => {
                 <span className="text-amber-400 font-medium">
                   ngọn đuốc soi đường — kim chỉ nam cho hành động
                 </span>{" "}
-                của Đảng và nhân dân Việt Nam, dẫn dắt sự nghiệp cách mạng, đổi mới và hội nhập hôm nay.
+                của Đảng và nhân dân Việt Nam, dẫn dắt sự nghiệp cách mạng, đổi
+                mới và hội nhập hôm nay.
               </motion.p>
             </div>
 
@@ -364,10 +372,16 @@ const HeroSection = () => {
                   <BookOpen className="w-6 h-6 animate-pulse" />
                 </div>
                 <div className="absolute bottom-8 left-8 text-amber-400">
-                  <Users className="w-5 h-5 animate-pulse" style={{ animationDelay: "1s" }} />
+                  <Users
+                    className="w-5 h-5 animate-pulse"
+                    style={{ animationDelay: "1s" }}
+                  />
                 </div>
                 <div className="absolute top-12 left-4 text-amber-400">
-                  <Lightbulb className="w-5 h-5 animate-pulse" style={{ animationDelay: "2s" }} />
+                  <Lightbulb
+                    className="w-5 h-5 animate-pulse"
+                    style={{ animationDelay: "2s" }}
+                  />
                 </div>
               </div>
 

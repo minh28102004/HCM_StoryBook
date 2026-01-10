@@ -1,7 +1,12 @@
-import React, { useMemo, useRef, useState, useEffect, useCallback  } from "react";
+import React, {
+  useMemo,
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import HTMLFlipBook from "react-pageflip";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Header from "@components/Header";
 import BookToolbox from "../StoryBook/BookToolbox";
 
 import {
@@ -17,22 +22,21 @@ export default function PhilosophyStoryBook() {
   const flipRef = useRef(null);
 
   const [pageSize, setPageSize] = useState({ w: 520, h: 700 });
-const onTocClick = useCallback((e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  const idx = Number.parseInt(e.currentTarget.dataset.goto, 10);
-  const api = flipRef.current?.pageFlip?.();
-  if (!Number.isNaN(idx) && api) api.flip(idx); // hoặc api.turnToPage(idx)
-}, []);
+  const onTocClick = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const idx = Number.parseInt(e.currentTarget.dataset.goto, 10);
+    const api = flipRef.current?.pageFlip?.();
+    if (!Number.isNaN(idx) && api) api.flip(idx); // hoặc api.turnToPage(idx)
+  }, []);
 
-const pages = useMemo(
-  () => spreadsToPages(PHILO_SPREADS, { onTocClick }),
-  [onTocClick]
-);
+  const pages = useMemo(
+    () => spreadsToPages(PHILO_SPREADS, { onTocClick }),
+    [onTocClick]
+  );
 
   const [currentPage, setCurrentPage] = useState(0);
 
-  
   // --- Stage để “trượt phải khi đọc / về giữa khi đóng” ---
   const totalPages = pages.length;
   const isFrontClosed = currentPage === 0; // bìa trước
@@ -99,8 +103,6 @@ const pages = useMemo(
 
   return (
     <div className="philo-book" lang="vi">
-      <Header />
-
       {/* Toolbox hợp nhất zoom với desktop */}
       <BookToolbox />
 

@@ -1,6 +1,6 @@
 /* ===================== PhilosophyStoryBook.css (FINAL) ===================== */
 :root {
-  --philo-header-h: 72px;
+  --philo-header-h: 70px;
 }
 
 @media (max-width:640px) {

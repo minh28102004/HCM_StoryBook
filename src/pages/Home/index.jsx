@@ -480,7 +480,7 @@ export default function MarxismPhilosophyPage() {
       {/* watermark & depth overlay */}
       <div className="fixed bottom-3 left-3 z-30 opacity-60">
         <div className="text-white/60 text-xs">
-          Triết học Mác-Lênin • Nghiên cứu khoa học
+          Tư tưởng Hồ Chí Minh • Khoa học và cách mạng
         </div>
       </div>
       <div className="fixed inset-0 pointer-events-none z-5">

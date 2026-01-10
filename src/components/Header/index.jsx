@@ -13,6 +13,7 @@ import {
 import { NavLink as RouterNavLink } from "react-router-dom";
 import endPoint from "@routes/routes";
 import { useLocation } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
 // Easing ngắn, mượt

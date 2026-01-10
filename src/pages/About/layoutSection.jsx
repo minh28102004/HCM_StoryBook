@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Quote } from "lucide-react";
 import HeroSection from "./HeroBanner_Section";
 import IntroduceSection from "./Introduce_Section";

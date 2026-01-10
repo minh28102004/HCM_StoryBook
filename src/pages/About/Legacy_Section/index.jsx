@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { BookOpenCheck, Compass, ArrowRight, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -6,12 +7,19 @@ import endPoint from "@routes/routes";
 
 const container = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.06 } },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.06 },
+  },
 };
 
 const item = {
   hidden: { opacity: 0, y: 8 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+  },
 };
 
 const AccentGlow = () => (
@@ -54,7 +62,7 @@ const TrademarkFooter = () => (
         />
       </svg>
       <span className="text-sm md:text-base font-semibold text-amber-200">
-        © 2026 PhiloBookStory – All Rights Reserved
+        © 2026 HCMBookStory – All Rights Reserved
       </span>
     </div>
   </div>
@@ -67,7 +75,9 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
   const goPrimary = () => {
     if (typeof onPrimary === "function") return onPrimary();
     // “Khám phá chi tiết giáo trình”
-    navigate(endPoint.STORYBOOK ?? endPoint.BOOKS ?? endPoint.BOOK ?? "/storybook");
+    navigate(
+      endPoint.STORYBOOK ?? endPoint.BOOKS ?? endPoint.BOOK ?? "/storybook"
+    );
   };
 
   const goSecondary = () => {
@@ -85,7 +95,8 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
         className="text-center"
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-400/10 px-3 py-1 text-amber-200 text-xs md:text-sm tracking-wide">
-          <Sparkles className="h-4 w-4" /> Cảm ơn bạn đã đồng hành đến cuối hành trình!
+          <Sparkles className="h-4 w-4" /> Cảm ơn bạn đã đồng hành đến cuối hành
+          trình!
         </div>
 
         <h2 className="pt-3 text-3xl md:text-4xl font-extrabold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-200 to-amber-400 leading-snug">
@@ -93,9 +104,13 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
         </h2>
 
         <p className="text-lg md:text-xl text-slate-300/95 max-w-4xl mx-auto leading-relaxed">
-          Những nguyên lý sống động của <span className="text-amber-200 font-semibold">Tư tưởng Hồ Chí Minh</span>{" "}
-          không dừng ở trang sách. Hãy nhận thức, vận dụng sáng tạo vào thực tiễn bản thân,
-          góp phần xây dựng đất nước Việt Nam xã hội chủ nghĩa giàu mạnh, dân chủ, công bằng, văn minh.
+          Những nguyên lý sống động của{" "}
+          <span className="text-amber-200 font-semibold">
+            Tư tưởng Hồ Chí Minh
+          </span>{" "}
+          không dừng ở trang sách. Hãy nhận thức, vận dụng sáng tạo vào thực
+          tiễn bản thân, góp phần xây dựng đất nước Việt Nam xã hội chủ nghĩa
+          giàu mạnh, dân chủ, công bằng, văn minh.
         </p>
       </motion.div>
     ),

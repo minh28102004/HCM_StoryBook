@@ -1,11 +1,12 @@
 const endPoint = {
   HOMEPAGE: "/",
-  INTRODUCTION: "/introduction",  
-  CHAPTERS: "/chapters",           
-  QUIZ: "/quiz",                  
-  RESOURCES: "/resources",   
+  INTRODUCTION: "/introduction",
+  CHAPTERS: "/chapters",
+  QUIZ: "/quiz",
+  RESOURCES: "/resources",
   ABOUT: "/about",
-  FAQS: "/faqs",                   
+  FAQS: "/faqs",
+  STORYBOOK: "/storybook",
 };
 
 export default endPoint;
