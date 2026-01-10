@@ -6,19 +6,12 @@ import endPoint from "@routes/routes";
 
 const container = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.06 },
-  },
+  show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.06 } },
 };
 
 const item = {
   hidden: { opacity: 0, y: 8 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
-  },
+  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] } },
 };
 
 const AccentGlow = () => (
@@ -30,13 +23,11 @@ const AccentGlow = () => (
 
 const TrademarkFooter = () => (
   <div className="flex flex-col items-center gap-3 text-center">
-    {/* Divider */}
     <div className="w-full max-w-3xl mx-auto">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
     </div>
 
     <div className="inline-flex items-center gap-3">
-      {/* Monogram MLN */}
       <svg
         width="28"
         height="28"
@@ -63,7 +54,7 @@ const TrademarkFooter = () => (
         />
       </svg>
       <span className="text-sm md:text-base font-semibold text-amber-200">
-        © {new Date().getFullYear()} All Rights Reserved
+        © 2026 PhiloBookStory – All Rights Reserved
       </span>
     </div>
   </div>
@@ -73,18 +64,16 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
   const navigate = useNavigate();
   const isVisible = !visibleSections || visibleSections.has?.("finale");
 
-  // Handlers: ưu tiên callback được truyền vào; nếu không có thì navigate
   const goPrimary = () => {
     if (typeof onPrimary === "function") return onPrimary();
-    navigate(endPoint.QUIZ ?? "/quiz");
+    // “Khám phá chi tiết giáo trình”
+    navigate(endPoint.STORYBOOK ?? endPoint.BOOKS ?? endPoint.BOOK ?? "/storybook");
   };
 
   const goSecondary = () => {
     if (typeof onSecondary === "function") return onSecondary();
-    // "Kho nội dung" → trang storybook
-    navigate(
-      endPoint.STORYBOOK ?? endPoint.BOOKS ?? endPoint.BOOK ?? "/storybook"
-    );
+    // “Xem toàn bộ chương trình”
+    navigate(endPoint.QUIZ ?? "/quiz");
   };
 
   const header = useMemo(
@@ -96,16 +85,17 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
         className="text-center"
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-400/10 px-3 py-1 text-amber-200 text-xs md:text-sm tracking-wide">
-          <Sparkles className="h-4 w-4" /> Cảm ơn bạn đã đồng hành đến cuối
+          <Sparkles className="h-4 w-4" /> Cảm ơn bạn đã đồng hành đến cuối hành trình!
         </div>
 
         <h2 className="pt-3 text-3xl md:text-4xl font-extrabold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-200 to-amber-400 leading-snug">
-          Khép Lại Để Mở Ra Hành Trình Mới
+          Kết thúc hành trình – Mở ra tương lai mới
         </h2>
+
         <p className="text-lg md:text-xl text-slate-300/95 max-w-4xl mx-auto leading-relaxed">
-          Những nguyên lý sống động của chủ nghĩa Mác – Lênin không dừng ở trang
-          sách. Từ nhận thức đến hành động, bạn sắp bước vào hành trình tự mình
-          khám phá – hệ thống, sâu sắc và thực tiễn.
+          Những nguyên lý sống động của <span className="text-amber-200 font-semibold">Tư tưởng Hồ Chí Minh</span>{" "}
+          không dừng ở trang sách. Hãy nhận thức, vận dụng sáng tạo vào thực tiễn bản thân,
+          góp phần xây dựng đất nước Việt Nam xã hội chủ nghĩa giàu mạnh, dân chủ, công bằng, văn minh.
         </p>
       </motion.div>
     ),
@@ -123,7 +113,6 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
       <div className="max-w-7xl mx-auto">
         {header}
 
-        {/* CTA */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -150,11 +139,10 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
             className="inline-flex items-center gap-2 rounded-xl px-5 py-3 md:px-6 md:py-3.5 font-semibold text-amber-200/90 ring-1 ring-amber-300/30 hover:bg-amber-400/10 transition-colors"
           >
             <BookOpenCheck className="h-5 w-5" />
-            Khám phá kho nội dung
+            Khám phá nội dung
           </motion.button>
         </motion.div>
 
-        {/* Fine print + Trademark */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
@@ -165,7 +153,6 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
         </motion.div>
       </div>
 
-      {/* Subtle divider into footer */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-4 bg-gradient-to-b from-transparent to-slate-950/90"

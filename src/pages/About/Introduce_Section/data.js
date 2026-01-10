@@ -1,56 +1,89 @@
 import {
-  Brain,
-  Layers,
-  Hammer,
+  Flag,
+  Ship,
+  Landmark,
   Users,
-  Lightbulb,
-  Globe,
+  Heart,
+  Sparkles,
 } from "lucide-react";
 
 export const bannerImages = [
-  "https://cdnphoto.dantri.com.vn/aoY4SEfpKFRjS65As5VBaFX4XKQ=/thumb_w/1280/2020/06/01/triet-hoc-3-1590971326232.jpg",
-  "https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/triet_hoc_la_gi_thumb_e7a65afadb.jpg",
-  "https://www.nxbctqg.org.vn/img_data/images/images/triethocmacxit.jpg",
-  "http://husc.hueuni.edu.vn/images/news/2022/20220407042957_nganh-triet-hoc-la-gi.jpeg",
-  "https://astrology.vn/images/triet_hoc/Adam_Bernaert_-_Vanitas_Still_Life_-_Walters_37682.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ho_Chi_Minh_1946.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/6/6b/Nha_Rong_Wharf.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/3a/Declaration_of_Independence_of_the_Democratic_Republic_of_Vietnam_1945.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/38/Vo_Nguyen_Giap_and_Ho_Chi_Minh_1954.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/2f/Ho_Chi_Minh_Mausoleum_Hanoi.jpg",
 ];
 
- // Concepts
- export const concepts = [
+// ✅ Thêm export này để index.jsx import không lỗi nữa
+export const introSlides = [
   {
-    icon: Brain,
-    title: "Biện chứng",
+    image: bannerImages[0],
+    title: "Khởi đầu hành trình",
     text:
-      "Thực tại luôn vận động; mâu thuẫn là động lực phát triển. Nhìn sự vật trong quan hệ và tiến trình biến đổi.",
+      "Từ làng Sen, khát vọng độc lập được hun đúc và trở thành điểm xuất phát cho hành trình cứu nước.",
   },
   {
-    icon: Layers,
-    title: "Lịch sử",
+    image: bannerImages[1],
+    title: "Bến Nhà Rồng 1911",
     text:
-      "Cơ sở kinh tế định hình thượng tầng; lịch sử là đấu tranh giai cấp. Phương thức sản xuất quyết định bước ngoặt xã hội.",
+      "Ngày 5/6/1911, Người ra đi tìm đường cứu nước — bước ngoặt mở ra hành trình bôn ba 5 châu 4 biển.",
   },
   {
-    icon: Hammer,
-    title: "Thực tiễn (Praxis)",
+    image: bannerImages[2],
+    title: "Mùa thu độc lập 1945",
     text:
-      "Triết học phải gắn hành động. Thực tiễn vừa khởi nguồn vừa là tiêu chuẩn kiểm nghiệm chân lý và định hướng giải phóng.",
+      "Cách mạng Tháng Tám và Tuyên ngôn Độc lập xác lập quyền tự do, tự chủ của dân tộc Việt Nam.",
+  },
+  {
+    image: bannerImages[3],
+    title: "Sức mạnh đoàn kết 1954",
+    text:
+      "Điện Biên Phủ là minh chứng cho đường lối đúng đắn và sức mạnh đại đoàn kết toàn dân tộc.",
+  },
+  {
+    image: bannerImages[4],
+    title: "Di sản sống động",
+    text:
+      "Tư tưởng Hồ Chí Minh tiếp tục soi đường cho đổi mới, hội nhập và xây dựng đất nước hôm nay.",
+  },
+];
+
+export const concepts = [
+  {
+    icon: Flag,
+    title: "Độc lập dân tộc & CNXH",
+    text:
+      "Độc lập phải gắn với hạnh phúc nhân dân và con đường đi lên CNXH, hướng tới dân giàu, nước mạnh, công bằng, dân chủ, văn minh.",
   },
   {
     icon: Users,
-    title: "Giai cấp & Xung đột",
+    title: "Đại đoàn kết toàn dân",
     text:
-      "Quan hệ sản xuất–sở hữu tạo thế lực giai cấp. Đấu tranh diễn ra trong kinh tế, pháp luật, văn hoá để đổi quyền lực.",
+      "Đoàn kết là chiến lược lâu dài: lấy công–nông–trí thức làm nền tảng, quy tụ mọi tầng lớp vì mục tiêu chung.",
   },
   {
-    icon: Lightbulb,
-    title: "Phê phán khoa học",
+    icon: Landmark,
+    title: "Đảng & Nhà nước vì dân",
     text:
-      "Tư duy phê phán bóc tách hình thức che giấu quyền lực, vượt ‘tất nhiên’ để mở khả thể xã hội công bằng hơn.",
+      "Đảng trong sạch vững mạnh; Nhà nước của dân–do dân–vì dân; cán bộ là công bộc, thượng tôn pháp luật.",
   },
   {
-    icon: Globe,
-    title: "Liên hệ thời đại",
+    icon: Heart,
+    title: "Văn hóa – Đạo đức – Con người",
     text:
-      "AI, chuyển đổi số, toàn cầu hoá và sinh thái buộc đọc lại Mác–Lênin về lao động, giá trị, bất bình đẳng, bền vững.",
+      "Đạo đức là gốc: cần, kiệm, liêm, chính, chí công vô tư; xây dựng văn hóa tiên tiến, đậm đà bản sắc; ‘trồng người’.",
+  },
+  {
+    icon: Ship,
+    title: "Hành trình hình thành tư tưởng",
+    text:
+      "1890–1911 khởi đầu; 1911–1930 tìm đường; 1930–1945 lập Đảng; 1945–1954 kháng chiến; 1954–1969 xây dựng.",
+  },
+  {
+    icon: Sparkles,
+    title: "Di sản hôm nay",
+    text:
+      "Vận dụng trong đổi mới & hội nhập: phát triển gắn tiến bộ, công bằng xã hội và sức mạnh đoàn kết.",
   },
 ];

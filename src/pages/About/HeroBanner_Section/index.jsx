@@ -3,11 +3,12 @@ import {
   BookOpen,
   Clock,
   Users,
-  Brain,
   Star,
   ArrowDown,
   Lightbulb,
   Heart,
+  Flag,
+  Landmark,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,7 +18,7 @@ const OdometerDigit = ({ from, to }) => (
     <motion.div
       key={`${from}-${to}`}
       initial={{ y: 0, opacity: 1 }}
-      animate={{ y: "-100%", opacity: 1 }} // trượt xuống
+      animate={{ y: "-100%", opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="flex flex-col leading-none tabular-nums"
     >
@@ -45,35 +46,7 @@ const OdometerNumber = ({ prev, current, className = "" }) => {
   );
 };
 
-/* ===== ROTATING PHRASE: chữ hiển thị + đổi 5s ===== */
-// const RotatingPhrase = ({ phrases, intervalMs = 5000, className = "" }) => {
-//   const [idx, setIdx] = React.useState(0);
-
-//   React.useEffect(() => {
-//     const t = setInterval(() => {
-//       setIdx((i) => (i + 1) % phrases.length);
-//     }, intervalMs);
-//     return () => clearInterval(t);
-//   }, [intervalMs, phrases.length]);
-
-//   return (
-//     <div className={`relative h-[1.6em] overflow-hidden ${className}`}>
-//       <AnimatePresence mode="wait" initial={false}>
-//         <motion.div
-//           key={idx}
-//           initial={{ y: "100%", opacity: 0 }}
-//           animate={{ y: "0%", opacity: 1 }}
-//           exit={{ y: "-100%", opacity: 0 }}
-//           transition={{ duration: 0.6, ease: "easeOut" }}
-//           className="whitespace-nowrap leading-6"
-//         >
-//           {phrases[idx]}
-//         </motion.div>
-//       </AnimatePresence>
-//     </div>
-//   );
-// };
-
+/* ===== ROTATING PHRASE ===== */
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
@@ -100,7 +73,6 @@ const RotatingPhrase = ({ phrases, intervalMs = 5000, className = "" }) => {
   return (
     <div
       className={[
-        // mobile: để auto height + không ẩn tràn
         "relative",
         isMobile ? "h-auto overflow-visible" : "h-[1.6em] overflow-hidden",
         className,
@@ -113,7 +85,6 @@ const RotatingPhrase = ({ phrases, intervalMs = 5000, className = "" }) => {
           animate={isMobile ? { opacity: 1 } : { y: "0%", opacity: 1 }}
           exit={isMobile ? { opacity: 0 } : { y: "-100%", opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          // mobile: cho phép xuống dòng; md+: vẫn giữ nowrap
           className="leading-6 whitespace-normal break-words md:whitespace-nowrap"
         >
           {phrases[idx]}
@@ -125,128 +96,78 @@ const RotatingPhrase = ({ phrases, intervalMs = 5000, className = "" }) => {
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [year, setYear] = React.useState(1818);
-  const [prevYear, setPrevYear] = React.useState(1817);
 
-  // Năm tăng 2s/lần
+  // ===== key years loop (130+ years) =====
+  const KEY_YEARS = [1890, 1911, 1930, 1945, 1954, 1969, 2026];
+  const KEY_LABELS = [
+    "Khởi đầu ở làng Sen",
+    "Bến Nhà Rồng – ra đi tìm đường",
+    "Thành lập Đảng Cộng sản Việt Nam",
+    "Tuyên ngôn Độc lập",
+    "Chiến thắng Điện Biên Phủ",
+    "Di sản bất diệt",
+    "Di sản sống động hôm nay",
+  ];
+
+  const [yearIndex, setYearIndex] = useState(0);
+  const [year, setYear] = useState(KEY_YEARS[0]);
+  const [prevYear, setPrevYear] = useState(KEY_YEARS[0]);
+
   React.useEffect(() => {
-    const maxYear = new Date().getFullYear();
     const timer = setInterval(() => {
-      setYear((y) => {
-        const next = y >= maxYear ? 1818 : y + 1;
-        setPrevYear(y);
-        return next;
+      setYearIndex((idx) => {
+        const nextIdx = (idx + 1) % KEY_YEARS.length;
+        setPrevYear(KEY_YEARS[idx]);
+        setYear(KEY_YEARS[nextIdx]);
+        return nextIdx;
       });
     }, 2000);
     return () => clearInterval(timer);
   }, []);
 
-  // Scroll parallax nhẹ (không ảnh hưởng nền reset)
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Tạo particle field 1 lần để nền KHÔNG đổi khi re-render
-  const DEFAULT_PARTICLE_COUNT = 150; // ⬅️ tăng/giảm tùy máy
+  // Particles (giữ nguyên logic nền)
+  const DEFAULT_PARTICLE_COUNT = 150;
   const particlesRef = React.useRef(null);
   if (!particlesRef.current) {
     const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
-    particlesRef.current = Array.from(
-      { length: DEFAULT_PARTICLE_COUNT },
-      () => {
-        // vị trí ban đầu (% viewport)
-        const left = Math.random() * 100;
-        const top = Math.random() * 100;
-
-        // kích thước (px): 1–3, thi thoảng to hơn
-        const size = Math.random() < 0.15 ? 3 : Math.random() < 0.35 ? 2 : 1;
-
-        // thời lượng/độ trễ (s): trải đều để không đồng bộ
-        const dur = 10 + Math.random() * 24; // 10–34s
-        const delay = Math.random() * 10; // 0–10s
-
-        // độ mờ khác nhau cho tự nhiên
-        const opacity = 0.18 + Math.random() * 0.22; // 0.18–0.40
-
-        // đường đi & lắc
-        const path = pick(["drift", "drift2", "drift3"]);
-        const sway = pick(["none", "swayX", "swayY"]);
-
-        return { left, top, size, dur, delay, opacity, path, sway };
-      }
-    );
+    particlesRef.current = Array.from({ length: DEFAULT_PARTICLE_COUNT }, () => {
+      const left = Math.random() * 100;
+      const top = Math.random() * 100;
+      const size = Math.random() < 0.15 ? 3 : Math.random() < 0.35 ? 2 : 1;
+      const dur = 10 + Math.random() * 24;
+      const delay = Math.random() * 10;
+      const opacity = 0.18 + Math.random() * 0.22;
+      const path = pick(["drift", "drift2", "drift3"]);
+      const sway = pick(["none", "swayX", "swayY"]);
+      return { left, top, size, dur, delay, opacity, path, sway };
+    });
   }
   const particles = particlesRef.current;
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
-      {/* KEYFRAMES cho nền bay chậm & nhấp nháy */}
       <style>{`
-      @keyframes drift {
-        0% { transform: translate(0,0); }
-        25% { transform: translate(22px,-16px); }
-        50% { transform: translate(-12px,12px); }
-        75% { transform: translate(16px,6px); }
-        100% { transform: translate(0,0); }
-      }
-      @keyframes drift2 {
-        0% { transform: translate(0,0) rotate(0deg); }
-        33% { transform: translate(-18px,20px) rotate(3deg); }
-        66% { transform: translate(15px,-14px) rotate(-2deg); }
-        100% { transform: translate(0,0) rotate(0deg); }
-      }
-      @keyframes drift3 {
-        0% { transform: translate(0,0) scale(1); }
-        50% { transform: translate(10px,8px) scale(1.08); }
-        100% { transform: translate(0,0) scale(1); }
-      }
-      @keyframes twinkle {
-        0%,100% { opacity: .22; transform: scale(1); }
-        50% { opacity: .7; transform: scale(1.35); }
-      }
-      @keyframes swayX {
-        0%,100% { transform: translateX(0); }
-        50% { transform: translateX(6px); }
-      }
-      @keyframes swayY {
-        0%,100% { transform: translateY(0); }
-        50% { transform: translateY(-6px); }
-      }
-         @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-  @keyframes spin-reverse {
-    from { transform: rotate(360deg); }
-    to   { transform: rotate(0deg); }
-  }
-  .animate-spin-slow {
-    animation: spin-slow 18s linear infinite;
-  }
-    .animate-spin-slow-star {
-    animation: spin-slow 14s linear infinite;
-  }
-  .animate-spin-reverse {
-    animation: spin-reverse 24s linear infinite;
-  }
-  .animate-spin-reverse {
-    animation: spin-reverse 24s linear infinite;
-  }
-    @keyframes star-twirl {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(180deg) scale(1.05); }
-  100% { transform: rotate(360deg) scale(1); }
-}
-.animate-star-twirl {
-  animation: star-twirl 6s linear infinite;
-}
+      @keyframes drift { 0%{transform:translate(0,0)} 25%{transform:translate(22px,-16px)} 50%{transform:translate(-12px,12px)} 75%{transform:translate(16px,6px)} 100%{transform:translate(0,0)} }
+      @keyframes drift2 { 0%{transform:translate(0,0) rotate(0deg)} 33%{transform:translate(-18px,20px) rotate(3deg)} 66%{transform:translate(15px,-14px) rotate(-2deg)} 100%{transform:translate(0,0) rotate(0deg)} }
+      @keyframes drift3 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(10px,8px) scale(1.08)} 100%{transform:translate(0,0) scale(1)} }
+      @keyframes twinkle { 0%,100%{opacity:.22;transform:scale(1)} 50%{opacity:.7;transform:scale(1.35)} }
+      @keyframes swayX { 0%,100%{transform:translateX(0)} 50%{transform:translateX(6px)} }
+      @keyframes swayY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+      @keyframes spin-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+      @keyframes spin-reverse { from{transform:rotate(360deg)} to{transform:rotate(0deg)} }
+      .animate-spin-slow{animation:spin-slow 18s linear infinite}
+      .animate-spin-slow-star{animation:spin-slow 14s linear infinite}
+      .animate-spin-reverse{animation:spin-reverse 24s linear infinite}
     `}</style>
 
-      {/* Animated Background (giữ nguyên, không reset khi số đổi) */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950">
-        {/* Floating particles — dùng dữ liệu đã “đóng băng” */}
         <div className="absolute inset-0 overflow-hidden">
           {particles.map((p, i) => {
             const anims = [
@@ -271,7 +192,7 @@ const HeroSection = () => {
                   top: `${p.top}%`,
                   width: `${p.size}px`,
                   height: `${p.size}px`,
-                  background: "rgba(251,191,36,1)", // amber-400
+                  background: "rgba(251,191,36,1)",
                   opacity: p.opacity,
                   animation: anims.join(", "),
                   willChange: "transform, opacity",
@@ -281,14 +202,12 @@ const HeroSection = () => {
           })}
         </div>
 
-        {/* Gradient orbs */}
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-300 rounded-full blur-3xl opacity-10 hidden md:block"
           style={{
             transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.07}px)`,
           }}
         />
-
         <div
           className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-blue-400 rounded-full blur-3xl opacity-10"
           style={{
@@ -300,15 +219,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-[77rem] mx-auto px-6 lg:px-0">
         <div className="grid lg:grid-cols-[1.8fr_1.2fr] gap-12 items-center py-12 sm:py-16">
-          {/* Left Content */}
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="space-y-8 order-1 lg:order-1"
+            className="space-y-8"
           >
             <div className="space-y-6">
-              {/* Tagline */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -316,18 +234,16 @@ const HeroSection = () => {
                 className="inline-flex items-center px-4 py-2 bg-amber-400/10 border border-amber-400/20 rounded-full text-amber-400 text-sm font-medium"
               >
                 <Clock className="w-4 h-4 mr-2" />
-                Hành trình 200+ năm lịch sử
+                HÀNH TRÌNH 130+ NĂM CỨU NƯỚC &amp; XÂY DỰNG ĐẤT NƯỚC
               </motion.div>
 
-              {/* Title */}
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="block text-slate-200">TRIẾT HỌC</span>
+                <span className="block text-slate-200">TRANG GIỚI THIỆU MÔN HỌC</span>
                 <span className="block bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
-                  MÁC - LÊNIN
+                  TƯ TƯỞNG HỒ CHÍ MINH
                 </span>
               </h1>
 
-              {/* Divider */}
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -335,23 +251,21 @@ const HeroSection = () => {
                 className="h-1 w-24 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full origin-left"
               />
 
-              {/* Description */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.6 }}
                 className="text-lg md:text-xl text-slate-300 leading-relaxed font-light"
               >
-                Khám phá hệ thống tư tưởng cách mạng đã
+                Tư tưởng Hồ Chí Minh là{" "}
                 <span className="text-amber-400 font-medium">
-                  {" "}
-                  thay đổi thế giới
-                </span>
-                , không chỉ trong triết học mà còn ảnh hưởng sâu rộng đến
-                <span className="text-amber-400 font-medium"> khoa học</span>,
-                <span className="text-amber-400 font-medium"> chính trị</span>{" "}
-                và
-                <span className="text-amber-400 font-medium"> xã hội</span>.
+                  hệ thống quan điểm toàn diện và sâu sắc
+                </span>{" "}
+                về những vấn đề cơ bản của cách mạng Việt Nam — kết quả của sự{" "}
+                <span className="text-amber-400 font-medium">
+                  vận dụng sáng tạo chủ nghĩa Mác–Lênin
+                </span>{" "}
+                vào điều kiện cụ thể, kế thừa truyền thống dân tộc và tiếp thu tinh hoa văn hóa nhân loại.
               </motion.p>
 
               <motion.p
@@ -360,12 +274,11 @@ const HeroSection = () => {
                 transition={{ duration: 0.9, delay: 0.8 }}
                 className="text-lg text-slate-400 leading-relaxed"
               >
-                Một chuyến du hành xuyên suốt lịch sử tư tưởng nhân loại, nơi{" "}
-                <span className="text-amber-400">
-                  khoa học gặp gỡ cách mạng
-                </span>
-                , lý thuyết gắn liền thực tiễn và tinh thần nhân văn trở thành
-                kim chỉ nam cho hành động.
+                Nó không chỉ là lý thuyết, mà là{" "}
+                <span className="text-amber-400 font-medium">
+                  ngọn đuốc soi đường — kim chỉ nam cho hành động
+                </span>{" "}
+                của Đảng và nhân dân Việt Nam, dẫn dắt sự nghiệp cách mạng, đổi mới và hội nhập hôm nay.
               </motion.p>
             </div>
 
@@ -377,20 +290,24 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <div className="flex items-center space-x-3 text-slate-300">
-                <BookOpen className="w-5 h-5 text-amber-400" />
-                <span>Tri thức khoa học</span>
+                <Flag className="w-5 h-5 text-amber-400" />
+                <span>Độc lập &amp; CNXH</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
-                <Lightbulb className="w-5 h-5 text-amber-400" />
-                <span>Tư duy biện chứng</span>
+                <Users className="w-5 h-5 text-amber-400" />
+                <span>Đại đoàn kết</span>
+              </div>
+              <div className="flex items-center space-x-3 text-slate-300">
+                <Landmark className="w-5 h-5 text-amber-400" />
+                <span>Đảng &amp; Nhà nước vì dân</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <Heart className="w-5 h-5 text-amber-400" />
-                <span>Lý tưởng nhân văn</span>
+                <span>Văn hóa – đạo đức – con người</span>
               </div>
             </motion.div>
 
-            {/* Call to action */}
+            {/* CTA */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -409,64 +326,51 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
-            className="relative order-2 lg:order-2"
+            className="relative"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto lg:max-w-full">
-              {/* Main circle */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-400/20 via-transparent to-slate-800/20 backdrop-blur-sm border border-amber-400/30">
-                {/* Rotating rings */}
                 <div className="absolute inset-8 rounded-full border-2 border-amber-400/40 animate-spin-slow">
                   <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-400 rounded-full shadow-lg shadow-amber-400/50" />
                 </div>
+
                 <div className="absolute inset-16 rounded-full border border-amber-400/20 animate-spin-reverse">
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-amber-300 rounded-full shadow-md" />
                 </div>
 
-                {/* Center content */}
                 <div className="absolute inset-24 rounded-full bg-slate-800/80 backdrop-blur-sm border border-amber-400/40 flex flex-col items-center justify-center sm:p-8 text-center">
                   <OdometerNumber
                     prev={prevYear}
                     current={year}
                     className="text-2xl sm:text-3xl md:text-4xl text-amber-400 mb-0 sm:mb-1"
                   />
+
                   <RotatingPhrase
-                    phrases={[
-                      "Bắt đầu hành trình",
-                      "Những bước ngoặt tư tưởng",
-                      "Di sản cách mạng",
-                    ]}
-                    intervalMs={5000}
+                    phrases={KEY_LABELS}
+                    intervalMs={2000}
                     className="text-xs sm:text-sm md:text-base text-slate-300 mb-0.5 sm:mb-4"
                   />
 
                   <div className="w-12 sm:w-20 h-px bg-amber-400/60 mb-0 sm:mb-4" />
-                  <div className=" text-xl sm:text-3xl md:text-4xl font-bold text-amber-400 mb-0 sm:mb-2">
-                    ∞
+                  <div className="text-xl sm:text-3xl md:text-4xl font-bold text-amber-400 mb-0 sm:mb-2">
+                    ✦
                   </div>
                   <div className="text-xs sm:text-sm text-slate-300">
-                    Ảnh hưởng vĩnh cửu
+                    Ngọn đuốc soi đường
                   </div>
                 </div>
 
-                {/* Floating elements */}
                 <div className="absolute top-4 right-12 text-amber-400">
                   <BookOpen className="w-6 h-6 animate-pulse" />
                 </div>
                 <div className="absolute bottom-8 left-8 text-amber-400">
-                  <Users
-                    className="w-5 h-5 animate-pulse"
-                    style={{ animationDelay: "1s" }}
-                  />
+                  <Users className="w-5 h-5 animate-pulse" style={{ animationDelay: "1s" }} />
                 </div>
                 <div className="absolute top-12 left-4 text-amber-400">
-                  <Brain
-                    className="w-5 h-5 animate-pulse"
-                    style={{ animationDelay: "2s" }}
-                  />
+                  <Lightbulb className="w-5 h-5 animate-pulse" style={{ animationDelay: "2s" }} />
                 </div>
               </div>
 
-              {/* Orbiting element */}
               <div className="absolute inset-0 animate-spin-slow-star">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-amber-400/20 rounded-full border border-amber-400/50 flex items-center justify-center">
                   <Star className="w-4 h-4 text-amber-400" />

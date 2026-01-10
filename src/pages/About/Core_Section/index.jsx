@@ -4,7 +4,6 @@ import { corePhilosophies } from "./data";
 const CoreSection = ({ visibleSections }) => {
   return (
     <>
-      {/* Core Philosophy Section */}
       <section
         id="philosophy"
         data-section
@@ -14,19 +13,19 @@ const CoreSection = ({ visibleSections }) => {
             : "opacity-0 translate-y-16"
         }`}
       >
-        <div className="max-w-7xl mx-auto ">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl md:text-4xl font-bold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-400 leading-snug">
-              Ba Trụ Cột Tư Tưởng
+              Các Khái Niệm Cốt Lõi
             </h2>
 
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Khám phá những nguyên lý cốt lõi đã định hình nên hệ thống triết
-              học vĩ đại này
+              3–4 “ô tư tưởng” giúp bạn nắm nhanh tinh thần trung tâm của môn học
+              Tư tưởng Hồ Chí Minh.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {corePhilosophies.map((philosophy, index) => (
               <div
                 key={index}
@@ -36,9 +35,9 @@ const CoreSection = ({ visibleSections }) => {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                <div className="text-amber-400 mb-6 ">{philosophy.icon}</div>
+                <div className="text-amber-400 mb-6">{philosophy.icon}</div>
 
-                <h3 className="text-2xl font-bold mb-2 text-slate-100  transition-colors duration-300">
+                <h3 className="text-2xl font-bold mb-2 text-slate-100 transition-colors duration-300">
                   {philosophy.title}
                 </h3>
 
@@ -61,7 +60,6 @@ const CoreSection = ({ visibleSections }) => {
                   ))}
                 </div>
 
-                {/* Decorative corner */}
                 <div className="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
                   <div className="w-8 h-8 border-t-2 border-r-2 border-amber-400/50" />
                 </div>

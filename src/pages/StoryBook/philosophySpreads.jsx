@@ -9,6 +9,7 @@ import Coverbook from "../../assets/picture/Coverbook.png";
  */
 export const spreads = [
   // ============ Spread 0: Bìa trước ============
+
   {
     left: null,
     right: (
@@ -20,11 +21,9 @@ export const spreads = [
             radial-gradient(circle at 80% 80%, rgba(245,158,11,.12) 0%, transparent 40%),
             url(${Coverbook}) center / cover no-repeat,
             linear-gradient(135deg, #0a0a14 0%, #1a1a2e 50%, #0f0f1a 100%)
-          `
+          `,
         }}
       >
-        {/* Nếu muốn chỉ hiển thị ảnh full-bleed, xóa các khối dưới đi.
-            Nếu vẫn muốn giữ tiêu đề/quote chồng lên ảnh, giữ nguyên nội dung. */}
         <div className="cover-design">
           <div className="cover-stars">
             <div className="star star-1" />
@@ -34,29 +33,27 @@ export const spreads = [
             <div className="star star-5" />
           </div>
 
-            <div className="cover-ornament top" />
+          <div className="cover-ornament top" />
 
-            <div className="cover-title">
-              <div className="title-backdrop" />
-              <h1 className="main-title">
-                <span className="title-line-1">CHỦ NGHĨA</span>
-                <span className="title-line-2">DUY VẬT LỊCH SỬ</span>
-              </h1>
-              <div className="subtitle">
-                Đời sống vật chất &amp; tinh thần của xã hội vận động ra sao?
-              </div>
+          <div className="cover-title">
+            <div className="title-backdrop" />
+            <h1 className="main-title">
+              <span className="title-line-1">TƯ TƯỞNG</span>
+              <span className="title-line-2">HỒ CHÍ MINH</span>
+            </h1>
+            <div className="subtitle">
+              Kim chỉ nam cho độc lập dân tộc &amp; con đường đi lên CNXH
             </div>
+          </div>
 
-            <div className="cover-quote">
-              <div className="quote-marks">"</div>
-              <div className="quote-text">
-                Không phải ý thức của con người quyết định tồn tại của họ;
-                <br />
-                trái lại, chính tồn tại xã hội của họ quyết định ý thức của họ
-              </div>
-              <div className="quote-author">— Karl Marx</div>
-              <div className="quote-marks closing">"</div>
+          <div className="cover-quote">
+            <div className="quote-marks">"</div>
+            <div className="quote-text">
+              Không có gì quý hơn độc lập, tự do
             </div>
+            <div className="quote-author">— Hồ Chí Minh</div>
+            <div className="quote-marks closing">"</div>
+          </div>
 
           <div className="cover-ornament bottom" />
           <div className="cover-glow" />
@@ -65,7 +62,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 1: Dẫn nhập — “Cặp kính” duy vật lịch sử ============
+  // ============ Spread 1: Dẫn nhập ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -75,24 +73,20 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Một “cặp kính” để nhìn xã hội</h3>
+          <h3>Vì sao học Tư tưởng Hồ Chí Minh?</h3>
           <p className="first-letter">
-            Vì sao mỗi thời đại lại có phong tục, luật pháp, niềm tin khác nhau?
-            Vì sao suy nghĩ hôm nay khác xa cha ông? Chủ nghĩa duy vật lịch sử
-            trao cho ta “cặp kính” để thấy sợi dây nối giữa đời sống vật chất và
-            đời sống tinh thần: cách con người sản xuất, sinh sống và quan hệ
-            với nhau định hình những gì họ tin, họ nghĩ, họ mơ ước.
+            Tư tưởng Hồ Chí Minh là hệ thống quan điểm toàn diện và sâu sắc về
+            cách mạng Việt Nam — từ giải phóng dân tộc đến xây dựng xã hội mới.
+            Học không phải để thuộc lòng, mà để hiểu “kim chỉ nam” cho hành động:
+            biết yêu nước, yêu dân, và vận dụng sáng tạo vào thực tiễn.
           </p>
 
           <div className="philosophy-quote">
             <div className="quote-symbol">❝</div>
             <p>
-              “Cách chúng ta sống và lao động sẽ quyết định cách chúng ta suy
-              nghĩ.”
+              “Học tập là để làm việc, làm người, làm cán bộ.”
             </p>
-            <div className="quote-author">
-              — Tóm lược tinh thần duy vật lịch sử
-            </div>
+            <div className="quote-author">— Hồ Chí Minh</div>
           </div>
         </div>
 
@@ -106,22 +100,20 @@ export const spreads = [
           <div className="principle">
             <span className="principle-icon">🎯</span>
             <div>
-              <strong>Nắm khái niệm:</strong> Tồn tại xã hội (TTXH) &amp; Ý thức
-              xã hội (YTXH).
+              <strong>Nắm khái niệm:</strong> định nghĩa, nguồn gốc, giá trị.
             </div>
           </div>
           <div className="principle">
             <span className="principle-icon">🧭</span>
             <div>
-              <strong>Hiểu quan hệ:</strong> Vật chất quyết định tinh thần và
-              tác động trở lại.
+              <strong>Hiểu nội dung cốt lõi:</strong> độc lập dân tộc gắn liền với CNXH.
             </div>
           </div>
           <div className="principle">
             <span className="principle-icon">🔎</span>
             <div>
-              <strong>Biết vận dụng:</strong> Giải thích biến đổi tư tưởng qua
-              biến đổi sản xuất.
+              <strong>Biết vận dụng:</strong> vào xây dựng Đảng, Nhà nước, đoàn kết,
+              văn hóa–đạo đức–con người.
             </div>
           </div>
         </div>
@@ -129,8 +121,8 @@ export const spreads = [
         <div className="reflection-box">
           <div className="reflection-title">Từ khóa</div>
           <p>
-            Phương thức sản xuất • Lực lượng sản xuất • Quan hệ sản xuất • Tâm
-            lý xã hội • Hệ tư tưởng
+            Mác–Lênin • Truyền thống dân tộc • Độc lập–tự do • CNXH • Đảng &amp; Nhà nước
+            • Đại đoàn kết • Văn hóa • Đạo đức • Trồng người
           </p>
         </div>
 
@@ -139,7 +131,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 2: Chương I — Tồn tại xã hội ============
+  // ============ Spread 2: CHƯƠNG I ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -149,35 +142,35 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Tồn Tại Xã Hội (TTXH) — Nền móng vật chất</h3>
+          <h3>Khái niệm Tư tưởng Hồ Chí Minh</h3>
           <p className="first-letter">
-            Hãy hình dung xã hội như một ngôi nhà: để vững chắc cần nền móng
-            tốt. Tồn tại xã hội chính là “nền móng” ấy — toàn bộ đời sống vật
-            chất và những điều kiện sinh hoạt vật chất của xã hội.
+            Theo định nghĩa của Đảng Cộng sản Việt Nam tại Đại hội XI (2011):
+            Tư tưởng Hồ Chí Minh là hệ thống quan điểm toàn diện và sâu sắc về
+            những vấn đề cơ bản của cách mạng Việt Nam.
           </p>
 
           <div className="wisdom-section">
-            <h4>Ba yếu tố cơ bản</h4>
+            <h4>Điểm cốt lõi</h4>
+
             <div className="wisdom-item">
               <span className="wisdom-number">1</span>
               <div>
-                <strong>Phương thức sản xuất của cải vật chất:</strong> yếu tố
-                quyết định nhất; gồm <em>lực lượng sản xuất</em> và{" "}
-                <em>quan hệ sản xuất</em>.
+                <strong>Nguồn gốc:</strong> vận dụng sáng tạo chủ nghĩa Mác–Lênin,
+                kế thừa truyền thống dân tộc, tiếp thu tinh hoa văn hóa nhân loại.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">2</span>
               <div>
-                <strong>Hoàn cảnh địa lý &amp; điều kiện tự nhiên:</strong> tạo
-                thuận lợi/khó khăn nhưng không quyết định tất cả.
+                <strong>Nội dung cốt lõi:</strong> con đường <em>độc lập dân tộc</em> gắn liền với <em>chủ nghĩa xã hội</em>.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">3</span>
               <div>
-                <strong>Dân cư:</strong> mật độ, cơ cấu, tăng trưởng — “những
-                người thợ” dựng nhà xã hội.
+                <strong>Giá trị:</strong> tài sản tinh thần quý giá, soi đường cho cách mạng Việt Nam.
               </div>
             </div>
           </div>
@@ -186,36 +179,34 @@ export const spreads = [
         <div className="page-number">4</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        {/* Đổi "Gợi ý hình ảnh" -> "Mẫu chuyện nhỏ" */}
-        <div className="reflection-box">
-          <div className="reflection-title">Mẫu chuyện nhỏ</div>
-          <p>
-            Ở một xã miền núi, nhóm thanh niên mang về máy xay ngô chạy điện và mở điểm thu mua.
-            Chỉ sau hai vụ, lịch làm việc đổi hẳn: phụ nữ rảnh buổi tối đi lớp xoá mù,
-            trẻ con có tiền mua sách. Làng lập quy ước chia ca và tổ góp vốn — không còn
-            cảnh “giữ bí quyết gia truyền” như trước. <em>LLSX</em> đổi → <em>QHSX</em> đổi,
-            và đời sống vật chất toàn xã hội nhích lên một nấc.
-          </p>
+        <div className="life-principles">
+          <h4>Đối tượng nghiên cứu</h4>
+
+          <div className="principle">
+            <span className="principle-icon">📚</span>
+            <div>
+              <strong>Di sản Hồ Chí Minh:</strong> hệ thống quan điểm, lý luận thể hiện trong toàn bộ di sản <em>nói – viết – làm</em>.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🧩</span>
+            <div>
+              <strong>Thực tiễn cách mạng:</strong> quá trình hiện thực hóa tư tưởng trong các giai đoạn lịch sử.
+            </div>
+          </div>
         </div>
 
-        <div className="life-principles">
-          <h4>Phương thức sản xuất</h4>
-          <div className="principle">
-            <span className="principle-icon">🛠️</span>
-            <div>
-              <strong>Lực lượng sản xuất (LLSX):</strong> công cụ, công nghệ,
-              tay nghề, tri thức.
-            </div>
-          </div>
-          <div className="principle">
-            <span className="principle-icon">🤝</span>
-            <div>
-              <strong>Quan hệ sản xuất (QHSX):</strong> sở hữu, tổ chức quản lý,
-              phân phối.
-            </div>
-          </div>
+        <div className="reflection-box">
+          <div className="reflection-title">Phương pháp nghiên cứu</div>
+          <p>
+            • Thống nhất <strong>tính Đảng</strong> và <strong>tính khoa học</strong> (khách quan, đúng bản chất).<br />
+            • Thống nhất <strong>lý luận</strong> và <strong>thực tiễn</strong> (lý luận gắn hành động).<br />
+            • Quan điểm <strong>toàn diện &amp; hệ thống</strong> (xem trong chỉnh thể thống nhất, hạt nhân là độc lập–tự do–dân chủ–CNXH).
+          </p>
         </div>
 
         <div className="page-number">5</div>
@@ -223,7 +214,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 3: Chương II — Ý thức xã hội ============
+  // ============ Spread 3: CHƯƠNG II ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -233,27 +225,38 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Ý Thức Xã Hội (YTXH) — “Linh hồn” của xã hội</h3>
-          <p className="first-letter">
-            Nếu TTXH là “thân thể”, YTXH là toàn bộ đời sống tinh thần nảy sinh
-            từ và phản ánh TTXH ở mỗi giai đoạn: tư tưởng, quan điểm, niềm tin,
-            phong tục, luật lệ…
-          </p>
+          <h3>Cơ sở khách quan hình thành tư tưởng</h3>
 
           <div className="wisdom-section">
-            <h4>Cấu trúc hai tầng</h4>
+            <h4>Những nền tảng chính</h4>
+
             <div className="wisdom-item">
               <span className="wisdom-number">1</span>
               <div>
-                <strong>Tâm lý xã hội:</strong> tình cảm, thói quen, truyền
-                thống — hình thành tự phát trong đời sống hằng ngày.
+                <strong>Thực tiễn Việt Nam</strong> cuối XIX – đầu XX: bế tắc về đường lối cứu nước → đòi hỏi con đường mới.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">2</span>
               <div>
-                <strong>Hệ tư tưởng xã hội:</strong> quan điểm đã được hệ thống
-                hóa (chính trị, pháp luật, triết học…).
+                <strong>Truyền thống dân tộc:</strong> chủ nghĩa yêu nước là động lực xuyên suốt và điểm xuất phát.
+              </div>
+            </div>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">3</span>
+              <div>
+                <strong>Tinh hoa văn hóa nhân loại:</strong><br />
+                • Phương Đông: Nho giáo (nhân trị, đức trị), Phật giáo (từ bi, vị tha), Tam dân (Tôn Trung Sơn).<br />
+                • Phương Tây: quyền con người, tự do, bình đẳng, bác ái (cách mạng Pháp &amp; Mỹ).
+              </div>
+            </div>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">4</span>
+              <div>
+                <strong>Chủ nghĩa Mác–Lênin:</strong> cơ sở lý luận quan trọng nhất, quyết định thế giới quan và phương pháp luận cách mạng.
               </div>
             </div>
           </div>
@@ -262,42 +265,55 @@ export const spreads = [
         <div className="page-number">6</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
         <div className="life-principles">
-          <h4>Tính giai cấp của YTXH</h4>
+          <h4>Quá trình hình thành &amp; phát triển</h4>
+
           <div className="principle">
-            <span className="principle-icon">🏛️</span>
+            <span className="principle-icon">🕰️</span>
             <div>
-              <strong>Giai cấp thống trị</strong> về kinh tế thường{" "}
-              <em>thống trị</em> đời sống tinh thần.
+              <strong>Trước 1911:</strong> hình thành tư tưởng yêu nước, chí hướng tìm đường mới.
             </div>
           </div>
+
           <div className="principle">
-            <span className="principle-icon">⚖️</span>
+            <span className="principle-icon">🧭</span>
             <div>
-              Các giai cấp bị trị có <strong>hệ tư tưởng riêng</strong> → đấu
-              tranh tư tưởng.
+              <strong>1911–1920:</strong> tìm thấy con đường cách mạng vô sản; đọc Luận cương Lênin (7/1920), gia nhập ĐCS Pháp.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">📘</span>
+            <div>
+              <strong>1920–1930:</strong> hình thành nội dung cơ bản; “Đường cách mệnh”; Cương lĩnh chính trị đầu tiên (1930).
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🛡️</span>
+            <div>
+              <strong>1930–1941:</strong> vượt thử thách, kiên trì lập trường: “Quyền lợi dân tộc giải phóng cao hơn hết thảy”.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🏁</span>
+            <div>
+              <strong>1941–1969:</strong> phát triển đến đỉnh cao; lãnh đạo giành độc lập (1945), kháng chiến chống Pháp và chống Mỹ.
             </div>
           </div>
         </div>
 
-        {/* Đổi "Gợi ý hình ảnh" -> "Mẫu chuyện nhỏ" */}
-        <div className="reflection-box">
-          <div className="reflection-title">Mẫu chuyện nhỏ</div>
-          <p>
-            Nhà máy giày mở ở thị trấn. Bảng tin công ty đăng bài “Gia đình là động lực — hãy tự nguyện tăng ca”:
-            một cách nhìn từ phía quản lý. Trong quán nước đối diện, nhóm công nhân chia sẻ bài viết về quyền nghỉ bù
-            từ một blog độc lập. Vài tuần sau, họ đề xuất quỹ ca đêm và lịch bù minh bạch. Cùng một sự kiện,
-            hai hệ tư tưởng đối thoại ngay trên cùng con phố.
-          </p>
-        </div>
         <div className="page-number">7</div>
       </AutoFitPage>
     ),
   },
 
-  // ============ Spread 4: Chương III — Các hình thái ý thức xã hội ============
+  // ============ Spread 4: CHƯƠNG III ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -307,75 +323,92 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Những “hình thái” chủ yếu</h3>
+          <h3>Độc lập dân tộc</h3>
+
           <div className="wisdom-section">
-            <h4>Danh mục nhanh</h4>
+            <h4>Ba điểm nhấn</h4>
+
             <div className="wisdom-item">
               <span className="wisdom-number">1</span>
               <div>
-                <strong>Ý thức chính trị</strong>
+                <strong>Quyền thiêng liêng:</strong> độc lập là quyền tự nhiên, bất khả xâm phạm của mọi dân tộc.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">2</span>
               <div>
-                <strong>Ý thức pháp quyền</strong>
+                <strong>Độc lập thật sự:</strong> hoàn toàn, triệt để trên mọi lĩnh vực; gắn với thống nhất và toàn vẹn lãnh thổ.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">3</span>
               <div>
-                <strong>Ý thức đạo đức</strong>
+                <strong>Gắn hạnh phúc nhân dân:</strong> “Nước độc lập mà dân không hưởng hạnh phúc tự do thì độc lập cũng không có ý nghĩa”.
               </div>
             </div>
-            <div className="wisdom-item">
-              <span className="wisdom-number">4</span>
-              <div>
-                <strong>Ý thức nghệ thuật (thẩm mỹ)</strong>
-              </div>
-            </div>
-            <div className="wisdom-item">
-              <span className="wisdom-number">5</span>
-              <div>
-                <strong>Ý thức tôn giáo</strong>
-              </div>
-            </div>
-            <div className="wisdom-item">
-              <span className="wisdom-number">6</span>
-              <div>
-                <strong>Ý thức khoa học</strong>
-              </div>
-            </div>
-            <div className="wisdom-item">
-              <span className="wisdom-number">7</span>
-              <div>
-                <strong>Ý thức triết học</strong> — hạt nhân lý luận của thế
-                giới quan.
-              </div>
-            </div>
+          </div>
+
+          <div className="philosophy-quote">
+            <div className="quote-symbol">❝</div>
+            <p>“Không có gì quý hơn độc lập, tự do.”</p>
+            <div className="quote-author">— Hồ Chí Minh</div>
           </div>
         </div>
 
         <div className="page-number">8</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        <div className="reflection-box">
-          <div className="reflection-title">Liên hệ chéo</div>
-          <p>
-            Chính trị ảnh hưởng nghệ thuật; khoa học chi phối triết học; tôn
-            giáo, đạo đức tác động pháp luật…
-          </p>
+        <div className="life-principles">
+          <h4>Cách mạng giải phóng dân tộc</h4>
+
+          <div className="principle">
+            <span className="principle-icon">🛤️</span>
+            <div>
+              <strong>Con đường:</strong> cách mạng vô sản để thắng lợi triệt để.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🏛️</span>
+            <div>
+              <strong>Lãnh đạo:</strong> phải do Đảng Cộng sản lãnh đạo.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🤝</span>
+            <div>
+              <strong>Lực lượng:</strong> đại đoàn kết toàn dân; liên minh công–nông là nền tảng.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">⚡</span>
+            <div>
+              <strong>Tính chủ động:</strong> cách mạng thuộc địa có thể giành thắng lợi trước.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🛡️</span>
+            <div>
+              <strong>Phương pháp:</strong> bạo lực cách mạng (kết hợp chính trị và vũ trang).
+            </div>
+          </div>
         </div>
 
-        <div className="philosophy-quote">
-          <div className="quote-symbol">❝</div>
+        <div className="reflection-box">
+          <div className="reflection-title">Về Chủ nghĩa xã hội</div>
           <p>
-            “Mỗi hình thái phản ánh TTXH theo cách riêng — bằng quyền lực, quy
-            tắc, giá trị, niềm tin, chân lý…”
+            • CNXH nhằm giải phóng người lao động: có việc làm, ấm no, hạnh phúc.<br />
+            • Đặc trưng chính trị: nhân dân làm chủ; Nhà nước của dân–do dân–vì dân dưới sự lãnh đạo của Đảng.<br />
+            • Động lực quan trọng: đoàn kết toàn dân; quyền dân chủ và lợi ích của nhân dân.
           </p>
-          <div className="quote-author">— Tóm lược</div>
         </div>
 
         <div className="page-number">9</div>
@@ -383,7 +416,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 5: Chương IV — Vật chất quyết định tinh thần ============
+  // ============ Spread 5: CHƯƠNG IV ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -393,39 +427,76 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Nguyên tắc cơ bản</h3>
-          <p className="first-letter">
-            Tồn tại xã hội quyết định ý thức xã hội. TTXH có trước và là nguồn
-            gốc, YTXH có sau và là sự phản ánh. Khi phương thức sản xuất thay
-            đổi, sớm hay muộn YTXH cũng thay đổi theo.
-          </p>
+          <h3>Đảng Cộng sản Việt Nam</h3>
 
-          <div className="philosophy-quote">
-            <div className="quote-symbol">❝</div>
-            <p>
-              “Nhà máy mọc lên — tư tưởng về quyền của người lao động &amp; dân
-              chủ hiện đại lan rộng.”
-            </p>
-            <div className="quote-author">— Ví dụ minh hoạ</div>
+          <div className="wisdom-section">
+            <h4>Nội dung trọng tâm</h4>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">1</span>
+              <div>
+                <strong>Tính tất yếu:</strong> Đảng “như người cầm lái”, nhân tố hàng đầu quyết định thắng lợi.
+              </div>
+            </div>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">2</span>
+              <div>
+                <strong>Quy luật ra đời:</strong> kết hợp Mác–Lênin với phong trào công nhân và phong trào yêu nước.
+              </div>
+            </div>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">3</span>
+              <div>
+                <strong>Xây dựng Đảng:</strong> trong sạch, vững mạnh; là “đạo đức”, là “văn minh”.
+              </div>
+            </div>
+
+            <div className="wisdom-item">
+              <span className="wisdom-number">4</span>
+              <div>
+                <strong>Nguyên tắc:</strong> tập trung dân chủ; tự phê bình &amp; phê bình; kỷ luật nghiêm minh tự giác; đoàn kết thống nhất.
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="page-number">10</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        <h4>Sơ đồ mũi tên</h4>
-        <div className="balance-grid">
-          <div className="balance-item">
-            <span className="balance-symbol">🏭</span>
-            <strong>Biến đổi sản xuất</strong>
-            Công nghệ, tổ chức, phân công lao động…
+        <div className="life-principles">
+          <h4>Nhà nước của nhân dân, do nhân dân, vì nhân dân</h4>
+
+          <div className="principle">
+            <span className="principle-icon">🏗️</span>
+            <div>
+              <strong>Bản chất:</strong> giai cấp công nhân; tính nhân dân &amp; tính dân tộc sâu sắc.
+            </div>
           </div>
-          <div className="balance-item">
-            <span className="balance-symbol">➡️</span>
-            <strong>Biến đổi ý thức</strong>
-            Quyền, luật, đạo đức, nghệ thuật, tôn giáo…
+
+          <div className="principle">
+            <span className="principle-icon">🗳️</span>
+            <div>
+              <strong>Nhà nước dân chủ:</strong> mọi quyền lực thuộc về nhân dân; cán bộ là “công bộc”, không phải “quan cách mạng”.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">⚖️</span>
+            <div>
+              <strong>Nhà nước pháp quyền:</strong> quản lý xã hội bằng Hiến pháp và pháp luật; thượng tôn pháp luật.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🧯</span>
+            <div>
+              <strong>Chống tiêu cực:</strong> kiên quyết chống đặc quyền đặc lợi, tham ô, lãng phí, quan liêu.
+            </div>
           </div>
         </div>
 
@@ -434,7 +505,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 6: Chương V — Tính độc lập tương đối của YTXH ============
+  // ============ Spread 6: CHƯƠNG V ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -444,66 +516,84 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Không chỉ là tấm gương thụ động</h3>
+          <h3>Đại đoàn kết toàn dân tộc</h3>
+
           <div className="wisdom-section">
-            <h4>Năm biểu hiện chính</h4>
+            <h4>Luận điểm chính</h4>
+
             <div className="wisdom-item">
               <span className="wisdom-number">1</span>
               <div>
-                <strong>Lạc hậu:</strong> thói quen cũ tiếp tục tồn tại (vd.
-                định kiến giới) dù cơ sở đã đổi.
+                <strong>Vai trò:</strong> vấn đề chiến lược, nhân tố quyết định thành công của cách mạng.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">2</span>
               <div>
-                <strong>Vượt trước:</strong> tư tưởng khoa học/tiến bộ dự báo
-                tương lai.
+                <strong>Chủ thể:</strong> toàn dân Việt Nam, không phân biệt giai cấp, tôn giáo, đảng phái.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">3</span>
               <div>
-                <strong>Kế thừa:</strong> thế hệ sau không bắt đầu từ số 0.
+                <strong>Nền tảng:</strong> liên minh công nhân – nông dân – trí thức.
               </div>
             </div>
+
             <div className="wisdom-item">
               <span className="wisdom-number">4</span>
               <div>
-                <strong>Tác động lẫn nhau:</strong> chính trị ↔ nghệ thuật, khoa
-                học ↔ triết học…
+                <strong>Hình thức:</strong> Mặt trận dân tộc thống nhất (Việt Minh, Liên Việt, Mặt trận Tổ quốc…).
               </div>
             </div>
-            <div className="wisdom-item">
-              <span className="wisdom-number">5</span>
-              <div>
-                <strong>Tác động trở lại TTXH:</strong> tư tưởng tiến bộ thúc
-                đẩy phát triển; tư tưởng lạc hậu kìm hãm.
-              </div>
-            </div>
+          </div>
+
+          <div className="philosophy-quote">
+            <div className="quote-symbol">❝</div>
+            <p>“Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công.”</p>
+            <div className="quote-author">— Hồ Chí Minh</div>
           </div>
         </div>
 
         <div className="page-number">12</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        {/* Đổi "Gợi ý hình ảnh" -> "Mẫu chuyện nhỏ" */}
-        <div className="reflection-box">
-          <div className="reflection-title">Mẫu chuyện nhỏ</div>
-          <p>
-            Ở một trường huyện, cô giáo Vật lý lập CLB maker. Trước cả khi xưởng mới được đầu tư,
-            học sinh đã thống nhất nội quy “ai cũng được thử — không phân biệt nam nữ” và mở ngày chia sẻ dự án.
-            Một năm sau, phòng lab về tới nơi; thói quen “nam máy — nữ sổ” đã biến mất từ trước.
-            <em>Ý thức mới</em> đi <em>vượt trước</em> và kéo điều kiện vật chất thay đổi theo.
-          </p>
+        <div className="life-principles">
+          <h4>Đoàn kết quốc tế</h4>
+
+          <div className="principle">
+            <span className="principle-icon">🌍</span>
+            <div>
+              <strong>Mục tiêu:</strong> kết hợp sức mạnh dân tộc với sức mạnh thời đại.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🤝</span>
+            <div>
+              <strong>Đối tượng:</strong> phong trào cộng sản quốc tế; phong trào giải phóng dân tộc; các lực lượng tiến bộ yêu chuộng hòa bình.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🧭</span>
+            <div>
+              <strong>Nguyên tắc:</strong> độc lập, tự chủ, tự lực tự cường; “có lý, có tình”.
+            </div>
+          </div>
         </div>
 
-        <div className="philosophy-quote">
-          <div className="quote-symbol">❝</div>
-          <p>“Ý tưởng đúng lúc là đòn bẩy của lịch sử.”</p>
-          <div className="quote-author">— Ẩn dụ biện chứng</div>
+        <div className="reflection-box">
+          <div className="reflection-title">Gợi nhớ</div>
+          <p>
+            Đoàn kết trong nước tạo <strong>sức mạnh nội lực</strong>. Đoàn kết quốc tế tạo <strong>sức mạnh ngoại lực</strong>.
+            Hai nguồn lực bổ trợ để vượt qua thách thức lịch sử.
+          </p>
         </div>
 
         <div className="page-number">13</div>
@@ -511,7 +601,8 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 7: Chương VI — Ví dụ & vận dụng ============
+  // ============ Spread 7: CHƯƠNG VI ============
+
   {
     left: (
       <AutoFitPage className="page-left">
@@ -521,26 +612,37 @@ export const spreads = [
         </div>
 
         <div className="page-body">
-          <h3>Minh họa nhanh</h3>
+          <h3>Văn hóa &amp; Đạo đức</h3>
+
           <div className="wisdom-section">
-            <h4>TTXH → YTXH</h4>
+            <h4>1) Về Văn hóa</h4>
             <div className="wisdom-item">
-              <span className="wisdom-number">1</span>
+              <span className="wisdom-number">•</span>
               <div>
-                Internet phổ cập → tư duy mở, văn hoá số, mô hình làm việc mới.
+                <strong>Vai trò:</strong> văn hóa là mục tiêu, là động lực và soi đường cho quốc dân đi.
               </div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">2</span>
+              <span className="wisdom-number">•</span>
               <div>
-                Đô thị hoá → chuẩn mực sống, pháp luật, lối sống hiện đại.
+                <strong>Văn hóa mới:</strong> có tính <em>dân tộc</em>, <em>khoa học</em>, <em>đại chúng</em>.
+              </div>
+            </div>
+          </div>
+
+          <div className="wisdom-section">
+            <h4>2) Về Đạo đức</h4>
+            <div className="wisdom-item">
+              <span className="wisdom-number">•</span>
+              <div>
+                <strong>Vị trí:</strong> đạo đức là “gốc” của người cách mạng.
               </div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">3</span>
+              <span className="wisdom-number">•</span>
               <div>
-                Chuỗi cung ứng toàn cầu → ý thức về quyền lao động và tiêu dùng
-                bền vững.
+                <strong>Phẩm chất cơ bản:</strong><br />
+                Trung với nước, hiếu với dân • Cần–kiệm–liêm–chính–chí công vô tư • Thương yêu con người • Tinh thần quốc tế trong sáng
               </div>
             </div>
           </div>
@@ -549,29 +651,40 @@ export const spreads = [
         <div className="page-number">14</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
         <div className="life-principles">
-          <h4>YTXH → TTXH (tác động trở lại)</h4>
+          <h4>3) Về Con người</h4>
+
           <div className="principle">
-            <span className="principle-icon">🚀</span>
+            <span className="principle-icon">👤</span>
             <div>
-              Phong trào khoa học, giáo dục mở thúc đẩy năng suất &amp; đổi mới.
+              <strong>Quan niệm:</strong> con người vừa là <em>mục tiêu</em>, vừa là <em>động lực</em> của cách mạng.
             </div>
           </div>
+
           <div className="principle">
-            <span className="principle-icon">🛑</span>
+            <span className="principle-icon">🌱</span>
             <div>
-              Tập tục lạc hậu kìm hãm lao động nữ, lãng phí nguồn lực xã hội.
+              <strong>Chiến lược trồng người:</strong> “Vì lợi ích mười năm trồng cây, vì lợi ích trăm năm trồng người”.
             </div>
           </div>
+
           <div className="principle">
-            <span className="principle-icon">📜</span>
+            <span className="principle-icon">🏗️</span>
             <div>
-              Cải cách pháp luật phản chiếu tư tưởng mới, đồng thời tạo môi
-              trường sản xuất mới.
+              <strong>Hàm ý:</strong> muốn xây dựng CNXH trước hết cần có những con người xã hội chủ nghĩa.
             </div>
           </div>
+        </div>
+
+        <div className="reflection-box">
+          <div className="reflection-title">Gợi ý suy ngẫm</div>
+          <p>
+            Nếu “trồng người” là chiến lược lâu dài, bạn nghĩ 3 năng lực cần ưu tiên là gì:
+            tri thức – đạo đức – kỹ năng – sức khỏe – thẩm mỹ?
+          </p>
         </div>
 
         <div className="page-number">15</div>
@@ -579,42 +692,44 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 8: Chương VII — Câu hỏi Socrates & thảo luận ============
+  // ============ Spread 8: Ôn tập nhanh ============
+
   {
     left: (
       <AutoFitPage className="page-left">
         <div className="page-header">
-          <h2>Chương VII</h2>
+          <h2>Ôn tập</h2>
           <div className="chapter-ornament">❦</div>
         </div>
 
         <div className="page-body">
-          <h3>Gợi ý tranh biện &amp; tư duy phản biện</h3>
+          <h3>Tóm tắt 6 chương</h3>
           <div className="wisdom-section">
-            <h4>5 câu hỏi kiểu Socrates</h4>
+            <h4>Gạch đầu dòng</h4>
+
             <div className="wisdom-item">
-              <span className="wisdom-number">1</span>
-              <div>
-                Bằng chứng TTXH nào đang đổi (công nghệ, tổ chức, lao động)?
-              </div>
+              <span className="wisdom-number">I</span>
+              <div>Khái niệm – đối tượng – phương pháp – ý nghĩa học tập.</div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">2</span>
-              <div>
-                Những thay đổi YTXH nào đi kèm (luật, đạo đức, nghệ thuật)?
-              </div>
+              <span className="wisdom-number">II</span>
+              <div>Cơ sở hình thành &amp; quá trình phát triển tư tưởng.</div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">3</span>
-              <div>Mình đang giả định gì về “nguyên nhân–hệ quả”?</div>
+              <span className="wisdom-number">III</span>
+              <div>Độc lập dân tộc gắn liền CNXH; cách mạng giải phóng dân tộc.</div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">4</span>
-              <div>Ví dụ phản chứng: nơi TTXH tương tự nhưng YTXH khác?</div>
+              <span className="wisdom-number">IV</span>
+              <div>Vai trò Đảng; Nhà nước của dân–do dân–vì dân.</div>
             </div>
             <div className="wisdom-item">
-              <span className="wisdom-number">5</span>
-              <div>Hệ quả thực tiễn nếu nhận định đúng/sai?</div>
+              <span className="wisdom-number">V</span>
+              <div>Đại đoàn kết toàn dân; đoàn kết quốc tế.</div>
+            </div>
+            <div className="wisdom-item">
+              <span className="wisdom-number">VI</span>
+              <div>Văn hóa – đạo đức – con người; chiến lược “trồng người”.</div>
             </div>
           </div>
         </div>
@@ -622,14 +737,32 @@ export const spreads = [
         <div className="page-number">16</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        <div className="reflection-box">
-          <div className="reflection-title">Câu hỏi thảo luận</div>
-          <p>
-            Khi mức sống vật chất tăng, vì sao một số tập tục vẫn bền bỉ? Hãy
-            chỉ ra yếu tố “kế thừa”, “lạc hậu”, hay “vượt trước”.
-          </p>
+        <div className="life-principles">
+          <h4>Bài tập 3 phút</h4>
+
+          <div className="principle">
+            <span className="principle-icon">📝</span>
+            <div>
+              Chọn <strong>1 luận điểm</strong> bạn tâm đắc nhất và nêu <strong>1 ví dụ thực tiễn</strong> hôm nay.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🧩</span>
+            <div>
+              Kết nối: <strong>độc lập–CNXH</strong> ↔ <strong>Đảng–Nhà nước</strong> ↔ <strong>đại đoàn kết</strong>.
+            </div>
+          </div>
+
+          <div className="principle">
+            <span className="principle-icon">🎯</span>
+            <div>
+              Tự đánh giá: bạn còn mơ hồ nhất ở chương nào? Vì sao?
+            </div>
+          </div>
         </div>
 
         <div className="page-number">17</div>
@@ -637,63 +770,65 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 9: Chương VIII — Bảng tóm tắt & so sánh ============
+  // ============ Spread 9: Câu hỏi thảo luận ============
+
   {
     left: (
       <AutoFitPage className="page-left">
         <div className="page-header">
-          <h2>Chương VIII</h2>
+          <h2>Thảo luận</h2>
           <div className="chapter-ornament">❦</div>
         </div>
 
         <div className="page-body">
-          <h3>Tóm tắt nhanh</h3>
-
-          <div className="balance-grid">
-            <div className="balance-item">
-              <span className="balance-symbol">🏗️</span>
-              <strong>TTXH</strong>
-              Nền móng vật chất: phương thức sản xuất, tự nhiên, dân cư.
+          <h3>5 câu hỏi kiểu Socrates</h3>
+          <div className="wisdom-section">
+            <div className="wisdom-item">
+              <span className="wisdom-number">1</span>
+              <div>
+                “Độc lập thật sự” gồm những yếu tố nào ngoài chính trị?
+              </div>
             </div>
-            <div className="balance-item">
-              <span className="balance-symbol">🧠</span>
-              <strong>YTXH</strong>
-              Đời sống tinh thần: tâm lý xã hội &amp; hệ tư tưởng; mang tính
-              giai cấp.
+            <div className="wisdom-item">
+              <span className="wisdom-number">2</span>
+              <div>
+                Vì sao phải gắn độc lập dân tộc với CNXH để tránh “độc lập hình thức”?
+              </div>
             </div>
-          </div>
-
-          <div className="philosophy-quote">
-            <div className="quote-symbol">❝</div>
-            <p>
-              “Vật chất quyết định tinh thần — tinh thần tác động trở lại vật
-              chất.”
-            </p>
-            <div className="quote-author">— Quy luật tổng quát</div>
+            <div className="wisdom-item">
+              <span className="wisdom-number">3</span>
+              <div>
+                Đại đoàn kết cần “nền tảng” gì để bền vững trong biến động xã hội?
+              </div>
+            </div>
+            <div className="wisdom-item">
+              <span className="wisdom-number">4</span>
+              <div>
+                Nhà nước pháp quyền cần cơ chế nào để “thượng tôn pháp luật” và chống quan liêu?
+              </div>
+            </div>
+            <div className="wisdom-item">
+              <span className="wisdom-number">5</span>
+              <div>
+                “Trồng người” hôm nay nên ưu tiên năng lực nào để hội nhập mà vẫn giữ bản sắc?
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="page-number">18</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
-        <div className="life-principles">
-          <h4>Vận dụng ôn tập</h4>
-          <div className="principle">
-            <span className="principle-icon">📝</span>
-            <div>
-              <strong>3′–Bài tập:</strong> Nêu 1 biến đổi sản xuất tại địa
-              phương và 2 biến đổi tinh thần đi kèm.
-            </div>
-          </div>
-          <div className="principle">
-            <span className="principle-icon">🧩</span>
-            <div>
-              <strong>So khớp:</strong> Ghi 2 ví dụ YTXH “lạc hậu” và 1 ví dụ
-              “vượt trước”.
-            </div>
-          </div>
+        <div className="reflection-box">
+          <div className="reflection-title">Câu hỏi tình huống</div>
+          <p>
+            Một địa phương phát triển kinh tế rất nhanh nhưng xuất hiện suy thoái đạo đức,
+            lối sống thực dụng và chia rẽ cộng đồng. Bạn sẽ vận dụng những luận điểm nào
+            (văn hóa – đạo đức – đại đoàn kết – nhà nước pháp quyền) để đề xuất giải pháp?
+          </p>
         </div>
 
         <div className="page-number">19</div>
@@ -701,43 +836,64 @@ export const spreads = [
     ),
   },
 
-  // ============ Spread 10: Chương IX — Lời kết học thuật ============
+  // ============ Spread 10: Bảng tóm tắt ============
+
   {
     left: (
       <AutoFitPage className="page-left">
         <div className="page-header">
-          <h2>Chương IX</h2>
+          <h2>Tổng kết</h2>
           <div className="chapter-ornament">❦</div>
         </div>
 
         <div className="page-body">
-          <h3>Ý nghĩa phương pháp</h3>
-          <p className="first-letter">
-            Hiểu quan hệ TTXH–YTXH giúp ta nhìn thấy “cơ chế sâu” của biến đổi
-            xã hội, từ đó cải cách không chỉ kinh tế–kỹ thuật mà còn văn hoá–tư
-            tưởng, để phát triển toàn diện và bền vững.
-          </p>
+          <h3>Bảng nhớ nhanh</h3>
 
-          <div className="reflection-box">
-            <div className="reflection-title">Gợi ý thực tiễn</div>
-            <p>
-              Phát triển kinh tế đi đôi xây dựng đời sống tinh thần lành mạnh;
-              coi trọng giáo dục, khoa học, pháp quyền.
-            </p>
+          <div className="balance-grid">
+            <div className="balance-item">
+              <span className="balance-symbol">📌</span>
+              <strong>Hạt nhân</strong>
+              Độc lập dân tộc gắn liền với CNXH.
+            </div>
+
+            <div className="balance-item">
+              <span className="balance-symbol">🏛️</span>
+              <strong>Trụ cột tổ chức</strong>
+              Đảng vững mạnh; Nhà nước của dân–do dân–vì dân; pháp quyền.
+            </div>
+
+            <div className="balance-item">
+              <span className="balance-symbol">🤝</span>
+              <strong>Sức mạnh</strong>
+              Đại đoàn kết toàn dân + đoàn kết quốc tế.
+            </div>
+
+            <div className="balance-item">
+              <span className="balance-symbol">🌿</span>
+              <strong>Nền tảng lâu dài</strong>
+              Văn hóa – đạo đức – con người; “trồng người”.
+            </div>
+          </div>
+
+          <div className="philosophy-quote">
+            <div className="quote-symbol">❝</div>
+            <p>“Dễ trăm lần không dân cũng chịu, khó vạn lần dân liệu cũng xong.”</p>
+            <div className="quote-author">— Hồ Chí Minh</div>
           </div>
         </div>
 
         <div className="page-number">20</div>
       </AutoFitPage>
     ),
+
     right: (
       <AutoFitPage className="page-right">
         <div className="meditation-box">
           <div className="meditation-title">Một phút suy ngẫm</div>
           <p>
-            Trong lớp, trong gia đình, trong công việc — điều kiện vật chất nào
-            đang dẫn dắt lối nghĩ của bạn? Và bạn có thể dùng tư tưởng tiến bộ
-            nào để tác động ngược, cải thiện điều kiện ấy?
+            Nếu bạn phải chọn <strong>một giá trị</strong> để mang theo trong học tập và công việc
+            (liêm chính, tận tụy, kỷ luật, nhân ái, sáng tạo…), bạn chọn gì?
+            Và bạn sẽ biến nó thành hành động cụ thể ra sao?
           </p>
         </div>
 
@@ -747,35 +903,36 @@ export const spreads = [
   },
 
   // ============ Spread 11: Kết & Bìa sau ============
+
   {
     left: (
       <AutoFitPage className="page-left">
         <div className="final-content">
           <div className="conclusion-title">
-            <h2>Vật chất &amp; tinh thần — Nhịp đôi của lịch sử</h2>
+            <h2>Kết</h2>
           </div>
 
           <div className="final-wisdom">
             <p>
-              Để thay đổi xã hội toàn diện, không chỉ phát triển sản xuất, mà
-              còn nuôi dưỡng đời sống tinh thần tiến bộ. Hai mặt ấy song hành,
-              tác động qua lại, tạo nên sự vận động không ngừng của lịch sử.
+              Tư tưởng Hồ Chí Minh là di sản bền vững: định hướng mục tiêu độc lập dân tộc,
+              xây dựng CNXH, củng cố Đảng–Nhà nước, phát huy đại đoàn kết, và bồi dưỡng con người.
+              Giá trị của tư tưởng nằm ở khả năng <strong>vận dụng sáng tạo</strong> vào thực tiễn hôm nay.
             </p>
 
             <div className="life-summary">
               <div className="summary-item">
-                <span className="summary-icon">🏗️</span>
-                <p><strong>Xây nền móng vật chất</strong> </p>
+                <span className="summary-icon">🧭</span>
+                <p><strong>Giữ vững mục tiêu</strong></p>
               </div>
 
               <div className="summary-item">
-                <span className="summary-icon">🧠</span>
-                <p><strong>Bồi đắp ý thức</strong> </p>
+                <span className="summary-icon">🤝</span>
+                <p><strong>Phát huy đoàn kết</strong></p>
               </div>
 
               <div className="summary-item">
-                <span className="summary-icon">🔄</span>
-                <p><strong>Phối hợp biện chứng</strong> </p>
+                <span className="summary-icon">🌱</span>
+                <p><strong>Trồng người lâu dài</strong></p>
               </div>
             </div>
           </div>
@@ -798,26 +955,26 @@ export const spreads = [
 
           <div className="back-title">
             <div className="back-title-backdrop" />
-            <h1>BIỆN CHỨNG</h1>
+            <h1>ĐOÀN KẾT</h1>
             <div className="infinity-symbol">∞</div>
           </div>
 
           <div className="back-quote">
             <div className="back-quote-text">
-              “Mỗi bước tiến vật chất
+              “Đoàn kết, đoàn kết,
               <br />
-              gợi mở một chân trời tinh thần mới”
+              đại đoàn kết”
             </div>
             <div className="back-quote-divider" />
             <div className="back-quote-text">
-              “Kết thúc một trang sách
+              “Thành công, thành công,
               <br />
-              là khởi đầu của trang khác”
+              đại thành công”
             </div>
           </div>
 
           <div className="back-message">
-            Tiếp tục quan sát TTXH &amp; YTXH
+            Tiếp tục học tập &amp; vận dụng
             <br />
             trong đời sống hằng ngày
           </div>
@@ -853,19 +1010,44 @@ export const spreadsToPages = (spreads, { onTocClick } = {}) => {
     return base + OFFSET;
   };
 
-  // Danh sách mục lục (label + spread đích)
+  // ====== MỤC LỤC CHI TIẾT (đúng theo yêu cầu) ======
   const toc = [
-    { label: "Dẫn nhập", s: 1, side: "left" },
-    { label: "Chương I — Tồn Tại Xã Hội", s: 2, side: "left" },
-    { label: "Chương II — Ý Thức Xã Hội", s: 3, side: "left" },
-    { label: "Chương III — Hình thái YTXH", s: 4, side: "left" },
-    { label: "Chương IV — Vật chất quyết định tinh thần", s: 5, side: "left" },
-    { label: "Chương V — Tính độc lập tương đối của YTXH", s: 6, side: "left" },
-    { label: "Chương VI — Ví dụ & vận dụng", s: 7, side: "left" },
-    { label: "Chương VII — Câu hỏi & thảo luận", s: 8, side: "left" },
-    { label: "Chương VIII — Tóm tắt & so sánh", s: 9, side: "left" },
-    { label: "Chương IX — Ý nghĩa phương pháp", s: 10, side: "left" },
-    { label: "Kết — Lời cuối", s: 11, side: "left" },
+    {
+      label:
+        "Chương I: Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập môn Tư tưởng Hồ Chí Minh.",
+      s: 2,
+      side: "left",
+    },
+    {
+      label:
+        "Chương II: Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh.",
+      s: 3,
+      side: "left",
+    },
+    {
+      label:
+        "Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội.",
+      s: 4,
+      side: "left",
+    },
+    {
+      label:
+        "Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân.",
+      s: 5,
+      side: "left",
+    },
+    {
+      label:
+        "Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế.",
+      s: 6,
+      side: "left",
+    },
+    {
+      label:
+        "Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người.",
+      s: 7,
+      side: "left",
+    },
   ];
 
   // Chia TOC thành 2 trang cho đẹp
@@ -875,7 +1057,7 @@ export const spreadsToPages = (spreads, { onTocClick } = {}) => {
 
   const renderTocList = (items) => (
     <div className="wisdom-section">
-      <h4>Chương / Trang</h4>
+      <h4>MỤC LỤC CHI TIẾT</h4>
       {items.map((item, i) => {
         const targetIdx = idxFor(item.s, item.side);
         const printedPage = 2 * item.s; // số trang hiển thị trong nội dung (left của spread s)
@@ -903,7 +1085,7 @@ export const spreadsToPages = (spreads, { onTocClick } = {}) => {
     <div className="page" key="toc-L">
       <AutoFitPage className="page-left">
         <div className="page-header">
-          <h2>Mục lục</h2>
+          <h2>MỤC LỤC CHI TIẾT</h2>
           <div className="chapter-ornament">❦</div>
         </div>
         <div className="page-body">{renderTocList(tocLeft)}</div>
@@ -917,7 +1099,7 @@ export const spreadsToPages = (spreads, { onTocClick } = {}) => {
     <div className="page" key="toc-R">
       <AutoFitPage className="page-right">
         <div className="page-header">
-          <h2>Mục lục (tiếp)</h2>
+          <h2>MỤC LỤC CHI TIẾT (tiếp)</h2>
           <div className="chapter-ornament">❦</div>
         </div>
         <div className="page-body">{renderTocList(tocRight)}</div>
