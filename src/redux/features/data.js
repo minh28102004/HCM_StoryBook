@@ -1,1903 +1,1835 @@
 // src/data/chapter3.dataset.js
-// Phiên bản đã chuẩn hoá chủ đề & xoá viết tắt
+// Dataset: Chương III — Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội
+// Trọng tâm: Chương III, Mục 1: Vấn đề độc lập dân tộc
+// Yêu cầu: chia thành 3 chapter; không viết tắt “chủ nghĩa xã hội”;
+// fillAnswer chỉ có câu hỏi dạng khuyết (_______); chỉ lấy câu hỏi trắc nghiệm A/B/C/D.
 
-export const DATASET_VERSION = 9;
+export const DATASET_VERSION = 7;
 
 /**
  * Quy ước:
- * - Mỗi chương có id riêng; trong mỗi chương, câu hỏi đánh số từ 1.
- * - Không dùng viết tắt (ví dụ: TTXH → "tồn tại xã hội"; YTXH → "ý thức xã hội";
- *   LLSX → "lực lượng sản xuất"; QHSX → "quan hệ sản xuất";
- *   CSHT → "cơ sở hạ tầng (kinh tế)"; KTTT → "kiến trúc thượng tầng";
- *   KT–XH → "kinh tế – xã hội"; TLSX → "tư liệu sản xuất").
+ * - Mỗi chapter có id riêng; trong mỗi chapter, câu hỏi đánh số từ 1.
+ * - correct là chỉ số 0-based (0=A, 1=B, 2=C, 3=D).
  */
 
 export const chapters = [
-  /* =========================================================
-   * Chương 1 — Tồn tại xã hội & Ý thức xã hội (cơ sở và quan hệ)
-   * Nền tảng khái niệm, cấu trúc, thuộc tính và quan hệ biện chứng.
-   * ========================================================= */
+  // =====================================================================
+  // CHAPTER 1 — NỀN TẢNG QUYỀN ĐỘC LẬP VÀ KHÁT VỌNG TỰ DO (20 CÂU)
+  // =====================================================================
   {
-    id: 31001,
-    title: "Tồn tại xã hội & Ý thức xã hội (cơ sở và quan hệ)",
-    description:
-      "Khái niệm nền tảng, kết cấu, các thuộc tính và quan hệ biện chứng giữa tồn tại xã hội và ý thức xã hội; các vận dụng điển hình.",
-    icon: "🧩",
+    id: 330031,
+    title: "Phần 1: Nền tảng tư tưởng về độc lập dân tộc",
+    description: "Trắc nghiệm về độc lập, tự do và cơ sở quyền dân tộc.",
+    icon: "🧠",
     questions: [
-      // 1
       {
         id: 1,
-        term: "Tồn tại xã hội",
+        term: "Độc lập, tự do là quyền thiêng liêng của các dân tộc",
         definition:
-          "Toàn bộ đời sống vật chất và những điều kiện sinh hoạt vật chất của xã hội.",
-        quiz: {
-          question: "Theo chủ nghĩa duy vật lịch sử, “tồn tại xã hội” là gì?",
-          options: [
-            "Toàn bộ đời sống tinh thần của xã hội.",
-            "Toàn bộ đời sống vật chất và những điều kiện sinh hoạt vật chất của xã hội.",
-            "Tổng thể hệ thống chính trị của xã hội.",
-            "Những thành tựu văn hoá – nghệ thuật.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "___ là toàn bộ đời sống vật chất và những điều kiện sinh hoạt vật chất của xã hội.",
-        answer: "Tồn tại xã hội",
-        fullFillAnswer:
-          "Tồn tại xã hội là toàn bộ đời sống vật chất và những điều kiện sinh hoạt vật chất của xã hội.",
-      },
-      // 2
-      {
-        id: 2,
-        term: "Các yếu tố cơ bản của tồn tại xã hội",
-        definition:
-          "Hoàn cảnh địa lý, dân cư và phương thức sản xuất của cải vật chất.",
-        quiz: {
-          question: "Ba yếu tố cơ bản cấu thành tồn tại xã hội là gì?",
-          options: [
-            "Phương thức sản xuất, nhà nước và giai cấp.",
-            "Lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng.",
-            "Hoàn cảnh địa lý, dân cư và phương thức sản xuất của cải vật chất.",
-            "Môi trường tự nhiên, dân số và hệ thống chính trị.",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Ba yếu tố cơ bản của tồn tại xã hội: ___.",
-        answer:
-          "Hoàn cảnh địa lý, dân cư và phương thức sản xuất của cải vật chất",
-        fullFillAnswer:
-          "Tồn tại xã hội bao gồm: hoàn cảnh địa lý, dân cư và phương thức sản xuất của cải vật chất.",
-      },
-      // 3
-      {
-        id: 3,
-        term: "Yếu tố quyết định nhất của tồn tại xã hội",
-        definition:
-          "Phương thức sản xuất của cải vật chất giữ vai trò quyết định nhất.",
+          "Hồ Chí Minh khẳng định độc lập và tự do là quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc.",
         quiz: {
           question:
-            "Trong các yếu tố của tồn tại xã hội, yếu tố nào giữ vai trò quyết định nhất?",
+            "Theo tư tưởng Hồ Chí Minh, độc lập và tự do của một dân tộc trước hết là gì?",
           options: [
-            "Hoàn cảnh địa lý và điều kiện tự nhiên.",
-            "Yếu tố dân cư và mật độ dân số.",
-            "Phương thức sản xuất của cải vật chất.",
-            "Các yếu tố đều quan trọng như nhau.",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Yếu tố quyết định nhất của tồn tại xã hội là ___.",
-        answer: "Phương thức sản xuất của cải vật chất",
-        fullFillAnswer:
-          "Trong tồn tại xã hội, phương thức sản xuất của cải vật chất giữ vai trò quyết định nhất.",
-      },
-      // 4
-      {
-        id: 4,
-        term: "Ý thức xã hội",
-        definition:
-          "Phương diện sinh hoạt tinh thần của xã hội, nảy sinh từ và phản ánh tồn tại xã hội.",
-        quiz: {
-          question: "Ý thức xã hội được hiểu là gì?",
-          options: [
-            "Toàn bộ đời sống vật chất của xã hội.",
-            "Phương diện sinh hoạt tinh thần của xã hội, nảy sinh từ và phản ánh tồn tại xã hội.",
-            "Ý thức của từng cá nhân.",
-            "Hệ thống cơ quan công quyền.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "___ là phương diện sinh hoạt tinh thần của xã hội, nảy sinh từ và phản ánh tồn tại xã hội.",
-        answer: "Ý thức xã hội",
-        fullFillAnswer:
-          "Ý thức xã hội là phương diện sinh hoạt tinh thần của xã hội, nảy sinh từ và phản ánh tồn tại xã hội.",
-      },
-      // 5
-      {
-        id: 5,
-        term: "Kết cấu của ý thức xã hội",
-        definition: "Gồm hai cấp độ: tâm lý xã hội và hệ tư tưởng xã hội.",
-        quiz: {
-          question: "Kết cấu của ý thức xã hội gồm những cấp độ nào?",
-          options: [
-            "Ý thức cá nhân và ý thức tập thể.",
-            "Tâm lý xã hội và hệ tư tưởng xã hội.",
-            "Ý thức thông thường và ý thức lý luận.",
-            "Ý thức khoa học và ý thức phi khoa học.",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Hai cấp độ trong kết cấu ý thức xã hội: ___ và ___.",
-        answer: "Tâm lý xã hội và hệ tư tưởng xã hội",
-        fullFillAnswer:
-          "Kết cấu ý thức xã hội gồm hai cấp độ: tâm lý xã hội và hệ tư tưởng xã hội.",
-      },
-      // 6
-      {
-        id: 6,
-        term: "Hình thái ý thức xã hội (loại trừ)",
-        definition:
-          "“Ý thức sản xuất” không phải là một hình thái của ý thức xã hội.",
-        quiz: {
-          question: "Đâu KHÔNG phải là một hình thái của ý thức xã hội?",
-          options: [
-            "Ý thức chính trị.",
-            "Ý thức đạo đức.",
-            "Ý thức sản xuất.",
-            "Ý thức nghệ thuật.",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "___ không phải là một hình thái của ý thức xã hội.",
-        answer: "Ý thức sản xuất",
-        fullFillAnswer:
-          "Trong các hình thái ý thức xã hội, “ý thức sản xuất” không phải là một hình thái.",
-      },
-      // 7
-      {
-        id: 7,
-        term: "Quan hệ giữa tồn tại xã hội và ý thức xã hội",
-        definition:
-          "Tồn tại xã hội quyết định ý thức xã hội; ý thức xã hội có tính độc lập tương đối và tác động trở lại tồn tại xã hội.",
-        quiz: {
-          question:
-            "Luận điểm nào thể hiện đúng nhất mối quan hệ giữa tồn tại xã hội và ý thức xã hội?",
-          options: [
-            "Ý thức xã hội quyết định tồn tại xã hội.",
-            "Hai mặt này tồn tại độc lập, không liên quan.",
-            "Tồn tại xã hội quyết định ý thức xã hội, đồng thời ý thức xã hội có tính độc lập tương đối và tác động trở lại tồn tại xã hội.",
-            "Chúng quyết định lẫn nhau ngang bằng.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Mối quan hệ: ___ quyết định ___; ___ có tính độc lập tương đối và tác động trở lại ___.",
-        answer:
-          "Tồn tại xã hội quyết định ý thức xã hội; ý thức xã hội tác động trở lại tồn tại xã hội",
-        fullFillAnswer:
-          "Tồn tại xã hội quyết định ý thức xã hội; ý thức xã hội có tính độc lập tương đối và tác động trở lại tồn tại xã hội.",
-      },
-      // 8
-      {
-        id: 8,
-        term: "Tính giai cấp của ý thức xã hội",
-        definition:
-          "Trong xã hội có giai cấp, do tồn tại xã hội và lợi ích khác nhau (thậm chí đối lập), ý thức xã hội mang tính giai cấp.",
-        quiz: {
-          question:
-            "Vì sao trong xã hội có giai cấp, ý thức xã hội lại mang tính giai cấp?",
-          options: [
-            "Vì mỗi giai cấp có trình độ nhận thức khác nhau.",
-            "Vì tồn tại xã hội của các giai cấp khác nhau, lợi ích giai cấp đối lập nhau.",
-            "Vì giai cấp thống trị áp đặt tư tưởng bằng bạo lực.",
-            "Vì thói quen truyền thống khác nhau.",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Ý thức xã hội mang tính giai cấp vì ___.",
-        answer: "Tồn tại xã hội khác nhau và lợi ích giai cấp đối lập nhau",
-        fullFillAnswer:
-          "Ý thức xã hội mang tính giai cấp vì tồn tại xã hội khác nhau và lợi ích giai cấp đối lập nhau.",
-      },
-      // 9
-      {
-        id: 9,
-        term: "Tính lạc hậu của ý thức xã hội",
-        definition:
-          "Một số phong tục, tập quán cũ không còn phù hợp vẫn tồn tại trong đời sống hiện đại.",
-        quiz: {
-          question:
-            "Biểu hiện nào thể hiện rõ tính lạc hậu của ý thức xã hội so với tồn tại xã hội?",
-          options: [
-            "Một phát minh khoa học đi trước thời đại.",
-            "Phong tục, tập quán cũ lạc hậu vẫn tồn tại trong đời sống hiện đại.",
-            "Tác phẩm nghệ thuật phản ánh chân thực đời sống.",
-            "Lý luận chính trị mới đáp ứng thực tiễn.",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Tính lạc hậu của ý thức xã hội: ___.",
-        answer:
-          "Phong tục, tập quán lạc hậu vẫn tồn tại trong đời sống hiện đại",
-        fullFillAnswer:
-          "Tính lạc hậu của ý thức xã hội thể hiện khi phong tục, tập quán cũ vẫn tồn tại trong đời sống hiện đại.",
-      },
-      // 10
-      {
-        id: 10,
-        term: "Tính vượt trước của ý thức xã hội",
-        definition:
-          "Khi phản ánh đúng bản chất và có cơ sở khoa học, ý thức xã hội có thể dự báo, đi trước tồn tại xã hội.",
-        quiz: {
-          question: "Ý thức xã hội có thể vượt trước tồn tại xã hội khi nào?",
-          options: [
-            "Khi phản ánh đúng đắn các mối liên hệ bản chất và có cơ sở khoa học.",
-            "Khi là ý chí chủ quan của một vĩ nhân.",
-            "Khi phản ánh hư ảo, hoang đường.",
-            "Khi lặp lại tư tưởng quá khứ.",
+            "Quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc",
+            "Đặc ân do nước lớn ban phát",
+            "Quyền chỉ dành cho các nước phát triển",
+            "Mục tiêu phụ, không quan trọng",
           ],
           correct: 0,
         },
         fillAnswer:
-          "Ý thức xã hội vượt trước tồn tại xã hội khi nó có cơ sở khoa học và ___.",
-        answer: "Phản ánh đúng đắn các mối liên hệ bản chất, tất yếu",
+          "Theo tư tưởng Hồ Chí Minh, độc lập và tự do của một dân tộc trước hết là _______.",
+        answer: "Quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc",
         fullFillAnswer:
-          "Ý thức xã hội vượt trước tồn tại xã hội nếu phản ánh đúng bản chất và có cơ sở khoa học.",
+          "Hồ Chí Minh coi độc lập, tự do là quyền thiêng liêng và không ai có thể xâm phạm của mọi dân tộc.",
       },
-      // 11
-      {
-        id: 11,
-        term: "Tính kế thừa của ý thức xã hội",
-        definition:
-          "Giai đoạn sau kế thừa có chọn lọc các giá trị của giai đoạn trước để phát triển.",
-        quiz: {
-          question:
-            "“Tính kế thừa” trong sự phát triển của ý thức xã hội có nghĩa là gì?",
-          options: [
-            "Sao chép hoàn toàn tư tưởng trước.",
-            "Phủ định sạch trơn tư tưởng trước.",
-            "Kế thừa có chọn lọc các giá trị trước để phát triển.",
-            "Các hình thái ý thức phát triển độc lập.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Tính kế thừa: giai đoạn sau ___ các giá trị giai đoạn trước.",
-        answer: "Kế thừa có chọn lọc",
-        fullFillAnswer:
-          "Tính kế thừa nghĩa là kế thừa có chọn lọc các giá trị của giai đoạn trước.",
-      },
-      // 12
-      {
-        id: 12,
-        term: "Sự tác động trở lại của ý thức xã hội",
-        definition:
-          "Ý thức xã hội có thể thúc đẩy hoặc kìm hãm tồn tại xã hội tùy tính chất tiến bộ hay lạc hậu.",
-        quiz: {
-          question:
-            "Sự tác động trở lại của ý thức xã hội đối với tồn tại xã hội được thể hiện thế nào?",
-          options: [
-            "Luôn luôn thúc đẩy tồn tại xã hội.",
-            "Luôn luôn kìm hãm tồn tại xã hội.",
-            "Không có khả năng tác động.",
-            "Có thể thúc đẩy hoặc kìm hãm tùy tính chất tiến bộ hay lạc hậu.",
-          ],
-          correct: 3,
-        },
-        fillAnswer:
-          "Ý thức xã hội có thể ___ hoặc ___ tồn tại xã hội tùy tính chất của nó.",
-        answer: "Thúc đẩy hoặc kìm hãm",
-        fullFillAnswer:
-          "Ý thức xã hội có thể thúc đẩy hoặc kìm hãm tồn tại xã hội tùy tính chất tiến bộ hay lạc hậu.",
-      },
-      // 13
-      {
-        id: 13,
-        term: "Phân biệt tâm lý xã hội và hệ tư tưởng xã hội",
-        definition:
-          "Tâm lý xã hội: phản ánh trực tiếp, tự phát; Hệ tư tưởng xã hội: phản ánh gián tiếp, có hệ thống.",
-        quiz: {
-          question:
-            "Sự khác biệt cơ bản giữa tâm lý xã hội và hệ tư tưởng xã hội là gì?",
-          options: [
-            "Tâm lý xã hội mang tính lý luận, hệ tư tưởng tự phát.",
-            "Tâm lý xã hội phản ánh trực tiếp, tự phát; hệ tư tưởng xã hội phản ánh gián tiếp, có hệ thống.",
-            "Tâm lý xã hội chỉ ở giai cấp bị trị; hệ tư tưởng chỉ ở giai cấp thống trị.",
-            "Tâm lý xã hội không thay đổi; hệ tư tưởng luôn thay đổi.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Tâm lý xã hội: phản ánh ___, ___; Hệ tư tưởng xã hội: phản ánh ___, ___.",
-        answer: "Trực tiếp, tự phát; gián tiếp, có hệ thống",
-        fullFillAnswer:
-          "Khác biệt: tâm lý xã hội phản ánh trực tiếp, tự phát; hệ tư tưởng xã hội phản ánh gián tiếp, có hệ thống.",
-      },
-      // 14
-      {
-        id: 14,
-        term: "Kinh tế quyết định chính trị",
-        definition:
-          "Một cách diễn đạt vai trò quyết định của tồn tại xã hội (đặc biệt là phương thức sản xuất) đối với ý thức xã hội và thượng tầng chính trị.",
-        quiz: {
-          question:
-            "Câu “Kinh tế quyết định chính trị” nhấn mạnh nội dung cốt lõi nào?",
-          options: [
-            "Vai trò của đấu tranh giai cấp trong lịch sử.",
-            "Vai trò quyết định của tồn tại xã hội đối với ý thức xã hội.",
-            "Quan hệ biện chứng giữa lực lượng sản xuất và quan hệ sản xuất.",
-            "Tính độc lập tuyệt đối của ý thức xã hội.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Kinh tế quyết định chính trị → vai trò quyết định của ___ đối với ___.",
-        answer: "Tồn tại xã hội đối với ý thức xã hội",
-        fullFillAnswer:
-          "Phát biểu này nhấn mạnh vai trò quyết định của tồn tại xã hội đối với ý thức xã hội.",
-      },
-      // 15
-      {
-        id: 15,
-        term: "Không giản lược đạo đức vào kinh tế",
-        definition:
-          "Sai khi cho rằng chỉ cần kinh tế phát triển thì tự khắc đạo đức được giải quyết; vì ý thức xã hội có tính độc lập tương đối và có thể tác động tiêu cực nếu lạc hậu.",
-        quiz: {
-          question:
-            "Luận điểm “Kinh tế phát triển thì tự khắc vấn đề đạo đức sẽ được giải quyết” là đúng hay sai?",
-          options: [
-            "Đúng, vì tồn tại xã hội quyết định hoàn toàn ý thức xã hội.",
-            "Sai, vì bỏ qua tính độc lập tương đối và khả năng tác động tiêu cực của ý thức xã hội lạc hậu.",
-            "Đúng, vì đạo đức là một bộ phận của kinh tế.",
-            "Sai, vì đạo đức không liên quan đến kinh tế.",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Đáp án đúng: ___.",
-        answer:
-          "Sai, vì bỏ qua tính độc lập tương đối và khả năng tác động tiêu cực của ý thức xã hội lạc hậu",
-        fullFillAnswer:
-          "Sai: vì bỏ qua tính độc lập tương đối và khả năng tác động tiêu cực của ý thức xã hội lạc hậu.",
-      },
-      // 16
-      {
-        id: 16,
-        term: "Cách mạng công nghiệp 4.0 và tác động xã hội",
-        definition:
-          "Thay đổi phương thức sản xuất (tồn tại xã hội) kéo theo biến đổi đời sống tinh thần (ý thức xã hội).",
-        quiz: {
-          question:
-            "Cách mạng công nghiệp 4.0 là sự thay đổi của yếu tố nào và sẽ tác động đến yếu tố nào?",
-          options: [
-            "Thay đổi ý thức xã hội → tác động đến tồn tại xã hội.",
-            "Thay đổi phương thức sản xuất (tồn tại xã hội) → biến đổi trong ý thức xã hội.",
-            "Thay đổi điều kiện tự nhiên → tác động đến dân số.",
-            "Thay đổi kiến trúc thượng tầng → tác động đến cơ sở hạ tầng (kinh tế).",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Cách mạng 4.0 → thay đổi trong ___, kéo theo biến đổi trong ___.",
-        answer: "Phương thức sản xuất (tồn tại xã hội); ý thức xã hội",
-        fullFillAnswer:
-          "Cách mạng công nghiệp 4.0 làm thay đổi phương thức sản xuất, kéo theo biến đổi trong ý thức xã hội.",
-      },
-    ],
-  },
-
-  /* =========================================================
-   * Chương 2 — Học thuyết hình thái kinh tế – xã hội
-   * Phương thức sản xuất; lực lượng sản xuất – quan hệ sản xuất;
-   * cơ sở hạ tầng (kinh tế) – kiến trúc thượng tầng; quy luật phù hợp.
-   * ========================================================= */
-  {
-    id: 31002,
-    title: "Học thuyết hình thái kinh tế – xã hội",
-    description:
-      "Phương thức sản xuất; lực lượng sản xuất và quan hệ sản xuất; cơ sở hạ tầng (kinh tế) – kiến trúc thượng tầng; quy luật phù hợp trong phát triển xã hội.",
-    icon: "🏛️",
-    questions: [
-      // 1
-      {
-        id: 1,
-        term: "Nền tảng phát triển xã hội",
-        definition: "Sản xuất vật chất.",
-        quiz: {
-          question:
-            "Yếu tố nào là nền tảng của mọi hoạt động xã hội và quyết định sự phát triển của xã hội?",
-          options: [
-            "Sản xuất tinh thần",
-            "Sản xuất vật chất",
-            "Hoạt động chính trị",
-            "Giao lưu văn hoá",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Nền tảng của mọi hoạt động xã hội là ___.",
-        answer: "Sản xuất vật chất",
-        fullFillAnswer: "Nền tảng phát triển xã hội là sản xuất vật chất.",
-      },
-      // 2
       {
         id: 2,
-        term: "Khái niệm phương thức sản xuất",
+        term: "Truyền thống dựng nước, giữ nước và khát vọng độc lập",
         definition:
-          "Cách con người tác động vào tự nhiên để tạo ra của cải vật chất.",
-        quiz: {
-          question: "Phương thức sản xuất là gì?",
-          options: [
-            "Cách sản xuất tinh thần",
-            "Cách con người tác động vào tự nhiên để tạo ra của cải vật chất",
-            "Cách tổ chức đời sống xã hội",
-            "Cách giao tiếp và trao đổi kinh nghiệm",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Phương thức sản xuất là ___.",
-        answer:
-          "Cách con người tác động vào tự nhiên để tạo ra của cải vật chất",
-        fullFillAnswer:
-          "Phương thức sản xuất là cách con người tác động vào tự nhiên để tạo ra của cải vật chất.",
-      },
-      // 3
-      {
-        id: 3,
-        term: "Cấu thành phương thức sản xuất",
-        definition: "Lực lượng sản xuất và quan hệ sản xuất.",
+          "Lịch sử dựng nước và giữ nước gắn với truyền thống yêu nước và chống ngoại xâm, thể hiện khát vọng độc lập, tự do của dân tộc.",
         quiz: {
           question:
-            "Phương thức sản xuất được cấu thành từ hai yếu tố cơ bản nào?",
+            "Theo nội dung lý thuyết, lịch sử dựng nước và giữ nước của dân tộc Việt Nam nói lên điều gì nổi bật?",
           options: [
-            "Người lao động và công cụ",
-            "Lực lượng sản xuất và quan hệ sản xuất",
-            "Cơ sở hạ tầng (kinh tế) và kiến trúc thượng tầng",
-            "Tồn tại xã hội và ý thức xã hội",
+            "Khát vọng to lớn về độc lập cho dân tộc và tự do cho nhân dân",
+            "Mong muốn phụ thuộc để được bảo hộ",
+            "Chỉ chú trọng phát triển kinh tế, không quan tâm chính trị",
+            "Chỉ cần hòa bình là đủ, không cần độc lập",
           ],
-          correct: 1,
-        },
-        fillAnswer: "Phương thức sản xuất được cấu thành bởi ___ và ___.",
-        answer: "Lực lượng sản xuất và quan hệ sản xuất",
-        fullFillAnswer:
-          "Phương thức sản xuất = Lực lượng sản xuất và quan hệ sản xuất.",
-      },
-      // 4
-      {
-        id: 4,
-        term: "Bản chất lực lượng sản xuất",
-        definition:
-          "Quan hệ giữa con người với tự nhiên trong quá trình sản xuất.",
-        quiz: {
-          question: "Lực lượng sản xuất biểu hiện mối quan hệ nào?",
-          options: [
-            "Quan hệ giữa người với người trong sản xuất",
-            "Quan hệ giữa con người với tự nhiên trong sản xuất",
-            "Quan hệ giai cấp",
-            "Quan hệ nhà nước – công dân",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Lực lượng sản xuất biểu hiện quan hệ giữa con người với ___ trong quá trình sản xuất.",
-        answer: "Tự nhiên",
-        fullFillAnswer:
-          "Lực lượng sản xuất biểu hiện quan hệ giữa con người với tự nhiên trong quá trình sản xuất.",
-      },
-      // 5
-      {
-        id: 5,
-        term: "Tư liệu sản xuất",
-        definition: "Công cụ lao động và đối tượng lao động.",
-        quiz: {
-          question: "Yếu tố nào sau đây thuộc về tư liệu sản xuất?",
-          options: [
-            "Kinh nghiệm, kỹ năng",
-            "Sức khoẻ, thể lực",
-            "Công cụ lao động và đối tượng lao động",
-            "Tri thức khoa học",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Tư liệu sản xuất gồm ___ và ___.",
-        answer: "Công cụ lao động và đối tượng lao động",
-        fullFillAnswer:
-          "Tư liệu sản xuất gồm công cụ lao động và đối tượng lao động.",
-      },
-      // 6
-      {
-        id: 6,
-        term: "Yếu tố quyết định của lực lượng sản xuất",
-        definition: "Người lao động.",
-        quiz: {
-          question:
-            "Trong các yếu tố của lực lượng sản xuất, yếu tố nào được xem là cơ bản và quyết định nhất?",
-          options: [
-            "Tư liệu sản xuất",
-            "Công cụ lao động",
-            "Người lao động",
-            "Đối tượng lao động",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Yếu tố cơ bản và quyết định nhất của lực lượng sản xuất là ___.",
-        answer: "Người lao động",
-        fullFillAnswer:
-          "Yếu tố cơ bản và quyết định nhất của lực lượng sản xuất là người lao động.",
-      },
-      // 7
-      {
-        id: 7,
-        term: "Yếu tố cách mạng nhất trong lực lượng sản xuất",
-        definition:
-          "Công cụ lao động (bao gồm cả công nghệ) là yếu tố động và cách mạng nhất, thước đo trình độ chinh phục tự nhiên.",
-        quiz: {
-          question:
-            "Trong lực lượng sản xuất, yếu tố nào động nhất và cách mạng nhất, là thước đo trình độ chinh phục tự nhiên?",
-          options: [
-            "Người lao động",
-            "Đối tượng lao động",
-            "Công cụ lao động (bao gồm công nghệ)",
-            "Tri thức khoa học",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Yếu tố động và cách mạng nhất trong lực lượng sản xuất là ___.",
-        answer: "Công cụ lao động (bao gồm công nghệ)",
-        fullFillAnswer:
-          "Công cụ lao động (bao gồm công nghệ) là yếu tố động nhất và cách mạng nhất trong lực lượng sản xuất.",
-      },
-      // 8
-      {
-        id: 8,
-        term: "Bản chất quan hệ sản xuất",
-        definition:
-          "Mối quan hệ giữa người với người trong quá trình sản xuất (sản xuất, phân phối, trao đổi, tiêu dùng).",
-        quiz: {
-          question:
-            "Quan hệ sản xuất là mối quan hệ giữa người với người trong quá trình nào?",
-          options: [
-            "Giao lưu văn hoá",
-            "Đấu tranh chính trị",
-            "Sản xuất (sản xuất, phân phối, trao đổi, tiêu dùng)",
-            "Hoạt động nghệ thuật",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Quan hệ sản xuất là quan hệ giữa người với người trong toàn bộ quá trình ___.",
-        answer: "Sản xuất (sản xuất, phân phối, trao đổi, tiêu dùng)",
-        fullFillAnswer:
-          "Quan hệ sản xuất là quan hệ giữa người với người trong toàn bộ quá trình sản xuất xã hội.",
-      },
-      // 9
-      {
-        id: 9,
-        term: "Mặt quyết định trong quan hệ sản xuất",
-        definition: "Quan hệ sở hữu đối với tư liệu sản xuất.",
-        quiz: {
-          question:
-            "Trong ba mặt của quan hệ sản xuất, mặt nào giữ vai trò quyết định các mặt còn lại?",
-          options: [
-            "Quan hệ tổ chức và quản lý sản xuất",
-            "Quan hệ phân phối sản phẩm",
-            "Quan hệ sở hữu đối với tư liệu sản xuất",
-            "Quan hệ trao đổi sản phẩm",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Trong quan hệ sản xuất, mặt quyết định là quan hệ ___ đối với tư liệu sản xuất.",
-        answer: "Sở hữu",
-        fullFillAnswer:
-          "Trong quan hệ sản xuất, quan hệ sở hữu đối với tư liệu sản xuất giữ vai trò quyết định.",
-      },
-      // 10
-      {
-        id: 10,
-        term: "Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất",
-        definition:
-          "Quy luật cơ bản, phổ biến của sự vận động và phát triển xã hội.",
-        quiz: {
-          question:
-            "Quy luật cơ bản, phổ biến của sự vận động và phát triển xã hội là quy luật nào?",
-          options: [
-            "Quy luật đấu tranh giai cấp",
-            "Quy luật tồn tại xã hội quyết định ý thức xã hội",
-            "Quy luật về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất",
-            "Quy luật kế thừa",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Quy luật cơ bản: sự phù hợp của ___ với trình độ ___ .",
-        answer:
-          "Sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất",
-        fullFillAnswer:
-          "Quy luật phát triển xã hội cơ bản là sự phù hợp của quan hệ sản xuất với trình độ lực lượng sản xuất.",
-      },
-      // 11
-      {
-        id: 11,
-        term: "Vai trò của quan hệ sản xuất phù hợp",
-        definition:
-          "Khi quan hệ sản xuất phù hợp với lực lượng sản xuất, nó thúc đẩy lực lượng sản xuất phát triển.",
-        quiz: {
-          question:
-            "Khi quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất, nó sẽ có vai trò gì?",
-          options: [
-            "Kìm hãm lực lượng sản xuất",
-            "Thúc đẩy lực lượng sản xuất phát triển",
-            "Không ảnh hưởng đến lực lượng sản xuất",
-            "Phá vỡ lực lượng sản xuất hiện có",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Khi quan hệ sản xuất phù hợp với lực lượng sản xuất, nó ___ lực lượng sản xuất.",
-        answer: "Thúc đẩy lực lượng sản xuất phát triển",
-        fullFillAnswer:
-          "Quan hệ sản xuất phù hợp sẽ thúc đẩy lực lượng sản xuất phát triển.",
-      },
-      // 12
-      {
-        id: 12,
-        term: "Nguyên nhân sâu xa của cách mạng xã hội",
-        definition:
-          "Mâu thuẫn giữa quan hệ sản xuất đã lỗi thời và lực lượng sản xuất đã phát triển.",
-        quiz: {
-          question: "Nguyên nhân sâu xa của các cuộc cách mạng xã hội là gì?",
-          options: [
-            "Mâu thuẫn đảng phái",
-            "Mâu thuẫn giữa quan hệ sản xuất lỗi thời và lực lượng sản xuất đã phát triển",
-            "Mâu thuẫn giữa các quốc gia, dân tộc",
-            "Mâu thuẫn về ý thức hệ",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Cách mạng xã hội bắt nguồn từ mâu thuẫn giữa ___ lỗi thời và ___ đã phát triển.",
-        answer: "Quan hệ sản xuất lỗi thời và lực lượng sản xuất đã phát triển",
-        fullFillAnswer:
-          "Nguyên nhân sâu xa của cách mạng xã hội là mâu thuẫn giữa quan hệ sản xuất lỗi thời và lực lượng sản xuất đã phát triển.",
-      },
-      // 13
-      {
-        id: 13,
-        term: "Cơ sở hạ tầng (kinh tế) của xã hội",
-        definition:
-          "Toàn bộ các quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội.",
-        quiz: {
-          question: "Cơ sở hạ tầng (kinh tế) của một xã hội là gì?",
-          options: [
-            "Toàn bộ các quan điểm, tư tưởng xã hội",
-            "Toàn bộ các thiết chế chính trị – xã hội",
-            "Toàn bộ các quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội",
-            "Toàn bộ các công trình vật chất kỹ thuật",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Cơ sở hạ tầng (kinh tế) là toàn bộ các ___ hợp thành cơ cấu kinh tế của xã hội.",
-        answer: "Quan hệ sản xuất",
-        fullFillAnswer:
-          "Cơ sở hạ tầng (kinh tế) là toàn bộ các quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội.",
-      },
-      // 14
-      {
-        id: 14,
-        term: "Kiến trúc thượng tầng",
-        definition:
-          "Toàn bộ các quan điểm và các thiết chế chính trị – xã hội tương ứng, hình thành trên một cơ sở hạ tầng (kinh tế) nhất định.",
-        quiz: {
-          question: "Kiến trúc thượng tầng là gì?",
-          options: [
-            "Toàn bộ các quan hệ sản xuất của xã hội",
-            "Toàn bộ sinh hoạt vật chất của xã hội",
-            "Toàn bộ các quan điểm và thiết chế chính trị – xã hội tương ứng, được hình thành trên một cơ sở hạ tầng (kinh tế) nhất định",
-            "Trình độ phát triển của lực lượng sản xuất",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Kiến trúc thượng tầng là toàn bộ các quan điểm và các thiết chế ___ – ___ hình thành trên cơ sở hạ tầng (kinh tế) nhất định.",
-        answer: "Chính trị – xã hội",
-        fullFillAnswer:
-          "Kiến trúc thượng tầng là các quan điểm và thiết chế chính trị – xã hội hình thành trên một cơ sở hạ tầng (kinh tế) nhất định.",
-      },
-      // 15
-      {
-        id: 15,
-        term: "Quan hệ cơ sở hạ tầng (kinh tế) – kiến trúc thượng tầng",
-        definition: "Cơ sở hạ tầng (kinh tế) quyết định kiến trúc thượng tầng.",
-        quiz: {
-          question:
-            "Trong mối quan hệ giữa cơ sở hạ tầng (kinh tế) và kiến trúc thượng tầng, yếu tố nào giữ vai trò quyết định?",
-          options: [
-            "Kiến trúc thượng tầng quyết định cơ sở hạ tầng (kinh tế)",
-            "Cơ sở hạ tầng (kinh tế) quyết định kiến trúc thượng tầng",
-            "Không có quan hệ với nhau",
-            "Quyết định lẫn nhau ngang bằng",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Trong quan hệ cơ sở hạ tầng (kinh tế) – kiến trúc thượng tầng, ___ quyết định ___.",
-        answer: "Cơ sở hạ tầng (kinh tế) quyết định kiến trúc thượng tầng",
-        fullFillAnswer:
-          "Trong quan hệ cơ sở hạ tầng (kinh tế) – kiến trúc thượng tầng, cơ sở hạ tầng (kinh tế) giữ vai trò quyết định.",
-      },
-      // 16
-      {
-        id: 16,
-        term: "Yếu tố kiến trúc thượng tầng tác động mạnh nhất đến cơ sở hạ tầng (kinh tế)",
-        definition: "Nhà nước.",
-        quiz: {
-          question:
-            "Yếu tố nào trong kiến trúc thượng tầng có vai trò tác động trực tiếp và mạnh mẽ nhất tới cơ sở hạ tầng (kinh tế)?",
-          options: ["Nhà nước", "Tôn giáo", "Nghệ thuật", "Đạo đức"],
           correct: 0,
         },
         fillAnswer:
-          "Trong kiến trúc thượng tầng, yếu tố tác động trực tiếp và mạnh nhất đến cơ sở hạ tầng (kinh tế) là ___.",
-        answer: "Nhà nước",
+          "Theo nội dung lý thuyết, lịch sử dựng nước và giữ nước của dân tộc Việt Nam nói lên _______.",
+        answer: "Khát vọng to lớn về độc lập cho dân tộc và tự do cho nhân dân",
         fullFillAnswer:
-          "Trong kiến trúc thượng tầng, nhà nước tác động trực tiếp và mạnh nhất tới cơ sở hạ tầng (kinh tế).",
+          "Truyền thống yêu nước và chống ngoại xâm làm nổi bật khát vọng độc lập dân tộc và tự do cho nhân dân.",
       },
-      // 17
+      {
+        id: 3,
+        term: "Khát vọng của Hồ Chí Minh về tự do và độc lập",
+        definition:
+          "Hồ Chí Minh nhiều lần khẳng định mong muốn lớn nhất là đồng bào được tự do và Tổ quốc được độc lập.",
+        quiz: {
+          question: "Hồ Chí Minh từng nói điều Người cần nhất trên đời là gì?",
+          options: [
+            "Đồng bào được tự do, Tổ quốc được độc lập",
+            "Giàu có cá nhân và danh vọng",
+            "Mở rộng lãnh thổ bằng mọi giá",
+            "Chỉ cần độc lập hình thức, không cần tự do cho dân",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Hồ Chí Minh từng nói điều Người cần nhất trên đời là _______.",
+        answer: "Đồng bào được tự do, Tổ quốc được độc lập",
+        fullFillAnswer:
+          "Người đặt tự do của nhân dân và độc lập của Tổ quốc lên hàng đầu.",
+      },
+      {
+        id: 4,
+        term: "Sự kiện năm 1919 và bản Yêu sách của nhân dân An Nam",
+        definition:
+          "Năm 1919, tại Hội nghị ở Véc-xây, Hồ Chí Minh gửi bản Yêu sách của nhân dân An Nam để đòi quyền cho dân tộc.",
+        quiz: {
+          question:
+            "Năm 1919, tại Hội nghị ở Véc-xây (Pháp), Hồ Chí Minh đã gửi văn kiện nào để đòi quyền cho dân tộc Việt Nam?",
+          options: [
+            "Bản Yêu sách của nhân dân An Nam",
+            "Tuyên ngôn Độc lập",
+            "Lời kêu gọi toàn quốc kháng chiến",
+            "Di chúc",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Năm 1919, tại Hội nghị ở Véc-xây (Pháp), Hồ Chí Minh đã gửi _______ để đòi quyền cho dân tộc Việt Nam.",
+        answer: "Bản Yêu sách của nhân dân An Nam",
+        fullFillAnswer:
+          "Sự kiện năm 1919 gắn với việc Người gửi bản Yêu sách của nhân dân An Nam tới Hội nghị ở Véc-xây.",
+      },
+      {
+        id: 5,
+        term: "Nội dung chính của bản Yêu sách năm 1919",
+        definition:
+          "Bản Yêu sách nhấn mạnh đòi quyền bình đẳng về pháp lý và các quyền tự do, dân chủ.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, hai nội dung chính của bản Yêu sách của nhân dân An Nam (1919) là gì?",
+          options: [
+            "Đòi quyền bình đẳng về pháp lý và đòi các quyền tự do, dân chủ",
+            "Đòi viện trợ kinh tế và mở rộng thuộc địa",
+            "Đòi phong tước và quyền lợi cho một giai cấp",
+            "Đòi đặc quyền cho thiểu số",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, hai nội dung chính của bản Yêu sách của nhân dân An Nam (1919) là _______.",
+        answer:
+          "Đòi quyền bình đẳng về pháp lý và đòi các quyền tự do, dân chủ",
+        fullFillAnswer:
+          "Bản Yêu sách tập trung vào bình đẳng pháp lý và quyền tự do, dân chủ cho nhân dân.",
+      },
+      {
+        id: 6,
+        term: "Ý nghĩa của sự kiện Yêu sách 1919",
+        definition:
+          "Dù không được chấp nhận, sự kiện cho thấy tư tưởng về quyền bình đẳng, tự do của các dân tộc thuộc địa đã hình thành.",
+        quiz: {
+          question:
+            "Dù bản Yêu sách năm 1919 không được chấp nhận, sự kiện đó cho thấy điều gì về tư tưởng Hồ Chí Minh?",
+          options: [
+            "Tư tưởng về quyền bình đẳng và tự do của các dân tộc thuộc địa đã hình thành",
+            "Tư tưởng từ bỏ độc lập để đổi lấy bảo hộ",
+            "Tư tưởng chỉ dựa vào sự ban phát của nước lớn",
+            "Tư tưởng không quan tâm đến quyền con người",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Dù bản Yêu sách năm 1919 không được chấp nhận, sự kiện đó cho thấy _______.",
+        answer:
+          "Tư tưởng về quyền bình đẳng và tự do của các dân tộc thuộc địa đã hình thành",
+        fullFillAnswer:
+          "Sự kiện thể hiện bước hình thành rõ nét tư tưởng về quyền dân tộc (bình đẳng, tự do) trong điều kiện thuộc địa.",
+      },
+      {
+        id: 7,
+        term: "Cơ sở lý luận: quyền con người và quyền dân tộc",
+        definition:
+          "Hồ Chí Minh dựa vào các quyền tự do, bình đẳng và quyền con người để khẳng định quyền dân tộc.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, Hồ Chí Minh căn cứ vào những quyền nào để khẳng định quyền dân tộc?",
+          options: [
+            "Quyền tự do, bình đẳng và quyền con người (những quyền không ai có thể xâm phạm)",
+            "Quyền chinh phục của nước mạnh",
+            "Quyền ưu tiên của thực dân",
+            "Quyền đặc ân của thiểu số",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, Hồ Chí Minh căn cứ vào _______ để khẳng định quyền dân tộc.",
+        answer:
+          "Quyền tự do, bình đẳng và quyền con người (những quyền không ai có thể xâm phạm)",
+        fullFillAnswer:
+          "Người lấy nền tảng quyền con người và các quyền tự do, bình đẳng để khẳng định quyền dân tộc.",
+      },
+      {
+        id: 8,
+        term: "Tham chiếu các bản tuyên ngôn lớn",
+        definition:
+          "Trong lập luận, Hồ Chí Minh tham chiếu Tuyên ngôn Độc lập (1776) và Tuyên ngôn Nhân quyền và Dân quyền (1791).",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, Hồ Chí Minh đã tham chiếu những văn kiện nào để củng cố lập luận về các quyền thiêng liêng?",
+          options: [
+            "Tuyên ngôn Độc lập của cách mạng Mỹ (1776) và Tuyên ngôn Nhân quyền và Dân quyền của cách mạng Pháp (1791)",
+            "Hiến chương Liên hợp quốc và Tuyên ngôn Thế giới về Nhân quyền",
+            "Hiệp định Giơ-ne-vơ và Hiệp định Pa-ri",
+            "Một văn kiện duy nhất của riêng Việt Nam",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, Hồ Chí Minh đã tham chiếu _______ để củng cố lập luận về các quyền thiêng liêng.",
+        answer:
+          "Tuyên ngôn Độc lập của cách mạng Mỹ (1776) và Tuyên ngôn Nhân quyền và Dân quyền của cách mạng Pháp (1791)",
+        fullFillAnswer:
+          "Người viện dẫn các tuyên ngôn lớn về quyền con người để khẳng định quyền dân tộc.",
+      },
+      {
+        id: 9,
+        term: "Nguyên lý bình đẳng giữa các dân tộc",
+        definition:
+          "Hồ Chí Minh khẳng định tất cả các dân tộc sinh ra bình đẳng, có quyền sống, quyền sung sướng và quyền tự do.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, các dân tộc trên thế giới có quyền cơ bản nào?",
+          options: [
+            "Quyền sống, quyền sung sướng và quyền tự do",
+            "Quyền xâm lược và chiếm đoạt",
+            "Quyền cai trị dân tộc khác",
+            "Quyền đặc quyền cho nước lớn",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, các dân tộc trên thế giới có quyền _______.",
+        answer: "Quyền sống, quyền sung sướng và quyền tự do",
+        fullFillAnswer:
+          "Người nhấn mạnh quyền sống, quyền sung sướng và quyền tự do là những quyền cơ bản của mọi dân tộc.",
+      },
+      {
+        id: 10,
+        term: "Mục tiêu trong Chánh cương vắn tắt năm 1930",
+        definition:
+          "Trong Chánh cương vắn tắt, mục tiêu chính trị là đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến, làm cho nước Nam hoàn toàn độc lập.",
+        quiz: {
+          question:
+            "Theo Chánh cương vắn tắt của Đảng năm 1930, mục tiêu chính trị được xác định là gì?",
+          options: [
+            "Đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến; làm cho nước Nam hoàn toàn độc lập",
+            "Liên minh vĩnh viễn với thực dân để phát triển",
+            "Tập trung kinh tế, không cần độc lập",
+            "Chỉ cải cách nhỏ trong khuôn khổ thuộc địa",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo Chánh cương vắn tắt của Đảng năm 1930, mục tiêu chính trị là _______.",
+        answer:
+          "Đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến; làm cho nước Nam hoàn toàn độc lập",
+        fullFillAnswer:
+          "Chánh cương vắn tắt năm 1930 nêu rõ mục tiêu đánh đổ đế quốc và phong kiến, giành độc lập hoàn toàn.",
+      },
+      {
+        id: 11,
+        term: "Tuyên ngôn Độc lập năm 1945 và quyết tâm bảo vệ độc lập",
+        definition:
+          "Trong Tuyên ngôn Độc lập, Hồ Chí Minh khẳng định quyền độc lập của Việt Nam và quyết tâm giữ vững quyền đó.",
+        quiz: {
+          question:
+            "Trong Tuyên ngôn Độc lập năm 1945, nội dung nào thể hiện rõ quyết tâm bảo vệ độc lập?",
+          options: [
+            "Toàn thể dân Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do và độc lập",
+            "Chấp nhận từ bỏ độc lập để đổi hòa bình",
+            "Giao toàn bộ quyền đối ngoại cho nước khác",
+            "Không cần lực lượng bảo vệ Tổ quốc",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong Tuyên ngôn Độc lập năm 1945, nội dung thể hiện rõ quyết tâm bảo vệ độc lập là _______.",
+        answer:
+          "Toàn thể dân Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do và độc lập",
+        fullFillAnswer:
+          "Tuyên ngôn Độc lập năm 1945 nêu rõ ý chí toàn dân bảo vệ nền độc lập vừa giành được.",
+      },
+      {
+        id: 12,
+        term: "Ý chí bảo vệ độc lập thể hiện trong kháng chiến",
+        definition:
+          "Ý chí và quyết tâm bảo vệ độc lập được thể hiện trong các cuộc kháng chiến chống Pháp và chống Mỹ.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, ý chí và quyết tâm bảo vệ độc lập được thể hiện rõ trong những cuộc kháng chiến nào?",
+          options: [
+            "Kháng chiến chống Pháp và kháng chiến chống Mỹ",
+            "Chỉ kháng chiến chống Pháp",
+            "Chỉ kháng chiến chống Mỹ",
+            "Không thể hiện trong kháng chiến nào",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, ý chí và quyết tâm bảo vệ độc lập được thể hiện rõ trong _______.",
+        answer: "Kháng chiến chống Pháp và kháng chiến chống Mỹ",
+        fullFillAnswer:
+          "Lý thuyết nêu rõ ý chí độc lập thể hiện trong cả hai cuộc kháng chiến chống Pháp và chống Mỹ.",
+      },
+      {
+        id: 13,
+        term: "Thư gửi Liên hợp quốc năm 1946",
+        definition:
+          "Hồ Chí Minh khẳng định mong muốn hòa bình nhưng kiên quyết chiến đấu để bảo vệ độc lập và toàn vẹn lãnh thổ.",
+        quiz: {
+          question:
+            "Trong thư gửi Liên hợp quốc năm 1946, Hồ Chí Minh nhấn mạnh điều gì?",
+          options: [
+            "Nhân dân Việt Nam mong muốn hòa bình nhưng kiên quyết chiến đấu đến cùng để bảo vệ toàn vẹn lãnh thổ và độc lập cho đất nước",
+            "Chấp nhận bị chia cắt để tránh chiến tranh",
+            "Trao quyền quyết định đối ngoại cho nước khác",
+            "Không cần bảo vệ độc lập nếu khó khăn",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong thư gửi Liên hợp quốc năm 1946, Hồ Chí Minh nhấn mạnh _______.",
+        answer:
+          "Nhân dân Việt Nam mong muốn hòa bình nhưng kiên quyết chiến đấu đến cùng để bảo vệ toàn vẹn lãnh thổ và độc lập cho đất nước",
+        fullFillAnswer:
+          "Thư năm 1946 thể hiện rõ: yêu hòa bình nhưng không nhân nhượng độc lập và toàn vẹn lãnh thổ.",
+      },
+      {
+        id: 14,
+        term: "Lời kêu gọi toàn quốc kháng chiến 19-12-1946",
+        definition:
+          "Lời kêu gọi thể hiện quyết tâm sắt đá: thà hy sinh tất cả chứ nhất định không chịu mất nước, không chịu làm nô lệ.",
+        quiz: {
+          question:
+            "Nội dung “thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ” thể hiện điều gì?",
+          options: [
+            "Quyết tâm sắt đá bảo vệ độc lập dân tộc",
+            "Ý định thỏa hiệp vô điều kiện",
+            "Chỉ là khẩu hiệu, không có giá trị",
+            "Sự phủ nhận quyền độc lập",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Nội dung “thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ” thể hiện _______.",
+        answer: "Quyết tâm sắt đá bảo vệ độc lập dân tộc",
+        fullFillAnswer:
+          "Câu nói là biểu hiện điển hình của quyết tâm không mất nước, không làm nô lệ.",
+      },
+      {
+        id: 15,
+        term: "Chân lý thời đại: Không có gì quý hơn độc lập, tự do",
+        definition:
+          "Trong bối cảnh chiến tranh ác liệt, Hồ Chí Minh nêu chân lý: không có gì quý hơn độc lập, tự do.",
+        quiz: {
+          question:
+            "Chân lý “Không có gì quý hơn độc lập, tự do” nhấn mạnh điều gì?",
+          options: [
+            "Độc lập và tự do là giá trị cao nhất, phải kiên quyết bảo vệ",
+            "Độc lập không quan trọng bằng kinh tế",
+            "Tự do có thể đánh đổi vô điều kiện",
+            "Chỉ cần ổn định, không cần độc lập",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Chân lý “Không có gì quý hơn độc lập, tự do” nhấn mạnh _______.",
+        answer: "Độc lập và tự do là giá trị cao nhất, phải kiên quyết bảo vệ",
+        fullFillAnswer:
+          "Câu nói khẳng định giá trị tối thượng của độc lập và tự do trong mục tiêu cách mạng.",
+      },
+      {
+        id: 16,
+        term: "Thủ đoạn của chủ nghĩa thực dân đế quốc",
+        definition:
+          "Thực dân đế quốc lập chính phủ bù nhìn và tuyên truyền “độc lập tự do” giả hiệu để che đậy bản chất xâm lược.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, bọn thực dân đế quốc thường dùng thủ đoạn nào để che đậy bản chất xâm lược?",
+          options: [
+            "Lập chính phủ bù nhìn bản xứ và tuyên truyền “độc lập tự do” giả hiệu",
+            "Trao độc lập hoàn toàn ngay lập tức",
+            "Tôn trọng tuyệt đối quyền tự quyết của thuộc địa",
+            "Rút quân vô điều kiện và bồi thường",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, bọn thực dân đế quốc thường dùng thủ đoạn _______ để che đậy bản chất xâm lược.",
+        answer:
+          "Lập chính phủ bù nhìn bản xứ và tuyên truyền “độc lập tự do” giả hiệu",
+        fullFillAnswer:
+          "Lý thuyết nêu rõ thủ đoạn “độc lập tự do” giả hiệu nhằm che đậy bản chất xâm lược.",
+      },
       {
         id: 17,
-        term: "Hệ quả đổi thay cơ sở hạ tầng (kinh tế)",
+        term: "Độc lập phải là độc lập thật sự, hoàn toàn và triệt để",
         definition:
-          "Biểu hiện tính quyết định của cơ sở hạ tầng (kinh tế) đối với kiến trúc thượng tầng.",
+          "Hồ Chí Minh nhấn mạnh độc lập phải đầy đủ trên mọi lĩnh vực; độc lập hình thức không có ý nghĩa.",
         quiz: {
-          question:
-            "Sự thay đổi của cơ sở hạ tầng (kinh tế) sẽ dẫn đến sự thay đổi của kiến trúc thượng tầng. Đây là tính chất gì của mối quan hệ?",
+          question: "Theo Hồ Chí Minh, độc lập dân tộc phải như thế nào?",
           options: [
-            "Tính độc lập tương đối của kiến trúc thượng tầng",
-            "Tính quyết định của cơ sở hạ tầng (kinh tế)",
-            "Tính tác động trở lại của kiến trúc thượng tầng",
-            "Tính kế thừa của kiến trúc thượng tầng",
+            "Độc lập thật sự, hoàn toàn và triệt để trên tất cả các lĩnh vực",
+            "Chỉ cần độc lập danh nghĩa là đủ",
+            "Chỉ cần độc lập về văn hóa",
+            "Chỉ cần độc lập về kinh tế, không cần chính trị",
           ],
-          correct: 1,
+          correct: 0,
         },
-        fillAnswer:
-          "Sự đổi thay kiến trúc thượng tầng do cơ sở hạ tầng (kinh tế) thay đổi thể hiện tính ___ của ___.",
-        answer: "Tính quyết định của cơ sở hạ tầng (kinh tế)",
+        fillAnswer: "Theo Hồ Chí Minh, độc lập dân tộc phải là _______.",
+        answer:
+          "Độc lập thật sự, hoàn toàn và triệt để trên tất cả các lĩnh vực",
         fullFillAnswer:
-          "Cơ sở hạ tầng (kinh tế) thay đổi kéo theo kiến trúc thượng tầng thay đổi – biểu hiện tính quyết định của cơ sở hạ tầng (kinh tế).",
+          "Người khẳng định độc lập phải toàn diện, không thể chỉ là hình thức hoặc một phần.",
       },
-      // 18
+
+      // ===== BỔ SUNG 3 CÂU (18–20) =====
       {
         id: 18,
-        term: "Tính lịch sử – tự nhiên của phát triển xã hội",
+        term: "Mục đích viện dẫn các bản tuyên ngôn lớn",
         definition:
-          "Sự phát triển của các hình thái kinh tế – xã hội là một quá trình lịch sử – tự nhiên.",
+          "Hồ Chí Minh viện dẫn các tuyên ngôn lớn để khẳng định tính phổ quát và chính nghĩa của quyền độc lập, tự do.",
         quiz: {
           question:
-            "Theo chủ nghĩa Mác – Lênin, sự phát triển của các hình thái kinh tế – xã hội là:",
+            "Việc Hồ Chí Minh tham chiếu các bản tuyên ngôn lớn về quyền con người chủ yếu nhằm mục đích gì?",
           options: [
-            "Một quá trình hoàn toàn ngẫu nhiên",
-            "Một quá trình lịch sử – tự nhiên",
-            "Một quá trình do ý chí của các vĩ nhân quyết định",
-            "Một quá trình tuần hoàn, lặp đi lặp lại",
+            "Khẳng định quyền độc lập, tự do là giá trị phổ quát và cuộc đấu tranh giành độc lập là chính nghĩa",
+            "Xin đặc ân từ các nước lớn",
+            "Phủ nhận quyền con người của các dân tộc thuộc địa",
+            "Chứng minh độc lập chỉ là vấn đề hình thức",
           ],
-          correct: 1,
+          correct: 0,
         },
         fillAnswer:
-          "Sự phát triển các hình thái kinh tế – xã hội là một quá trình ___ – ___.",
-        answer: "Lịch sử – tự nhiên",
+          "Việc Hồ Chí Minh tham chiếu các bản tuyên ngôn lớn chủ yếu nhằm _______.",
+        answer:
+          "Khẳng định quyền độc lập, tự do là giá trị phổ quát và cuộc đấu tranh giành độc lập là chính nghĩa",
         fullFillAnswer:
-          "Các hình thái kinh tế – xã hội phát triển theo quá trình lịch sử – tự nhiên.",
+          "Người dùng giá trị phổ quát về quyền con người để củng cố lập luận về quyền độc lập, tự do của các dân tộc.",
       },
-      // 19
       {
         id: 19,
-        term: "Các hình thái kinh tế – xã hội trong lịch sử (loại trừ)",
+        term: "Từ quyền con người suy ra quyền dân tộc",
         definition:
-          "“Toàn cầu hoá” không phải là một hình thái kinh tế – xã hội lịch sử.",
+          "Trong lập luận, từ quyền con người có thể suy ra quyền sống, quyền sung sướng và quyền tự do của các dân tộc.",
         quiz: {
           question:
-            "Đâu không phải là một trong những hình thái kinh tế – xã hội đã tồn tại trong lịch sử?",
+            "Trong tư tưởng Hồ Chí Minh, từ việc thừa nhận quyền con người có thể rút ra kết luận nào về các dân tộc?",
           options: [
-            "Cộng sản nguyên thuỷ",
-            "Chiếm hữu nô lệ",
-            "Tư bản chủ nghĩa",
-            "Toàn cầu hoá",
+            "Mọi dân tộc đều có quyền sống, quyền sung sướng và quyền tự do",
+            "Chỉ các dân tộc mạnh mới có quyền sống",
+            "Chỉ các dân tộc có thuộc địa mới có quyền tự do",
+            "Các dân tộc nhỏ không có quyền bình đẳng",
           ],
-          correct: 3,
+          correct: 0,
         },
-        fillAnswer: "___ không phải là một hình thái kinh tế – xã hội lịch sử.",
-        answer: "Toàn cầu hoá",
+        fillAnswer:
+          "Trong tư tưởng Hồ Chí Minh, từ quyền con người có thể rút ra rằng _______.",
+        answer:
+          "Mọi dân tộc đều có quyền sống, quyền sung sướng và quyền tự do",
         fullFillAnswer:
-          "Toàn cầu hoá không phải là một hình thái kinh tế – xã hội lịch sử.",
+          "Hồ Chí Minh nhấn mạnh sự thống nhất giữa quyền con người và quyền dân tộc, đều mang tính phổ quát.",
       },
-      // 20
       {
         id: 20,
-        term: "Giá trị học thuyết hình thái kinh tế – xã hội",
+        term: "Bản chất chính nghĩa của đấu tranh giành độc lập",
         definition:
-          "Cả ba khía cạnh đều đúng: phương pháp luận khoa học; chỉ ra động lực; khẳng định quy luật khách quan.",
+          "Đấu tranh giành độc lập là đấu tranh để thực hiện quyền thiêng liêng và bình đẳng của dân tộc.",
         quiz: {
           question:
-            "“Giá trị của học thuyết hình thái kinh tế – xã hội” là gì?",
+            "Theo tư tưởng Hồ Chí Minh, đấu tranh giành độc lập dân tộc trước hết là đấu tranh vì điều gì?",
           options: [
-            "Cung cấp phương pháp luận khoa học để phân tích, lý giải lịch sử xã hội",
-            "Chỉ ra động lực phát triển của xã hội là sản xuất vật chất",
-            "Khẳng định sự phát triển của xã hội tuân theo quy luật khách quan",
-            "Cả ba ý trên đều đúng",
+            "Quyền thiêng liêng, bình đẳng của dân tộc và quyền tự do của nhân dân",
+            "Đặc quyền của một nhóm người",
+            "Mở rộng thuộc địa ra bên ngoài",
+            "Lợi ích cá nhân của lãnh tụ",
           ],
-          correct: 3,
+          correct: 0,
         },
-        fillAnswer: "Giá trị học thuyết hình thái kinh tế – xã hội: ___.",
-        answer: "Cả ba ý trên đều đúng",
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, đấu tranh giành độc lập dân tộc trước hết là đấu tranh vì _______.",
+        answer:
+          "Quyền thiêng liêng, bình đẳng của dân tộc và quyền tự do của nhân dân",
         fullFillAnswer:
-          "Giá trị học thuyết hình thái kinh tế – xã hội: cả ba ý trên đều đúng.",
+          "Độc lập dân tộc gắn với quyền thiêng liêng của dân tộc và quyền tự do của nhân dân, nên cuộc đấu tranh mang tính chính nghĩa.",
       },
     ],
   },
 
-  /* =========================================================
-   * Chương 3 — Giai cấp, Dân tộc, Nhà nước & Cách mạng xã hội
-   * Nguồn gốc giai cấp; đấu tranh giai cấp; bản chất nhà nước; CMXH.
-   * ========================================================= */
+  // =====================================================================
+  // CHAPTER 2 — GIỮ VỮNG ĐỘC LẬP, THỐNG NHẤT VÀ TOÀN VẸN LÃNH THỔ (20 CÂU)
+  // =====================================================================
   {
-    id: 31003,
-    title: "Giai cấp, Dân tộc, Nhà nước & Cách mạng xã hội",
+    id: 330032,
+    title: "Phần 2: Độc lập, thống nhất và toàn vẹn lãnh thổ",
     description:
-      "Nguồn gốc giai cấp, đấu tranh giai cấp, quan hệ giai cấp – dân tộc, bản chất và chức năng của nhà nước, cách mạng xã hội.",
+      "Trắc nghiệm về độc lập thật sự và yêu cầu thống nhất Tổ quốc.",
     icon: "🛡️",
     questions: [
-      // 1
       {
         id: 1,
-        term: "Nguồn gốc ra đời giai cấp",
+        term: "Tiêu chí độc lập thật sự: quyền tự quyết đối ngoại, quân đội, tài chính",
         definition:
-          "Sự phân công lao động xã hội và sự xuất hiện tư hữu về tư liệu sản xuất.",
+          "Nếu không có quyền tự quyết về đối ngoại, không có quân đội riêng, không có tài chính riêng thì độc lập không có ý nghĩa.",
         quiz: {
           question:
-            "Nguồn gốc trực tiếp và quyết định sự ra đời của giai cấp là gì?",
+            "Theo nội dung lý thuyết, điều nào sau đây cho thấy một quốc gia chưa có độc lập thật sự?",
           options: [
-            "Sự khác biệt về năng lực giữa con người",
-            "Sự phân công lao động xã hội và sự xuất hiện chế độ tư hữu về tư liệu sản xuất",
-            "Sự khác biệt về chủng tộc và giới tính",
-            "Kết quả của các cuộc chiến tranh xâm lược",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Giai cấp ra đời do ___ và sự xuất hiện ___ về tư liệu sản xuất.",
-        answer:
-          "Sự phân công lao động xã hội và sự xuất hiện tư hữu về tư liệu sản xuất",
-        fullFillAnswer:
-          "Giai cấp ra đời do phân công lao động xã hội và sự xuất hiện tư hữu về tư liệu sản xuất.",
-      },
-      // 2
-      {
-        id: 2,
-        term: "Đặc trưng bản chất của giai cấp (theo V.I. Lênin)",
-        definition:
-          "Tất cả các đặc trưng, trong đó khác nhau về sở hữu tư liệu sản xuất là cơ bản nhất.",
-        quiz: {
-          question:
-            "Theo V.I. Lênin, đặc trưng cơ bản nhất của giai cấp là gì?",
-          options: [
-            "Sự khác nhau về địa vị trong một hệ thống sản xuất xã hội nhất định",
-            "Sự khác nhau về vai trò trong tổ chức lao động xã hội",
-            "Sự khác nhau về phương thức và quy mô thu nhập",
-            "Tất cả các đặc trưng trên, trong đó sự khác nhau về sở hữu tư liệu sản xuất là cơ bản nhất",
-          ],
-          correct: 3,
-        },
-        fillAnswer:
-          "Theo Lênin, đặc trưng cơ bản nhất của giai cấp là khác nhau về ___ đối với tư liệu sản xuất.",
-        answer: "Sở hữu",
-        fullFillAnswer:
-          "Theo Lênin, điểm cơ bản nhất là khác nhau về sở hữu tư liệu sản xuất.",
-      },
-      // 3
-      {
-        id: 3,
-        term: "Khái niệm đấu tranh giai cấp",
-        definition:
-          "Cuộc đấu tranh giữa các tập đoàn người có lợi ích cơ bản đối lập nhau.",
-        quiz: {
-          question: "Đấu tranh giai cấp là gì?",
-          options: [
-            "Cuộc đấu tranh giữa các tập đoàn người có lợi ích cơ bản đối lập nhau",
-            "Mọi cuộc xung đột trong đời sống xã hội",
-            "Cuộc đấu tranh giữa các quốc gia",
-            "Cuộc đấu tranh giữa các cá nhân",
+            "Không có quyền tự quyết về đối ngoại, không có quân đội riêng, không có nền tài chính riêng",
+            "Có chủ quyền đối ngoại, quốc phòng, tài chính đầy đủ",
+            "Tự quyết đường lối đối nội và đối ngoại",
+            "Tự tổ chức lực lượng bảo vệ đất nước",
           ],
           correct: 0,
         },
-        fillAnswer: "Đấu tranh giai cấp là: ___.",
+        fillAnswer:
+          "Theo nội dung lý thuyết, một quốc gia chưa có độc lập thật sự khi _______.",
         answer:
-          "Cuộc đấu tranh giữa các tập đoàn người có lợi ích cơ bản đối lập nhau",
+          "Không có quyền tự quyết về đối ngoại, không có quân đội riêng, không có nền tài chính riêng",
         fullFillAnswer:
-          "Đấu tranh giai cấp là đấu tranh giữa các tập đoàn người có lợi ích cơ bản đối lập.",
+          "Lý thuyết nêu rõ: thiếu các yếu tố cốt lõi đó thì độc lập không có ý nghĩa.",
       },
-      // 4
+      {
+        id: 2,
+        term: "Hiệp định Sơ bộ ngày 6-3-1946 và nội hàm về độc lập",
+        definition:
+          "Nội dung nêu việc công nhận Việt Nam là quốc gia tự do có chính phủ, nghị viện, quân đội, tài chính của mình.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, Hiệp định Sơ bộ ngày 6-3-1946 thể hiện những yếu tố nào gắn với độc lập thật sự?",
+          options: [
+            "Có chính phủ của mình, nghị viện của mình, quân đội của mình, tài chính của mình",
+            "Chỉ có quốc kỳ và quốc ca",
+            "Chỉ có quyền nội trị, không có đối ngoại",
+            "Chỉ có tự trị địa phương",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, Hiệp định Sơ bộ ngày 6-3-1946 thể hiện các yếu tố gắn với độc lập thật sự là _______.",
+        answer:
+          "Có chính phủ của mình, nghị viện của mình, quân đội của mình, tài chính của mình",
+        fullFillAnswer:
+          "Các yếu tố này phản ánh nội dung chủ quyền và độc lập trên nhiều lĩnh vực.",
+      },
+      {
+        id: 3,
+        term: "Độc lập dân tộc gắn liền với tự do, hạnh phúc của nhân dân",
+        definition:
+          "Độc lập không chỉ là vấn đề quốc gia mà còn phải gắn với đời sống, quyền tự do và hạnh phúc của nhân dân.",
+        quiz: {
+          question:
+            "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với điều gì?",
+          options: [
+            "Tự do và hạnh phúc của nhân dân",
+            "Quyền lợi của một nhóm thiểu số",
+            "Sự phụ thuộc để đổi viện trợ",
+            "Chỉ độc lập danh nghĩa",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với _______.",
+        answer: "Tự do và hạnh phúc của nhân dân",
+        fullFillAnswer:
+          "Hồ Chí Minh nhấn mạnh độc lập dân tộc phải gắn với tự do, hạnh phúc cho nhân dân.",
+      },
       {
         id: 4,
-        term: "Nguồn gốc đấu tranh giai cấp",
+        term: "Ý nghĩa câu nói về độc lập và hạnh phúc",
         definition:
-          "Mâu thuẫn không thể điều hoà về lợi ích giữa các giai cấp.",
+          "Nếu nhân dân không hưởng tự do, hạnh phúc thì độc lập chưa có ý nghĩa trọn vẹn.",
         quiz: {
-          question: "Nguồn gốc của đấu tranh giai cấp là gì?",
+          question:
+            "Câu “Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì” thể hiện nội dung nào?",
           options: [
-            "Mâu thuẫn về tư tưởng và tôn giáo",
-            "Mâu thuẫn không thể điều hoà về lợi ích giữa các giai cấp",
-            "Mâu thuẫn về văn hoá và lối sống",
-            "Mâu thuẫn trong quan hệ gia đình",
+            "Độc lập phải gắn với quyền tự do và hạnh phúc của nhân dân",
+            "Độc lập chỉ cần về mặt hình thức",
+            "Hạnh phúc không quan trọng bằng độc lập",
+            "Không cần quan tâm đời sống nhân dân sau khi độc lập",
           ],
-          correct: 1,
+          correct: 0,
         },
-        fillAnswer: "Nguồn gốc đấu tranh giai cấp: ___.",
-        answer: "Mâu thuẫn không thể điều hoà về lợi ích giữa các giai cấp",
+        fillAnswer:
+          "Câu “Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì” thể hiện _______.",
+        answer: "Độc lập phải gắn với quyền tự do và hạnh phúc của nhân dân",
         fullFillAnswer:
-          "Nguồn gốc đấu tranh giai cấp là mâu thuẫn lợi ích giai cấp không thể điều hoà.",
+          "Hồ Chí Minh coi nhân dân là trung tâm: độc lập phải đem lại tự do, hạnh phúc cho dân.",
       },
-      // 5
       {
         id: 5,
-        term: "Vai trò của đấu tranh giai cấp",
-        definition: "Một động lực quan trọng của sự phát triển xã hội.",
+        term: "Những nhiệm vụ cấp bách sau Cách mạng Tháng Tám",
+        definition:
+          "Sau khi giành độc lập, Hồ Chí Minh nhấn mạnh chăm lo đời sống nhân dân: ăn, mặc, ở, học.",
         quiz: {
           question:
-            "Theo quan điểm Mác-xít, vai trò của đấu tranh giai cấp trong xã hội có giai cấp là gì?",
+            "Theo nội dung lý thuyết, ngay sau thắng lợi của Cách mạng Tháng Tám, Hồ Chí Minh yêu cầu tập trung làm gì cho nhân dân?",
           options: [
-            "Gây ra sự hỗn loạn và thụt lùi cho xã hội",
-            "Là một động lực quan trọng của sự phát triển xã hội",
-            "Chỉ có ý nghĩa trong việc lật đổ chính quyền",
-            "Không có vai trò gì đặc biệt",
+            "Làm cho dân có ăn, có mặc, có chỗ ở, có học hành",
+            "Chỉ tập trung xây dựng quân đội, bỏ qua đời sống",
+            "Chỉ phát triển công nghiệp nặng",
+            "Chỉ tăng thuế để có ngân sách",
           ],
-          correct: 1,
+          correct: 0,
         },
-        fillAnswer: "Vai trò của đấu tranh giai cấp là ___.",
-        answer: "Một động lực quan trọng của sự phát triển xã hội",
+        fillAnswer:
+          "Ngay sau thắng lợi của Cách mạng Tháng Tám, Hồ Chí Minh yêu cầu _______.",
+        answer: "Làm cho dân có ăn, có mặc, có chỗ ở, có học hành",
         fullFillAnswer:
-          "Đấu tranh giai cấp là một động lực quan trọng của phát triển xã hội.",
+          "Người đặt các nhu cầu thiết yếu (ăn, mặc, ở, học) là ưu tiên gắn với ý nghĩa của độc lập.",
       },
-      // 6
       {
         id: 6,
-        term: "Đỉnh cao của đấu tranh giai cấp",
-        definition: "Cách mạng xã hội.",
-        quiz: {
-          question: "Đỉnh cao của đấu tranh giai cấp thường dẫn tới:",
-          options: [
-            "Cải cách xã hội",
-            "Hoà giải giai cấp",
-            "Cách mạng xã hội",
-            "Bầu cử dân chủ",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Đỉnh cao của đấu tranh giai cấp thường dẫn tới ___.",
-        answer: "Cách mạng xã hội",
-        fullFillAnswer:
-          "Đỉnh cao đấu tranh giai cấp thường dẫn tới cách mạng xã hội.",
-      },
-      // 7
-      {
-        id: 7,
-        term: "Cơ sở hình thành dân tộc",
+        term: "Học thuyết Tam dân và cách hiểu về độc lập",
         definition:
-          "Sự thống nhất ngôn ngữ, lãnh thổ, đời sống kinh tế, văn hoá và sự gắn bó bền vững của cộng đồng.",
-        quiz: {
-          question: "Dân tộc được hình thành dựa trên cơ sở của:",
-          options: [
-            "Sự thống nhất về ngôn ngữ và lãnh thổ",
-            "Sự thống nhất về đời sống kinh tế và văn hoá",
-            "Sự gắn bó của một cộng đồng người ổn định, bền vững",
-            "Tất cả các yếu tố trên",
-          ],
-          correct: 3,
-        },
-        fillAnswer: "Dân tộc được hình thành dựa trên: ___.",
-        answer: "Tất cả các yếu tố trên",
-        fullFillAnswer:
-          "Dân tộc hình thành trên tổng hoà các yếu tố: ngôn ngữ, lãnh thổ, kinh tế, văn hoá, cộng đồng.",
-      },
-      // 8
-      {
-        id: 8,
-        term: "Thời điểm ra đời của dân tộc",
-        definition: "Ra đời muộn hơn, gắn liền với thời kỳ chủ nghĩa tư bản.",
-        quiz: {
-          question: "So với giai cấp, khái niệm dân tộc:",
-          options: [
-            "Ra đời sớm hơn",
-            "Ra đời muộn hơn, gắn liền với thời kỳ chủ nghĩa tư bản",
-            "Ra đời cùng lúc",
-            "Không liên quan đến nhau",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "So với giai cấp, dân tộc ra đời ___.",
-        answer: "Muộn hơn, gắn liền với thời kỳ chủ nghĩa tư bản",
-        fullFillAnswer:
-          "Dân tộc ra đời muộn hơn, gắn với quá trình phát triển của chủ nghĩa tư bản.",
-      },
-      // 9
-      {
-        id: 9,
-        term: "Quan hệ giữa giai cấp và dân tộc",
-        definition: "Có mối quan hệ biện chứng, thống nhất.",
+          "Hồ Chí Minh đánh giá cao học thuyết Tam dân: dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc.",
         quiz: {
           question:
-            "Mối quan hệ giữa giai cấp và dân tộc được thể hiện như thế nào?",
+            "Theo nội dung lý thuyết, học thuyết Tam dân được Hồ Chí Minh đánh giá cao vì nhấn mạnh điều gì?",
           options: [
-            "Lợi ích giai cấp và lợi ích dân tộc hoàn toàn tách biệt",
-            "Lợi ích giai cấp quyết định hoàn toàn lợi ích dân tộc",
-            "Lợi ích giai cấp và lợi ích dân tộc có mối quan hệ biện chứng, thống nhất với nhau",
-            "Lợi ích dân tộc quyết định hoàn toàn lợi ích giai cấp",
+            "Dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc",
+            "Chỉ cần dân tộc độc lập, không cần dân quyền",
+            "Chỉ cần dân sinh, không cần độc lập",
+            "Chỉ cần mở rộng thuộc địa",
           ],
-          correct: 2,
+          correct: 0,
         },
-        fillAnswer: "Quan hệ giữa giai cấp và dân tộc là mối quan hệ ___, ___.",
-        answer: "Biện chứng, thống nhất",
+        fillAnswer:
+          "Theo nội dung lý thuyết, học thuyết Tam dân nhấn mạnh _______.",
+        answer: "Dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc",
         fullFillAnswer:
-          "Giữa giai cấp và dân tộc tồn tại mối quan hệ biện chứng, thống nhất.",
+          "Tam dân nhấn mạnh trọn vẹn: độc lập dân tộc đi liền tự do và hạnh phúc của nhân dân.",
       },
-      // 10
+      {
+        id: 7,
+        term: "Âm mưu chia cắt và yêu cầu thống nhất, toàn vẹn lãnh thổ",
+        definition:
+          "Tư tưởng độc lập gắn với thống nhất và toàn vẹn lãnh thổ; kẻ thù thường tìm cách chia cắt đất nước.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, tư tưởng độc lập dân tộc của Hồ Chí Minh gắn liền chặt chẽ với yêu cầu nào?",
+          options: [
+            "Thống nhất Tổ quốc và toàn vẹn lãnh thổ",
+            "Chấp nhận chia cắt lâu dài để yên ổn",
+            "Chỉ giữ miền Bắc, bỏ miền Nam",
+            "Chỉ ưu tiên lợi ích địa phương",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, tư tưởng độc lập dân tộc gắn liền chặt chẽ với yêu cầu _______.",
+        answer: "Thống nhất Tổ quốc và toàn vẹn lãnh thổ",
+        fullFillAnswer:
+          "Độc lập dân tộc theo Hồ Chí Minh không tách rời thống nhất đất nước và toàn vẹn lãnh thổ.",
+      },
+      {
+        id: 8,
+        term: "Thực dân Pháp chia nước ta ra ba kỳ",
+        definition:
+          "Thực dân Pháp từng chia nước ta thành ba kỳ, mỗi kỳ có chế độ cai trị riêng nhằm chia để trị.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, thực dân Pháp đã từng làm gì để phục vụ âm mưu chia cắt đất nước ta?",
+          options: [
+            "Chia đất nước ra ba kỳ, mỗi kỳ có chế độ cai trị riêng",
+            "Trao độc lập hoàn toàn và thống nhất ngay",
+            "Hỗ trợ xây dựng nền giáo dục thống nhất",
+            "Rút quân và bồi thường chiến tranh",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, thực dân Pháp đã từng _______ để phục vụ âm mưu chia cắt đất nước ta.",
+        answer: "Chia đất nước ra ba kỳ, mỗi kỳ có chế độ cai trị riêng",
+        fullFillAnswer:
+          "Việc chia ba kỳ là biểu hiện điển hình của âm mưu chia để trị.",
+      },
+      {
+        id: 9,
+        term: "Âm mưu Nam Kỳ tự trị",
+        definition:
+          "Sau khi chiếm lại Nam Bộ, thực dân Pháp đưa ra chiêu bài “Nam Kỳ tự trị” nhằm chia cắt nước ta.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, “Nam Kỳ tự trị” mà thực dân Pháp đưa ra nhằm mục đích gì?",
+          options: [
+            "Chia cắt đất nước ta, phá hoại thống nhất dân tộc",
+            "Thống nhất đất nước nhanh hơn",
+            "Trao độc lập hoàn toàn cho Việt Nam",
+            "Bảo đảm toàn vẹn lãnh thổ",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, “Nam Kỳ tự trị” mà thực dân Pháp đưa ra nhằm _______.",
+        answer: "Chia cắt đất nước ta, phá hoại thống nhất dân tộc",
+        fullFillAnswer:
+          "Chiêu bài “Nam Kỳ tự trị” là thủ đoạn chính trị nhằm chia cắt Việt Nam.",
+      },
       {
         id: 10,
-        term: "Nguồn gốc ra đời nhà nước",
+        term: "Khẳng định Nam Bộ là một phần của Việt Nam",
         definition:
-          "Khi xã hội xuất hiện chế độ tư hữu và phân chia giai cấp đối kháng.",
+          "Trong thư gửi đồng bào Nam Bộ (1946), Hồ Chí Minh khẳng định Nam Bộ là dân nước Việt Nam; chân lý đó không bao giờ thay đổi.",
         quiz: {
-          question: "Nhà nước ra đời khi nào?",
+          question:
+            "Nội dung “Đồng bào Nam Bộ là dân nước Việt Nam… chân lý đó không bao giờ thay đổi” thể hiện lập trường nào?",
           options: [
-            "Ngay từ khi xã hội loài người xuất hiện",
-            "Khi xã hội xuất hiện tư hữu và phân chia giai cấp đối kháng",
-            "Khi có nhu cầu quản lý các công việc chung của cộng đồng",
-            "Khi dân số phát triển đến một quy mô nhất định",
+            "Kiên quyết giữ vững thống nhất và toàn vẹn lãnh thổ",
+            "Chấp nhận Nam Bộ tách khỏi Tổ quốc",
+            "Chỉ coi Nam Bộ là vùng tự trị",
+            "Đồng ý chia cắt lâu dài",
           ],
-          correct: 1,
+          correct: 0,
         },
         fillAnswer:
-          "Nhà nước ra đời khi xã hội xuất hiện ___ và phân chia ___ đối kháng.",
-        answer: "Tư hữu; giai cấp",
+          "Nội dung “Đồng bào Nam Bộ là dân nước Việt Nam… chân lý đó không bao giờ thay đổi” thể hiện lập trường _______.",
+        answer: "Kiên quyết giữ vững thống nhất và toàn vẹn lãnh thổ",
         fullFillAnswer:
-          "Nhà nước ra đời khi xuất hiện tư hữu và sự đối kháng giai cấp.",
+          "Câu nói thể hiện lập trường nhất quán: Nam Bộ là bộ phận không thể tách rời của Việt Nam.",
       },
-      // 11
       {
         id: 11,
-        term: "Bản chất nhà nước (theo Mác – Lênin)",
-        definition: "Công cụ chuyên chính của giai cấp thống trị.",
-        quiz: {
-          question: "Bản chất của nhà nước theo quan điểm Mác – Lênin là gì?",
-          options: [
-            "Là tổ chức công quyền trung lập, đứng trên mọi giai cấp",
-            "Là công cụ chuyên chính của giai cấp thống trị",
-            "Là tổ chức để điều hoà mâu thuẫn giai cấp",
-            "Là cơ quan đại diện cho lợi ích của toàn thể nhân dân",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Bản chất nhà nước theo Mác – Lênin: ___.",
-        answer: "Công cụ chuyên chính của giai cấp thống trị",
-        fullFillAnswer:
-          "Theo Mác – Lênin, nhà nước là công cụ chuyên chính của giai cấp thống trị.",
-      },
-      // 12
-      {
-        id: 12,
-        term: "Chức năng cơ bản của nhà nước",
+        term: "Kiên trì đấu tranh sau Hiệp định Giơ-ne-vơ năm 1954",
         definition:
-          "Chức năng thống trị chính trị (bạo lực trấn áp) và chức năng xã hội.",
+          "Sau Hiệp định Giơ-ne-vơ, đất nước tạm thời chia cắt; Hồ Chí Minh kiên trì đấu tranh để thống nhất Tổ quốc.",
         quiz: {
-          question: "Chức năng cơ bản của nhà nước là gì?",
+          question:
+            "Sau Hiệp định Giơ-ne-vơ năm 1954, theo nội dung lý thuyết, Hồ Chí Minh tiếp tục kiên trì đấu tranh nhằm mục tiêu gì?",
           options: [
-            "Chức năng đối nội và chức năng đối ngoại",
-            "Chức năng kinh tế và chức năng văn hoá",
-            "Chức năng thống trị chính trị (bạo lực trấn áp) và chức năng xã hội",
-            "Chức năng lập pháp, hành pháp và tư pháp",
+            "Thống nhất Tổ quốc",
+            "Chấp nhận chia cắt vĩnh viễn",
+            "Chỉ phát triển một miền, bỏ miền còn lại",
+            "Từ bỏ mục tiêu thống nhất để đổi viện trợ",
           ],
-          correct: 2,
-        },
-        fillAnswer: "Hai chức năng cơ bản của nhà nước là ___ và ___.",
-        answer: "Thống trị chính trị; chức năng xã hội",
-        fullFillAnswer:
-          "Chức năng cơ bản của nhà nước gồm thống trị chính trị và chức năng xã hội.",
-      },
-      // 13
-      {
-        id: 13,
-        term: "Kiểu nhà nước đầu tiên trong lịch sử",
-        definition: "Nhà nước chủ nô.",
-        quiz: {
-          question: "Đâu là kiểu nhà nước đầu tiên trong lịch sử?",
-          options: [
-            "Nhà nước phong kiến",
-            "Nhà nước tư sản",
-            "Nhà nước chủ nô",
-            "Nhà nước xã hội chủ nghĩa",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Kiểu nhà nước đầu tiên trong lịch sử là ___.",
-        answer: "Nhà nước chủ nô",
-        fullFillAnswer:
-          "Kiểu nhà nước đầu tiên trong lịch sử là nhà nước chủ nô.",
-      },
-      // 14
-      {
-        id: 14,
-        term: "Khái niệm cách mạng xã hội (nghĩa hẹp)",
-        definition:
-          "Cuộc đấu tranh lật đổ một chế độ chính trị đã lỗi thời, thiết lập một chế độ tiến bộ hơn.",
-        quiz: {
-          question: "Cách mạng xã hội theo nghĩa hẹp là gì?",
-          options: [
-            "Sự thay đổi dần dần về văn hoá, xã hội",
-            "Cuộc đấu tranh lật đổ một chế độ chính trị đã lỗi thời, thiết lập một chế độ tiến bộ hơn",
-            "Mọi sự biến đổi trong đời sống",
-            "Các cuộc cải cách kinh tế",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Cách mạng xã hội (nghĩa hẹp) là: ___.",
-        answer:
-          "Cuộc đấu tranh lật đổ một chế độ chính trị đã lỗi thời, thiết lập một chế độ tiến bộ hơn",
-        fullFillAnswer:
-          "Cách mạng xã hội (nghĩa hẹp) là đấu tranh lật đổ chế độ lỗi thời, thiết lập chế độ tiến bộ hơn.",
-      },
-      // 15
-      {
-        id: 15,
-        term: "Nguồn gốc của cách mạng xã hội",
-        definition:
-          "Bắt nguồn từ mâu thuẫn gay gắt giữa lực lượng sản xuất và quan hệ sản xuất.",
-        quiz: {
-          question: "Nguồn gốc của cách mạng xã hội là gì?",
-          options: [
-            "Do ý muốn chủ quan của các nhà lãnh đạo",
-            "Do sự tuyên truyền của các thế lực bên ngoài",
-            "Bắt nguồn từ mâu thuẫn gay gắt giữa lực lượng sản xuất và quan hệ sản xuất",
-            "Do sự khủng hoảng về đạo đức xã hội",
-          ],
-          correct: 2,
+          correct: 0,
         },
         fillAnswer:
-          "Nguồn gốc cách mạng xã hội: mâu thuẫn gay gắt giữa ___ và ___.",
-        answer: "Lực lượng sản xuất và quan hệ sản xuất",
+          "Sau Hiệp định Giơ-ne-vơ năm 1954, Hồ Chí Minh tiếp tục kiên trì đấu tranh nhằm _______.",
+        answer: "Thống nhất Tổ quốc",
         fullFillAnswer:
-          "Nguồn gốc cách mạng xã hội là mâu thuẫn gay gắt giữa lực lượng sản xuất và quan hệ sản xuất.",
+          "Người kiên trì mục tiêu thống nhất đất nước dù hoàn cảnh tạm thời chia cắt.",
+      },
+      {
+        id: 12,
+        term: "Khẳng định “Nước Việt Nam là một, dân tộc Việt Nam là một”",
+        definition:
+          "Lập trường thống nhất và toàn vẹn lãnh thổ được thể hiện trong khẳng định: nước Việt Nam là một, dân tộc Việt Nam là một.",
+        quiz: {
+          question:
+            "Khẳng định “Nước Việt Nam là một, dân tộc Việt Nam là một” chủ yếu nhấn mạnh điều gì?",
+          options: [
+            "Tính thống nhất không thể chia cắt của Tổ quốc và dân tộc",
+            "Sự cần thiết chia cắt để dễ quản lý",
+            "Chỉ có thống nhất về văn hóa, không cần lãnh thổ",
+            "Chấp nhận nhiều quốc gia trên một lãnh thổ",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Khẳng định “Nước Việt Nam là một, dân tộc Việt Nam là một” nhấn mạnh _______.",
+        answer: "Tính thống nhất không thể chia cắt của Tổ quốc và dân tộc",
+        fullFillAnswer:
+          "Câu nói thể hiện chân lý thống nhất và toàn vẹn lãnh thổ là nguyên tắc không thay đổi.",
+      },
+      {
+        id: 13,
+        term: "Niềm tin vào thắng lợi và thống nhất đất nước",
+        definition:
+          "Trong Di chúc, Hồ Chí Minh thể hiện niềm tin tuyệt đối vào thắng lợi của cách mạng và sự thống nhất nước nhà.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, trong Di chúc, Hồ Chí Minh thể hiện niềm tin như thế nào?",
+          options: [
+            "Tin tưởng tuyệt đối vào thắng lợi của cách mạng và sự thống nhất nước nhà",
+            "Từ bỏ niềm tin vào tương lai đất nước",
+            "Chấp nhận chia cắt lâu dài",
+            "Không quan tâm đến thống nhất",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, trong Di chúc, Hồ Chí Minh thể hiện niềm tin _______.",
+        answer:
+          "Tin tưởng tuyệt đối vào thắng lợi của cách mạng và sự thống nhất nước nhà",
+        fullFillAnswer:
+          "Di chúc thể hiện niềm tin sâu sắc của Người vào thắng lợi và thống nhất Tổ quốc.",
+      },
+
+      // ===== BỔ SUNG 7 CÂU (14–20) =====
+      {
+        id: 14,
+        term: "Mục đích của chính sách chia để trị",
+        definition:
+          "Chia cắt lãnh thổ và áp dụng chế độ cai trị khác nhau nhằm làm suy yếu khối thống nhất dân tộc.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, việc thực dân Pháp chia nước ta ra ba kỳ chủ yếu nhằm mục đích gì?",
+          options: [
+            "Chia để trị, phá hoại khối thống nhất dân tộc",
+            "Tạo điều kiện để đất nước sớm thống nhất",
+            "Tăng quyền tự quyết cho nhân dân Việt Nam",
+            "Bảo đảm toàn vẹn lãnh thổ Việt Nam",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, việc thực dân Pháp chia nước ta ra ba kỳ chủ yếu nhằm _______.",
+        answer: "Chia để trị, phá hoại khối thống nhất dân tộc",
+        fullFillAnswer:
+          "Chia để trị là thủ đoạn điển hình để chia rẽ, làm suy yếu sức mạnh thống nhất của dân tộc.",
+      },
+      {
+        id: 15,
+        term: "Thống nhất và toàn vẹn lãnh thổ là nguyên tắc không nhân nhượng",
+        definition:
+          "Trong tư tưởng Hồ Chí Minh, độc lập dân tộc gắn chặt với thống nhất Tổ quốc và toàn vẹn lãnh thổ.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, thống nhất Tổ quốc và toàn vẹn lãnh thổ có ý nghĩa như thế nào đối với độc lập dân tộc?",
+          options: [
+            "Là yêu cầu nguyên tắc, không thể nhân nhượng",
+            "Chỉ là mục tiêu phụ, có thể bỏ qua",
+            "Chỉ quan trọng trong thời bình",
+            "Chỉ cần thống nhất về văn hóa là đủ",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, thống nhất Tổ quốc và toàn vẹn lãnh thổ là _______.",
+        answer: "Là yêu cầu nguyên tắc, không thể nhân nhượng",
+        fullFillAnswer:
+          "Độc lập dân tộc không tách rời thống nhất và toàn vẹn lãnh thổ, đây là nguyên tắc kiên định.",
+      },
+      {
+        id: 16,
+        term: "Quyền tự quyết về đối ngoại là dấu hiệu của độc lập thật sự",
+        definition:
+          "Một quốc gia độc lập thật sự phải có quyền tự quyết trong quan hệ đối ngoại và đường lối đối ngoại.",
+        quiz: {
+          question:
+            "Trong các yếu tố sau, yếu tố nào phản ánh rõ nhất một quốc gia có độc lập thật sự về mặt quan hệ quốc tế?",
+          options: [
+            "Quyền tự quyết về đối ngoại",
+            "Chỉ có quốc kỳ và quốc ca",
+            "Chỉ có truyền thống văn hóa lâu đời",
+            "Chỉ có quan hệ kinh tế với nước lớn",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Yếu tố phản ánh rõ nhất một quốc gia có độc lập thật sự về mặt quan hệ quốc tế là _______.",
+        answer: "Quyền tự quyết về đối ngoại",
+        fullFillAnswer:
+          "Không tự quyết đối ngoại thì chủ quyền bị lệ thuộc, độc lập trở thành hình thức.",
+      },
+      {
+        id: 17,
+        term: "Quan điểm về hòa bình gắn với nguyên tắc độc lập",
+        definition:
+          "Hồ Chí Minh chủ trương hòa bình nhưng không đánh đổi độc lập và chủ quyền quốc gia.",
+        quiz: {
+          question:
+            "Trong tư tưởng Hồ Chí Minh, thái độ đúng đắn đối với hòa bình là gì?",
+          options: [
+            "Yêu hòa bình nhưng kiên quyết bảo vệ độc lập, chủ quyền quốc gia",
+            "Chấp nhận mất độc lập để tránh chiến tranh bằng mọi giá",
+            "Chỉ cần hòa bình, không cần quan tâm chủ quyền",
+            "Từ bỏ đấu tranh, phó mặc vận mệnh dân tộc",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong tư tưởng Hồ Chí Minh, thái độ đúng đắn đối với hòa bình là _______.",
+        answer:
+          "Yêu hòa bình nhưng kiên quyết bảo vệ độc lập, chủ quyền quốc gia",
+        fullFillAnswer:
+          "Hòa bình là mục tiêu, nhưng độc lập và chủ quyền là nguyên tắc không thể đánh đổi.",
+      },
+      {
+        id: 18,
+        term: "Chiêu bài chính trị sau khi chiếm lại Nam Bộ",
+        definition:
+          "Thực dân Pháp dùng chiêu bài “Nam Kỳ tự trị” để tạo cớ chia cắt và phá hoại thống nhất.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, sau khi chiếm lại Nam Bộ, thực dân Pháp đã đưa ra chiêu bài nào?",
+          options: [
+            "Nam Kỳ tự trị",
+            "Tổng tuyển cử thống nhất ngay lập tức",
+            "Trao độc lập hoàn toàn và rút quân",
+            "Tôn trọng tuyệt đối quyền tự quyết của Việt Nam",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, sau khi chiếm lại Nam Bộ, thực dân Pháp đã đưa ra chiêu bài _______.",
+        answer: "Nam Kỳ tự trị",
+        fullFillAnswer:
+          "Đây là thủ đoạn chính trị nhằm chia cắt Việt Nam, phá hoại khối thống nhất dân tộc.",
+      },
+      {
+        id: 19,
+        term: "Tình trạng đất nước sau Hiệp định Giơ-ne-vơ năm 1954",
+        definition:
+          "Sau Hiệp định Giơ-ne-vơ, đất nước ở trạng thái tạm thời chia cắt; yêu cầu thống nhất đặt ra cấp thiết.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, sau Hiệp định Giơ-ne-vơ năm 1954, nước ta ở tình trạng nào?",
+          options: [
+            "Tạm thời bị chia cắt, nhưng mục tiêu thống nhất vẫn được kiên trì",
+            "Đã thống nhất hoàn toàn và ổn định lâu dài",
+            "Bị chia cắt vĩnh viễn theo thỏa thuận",
+            "Không còn nhu cầu thống nhất đất nước",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, sau Hiệp định Giơ-ne-vơ năm 1954, nước ta _______.",
+        answer:
+          "Tạm thời bị chia cắt, nhưng mục tiêu thống nhất vẫn được kiên trì",
+        fullFillAnswer:
+          "Tình trạng chia cắt chỉ là tạm thời; mục tiêu thống nhất luôn được xác định nhất quán.",
+      },
+      {
+        id: 20,
+        term: "Niềm tin về ngày thống nhất trong Di chúc",
+        definition:
+          "Trong Di chúc, Hồ Chí Minh tin tưởng chắc chắn sự nghiệp thống nhất sẽ thành công.",
+        quiz: {
+          question:
+            "Trong Di chúc, niềm tin nào sau đây thể hiện rõ nhất về tương lai thống nhất đất nước?",
+          options: [
+            "Tin tưởng sự nghiệp thống nhất nhất định thắng lợi, đất nước sẽ sum họp một nhà",
+            "Chấp nhận chia cắt lâu dài để ổn định",
+            "Không đặt vấn đề thống nhất là nhiệm vụ quan trọng",
+            "Chỉ ưu tiên phát triển một miền, miền còn lại để sau",
+          ],
+          correct: 0,
+        },
+        fillAnswer: "Trong Di chúc, Hồ Chí Minh tin tưởng _______.",
+        answer:
+          "Tin tưởng sự nghiệp thống nhất nhất định thắng lợi, đất nước sẽ sum họp một nhà",
+        fullFillAnswer:
+          "Niềm tin tất thắng và ý chí thống nhất thể hiện nhất quán trong tư tưởng và di chúc của Người.",
       },
     ],
   },
-
-  /* =========================================================
-   * Chương 4 — Con người, văn hoá & vai trò quần chúng
-   * Bản chất con người; tha hoá; khác biệt người – vật; vai trò quần chúng; văn hoá và phát triển.
-   * ========================================================= */
   {
-    id: 31004,
-    title: "Con người, văn hoá & vai trò quần chúng",
+    id: 330034,
+    title: "Phần 3: Con đường và sức mạnh bảo vệ độc lập dân tộc",
     description:
-      "Triết học về con người trong chủ nghĩa Mác – Lênin: bản chất, lao động, tha hoá; vai trò quần chúng nhân dân; định hướng xây dựng văn hoá.",
-    icon: "🌱",
+      "Trắc nghiệm về lực lượng, phương pháp và sức mạnh giành – giữ độc lập.",
+    icon: "🤝",
     questions: [
-      // 1 (từ câu 17 bộ đầu)
       {
         id: 1,
-        term: "Xây dựng văn hoá Việt Nam",
+        term: "Đại đoàn kết toàn dân tộc",
         definition:
-          "Phát triển kinh tế đồng thời kế thừa có chọn lọc truyền thống và tiếp thu tinh hoa nhân loại.",
+          "Hồ Chí Minh coi đại đoàn kết toàn dân tộc là nguồn sức mạnh quyết định để giành và giữ vững độc lập.",
         quiz: {
           question:
-            "Để xây dựng nền văn hoá Việt Nam tiên tiến, đậm đà bản sắc dân tộc, cần làm gì?",
+            "Theo tư tưởng Hồ Chí Minh, nguồn sức mạnh quan trọng hàng đầu để giành và giữ vững độc lập dân tộc là gì?",
           options: [
-            "Kế thừa có chọn lọc các giá trị truyền thống và tiếp thu tinh hoa nhân loại.",
-            "Chỉ tập trung phát triển kinh tế, văn hoá tự phát triển.",
-            "Xoá bỏ hoàn toàn các giá trị cũ.",
-            "Du nhập toàn bộ văn hoá nước ngoài.",
+            "Đại đoàn kết toàn dân tộc",
+            "Phụ thuộc hoàn toàn vào viện trợ bên ngoài",
+            "Chỉ dựa vào một giai cấp duy nhất",
+            "Chỉ dựa vào sức mạnh kinh tế của một nhóm nhỏ",
           ],
           correct: 0,
         },
-        fillAnswer: "Cần ___ giá trị truyền thống và ___ tinh hoa nhân loại.",
-        answer: "Kế thừa có chọn lọc; tiếp thu",
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, sức mạnh hàng đầu để giành và giữ độc lập là _______.",
+        answer: "Đại đoàn kết toàn dân tộc",
         fullFillAnswer:
-          "Phải kế thừa có chọn lọc truyền thống và tiếp thu tinh hoa nhân loại.",
+          "Đại đoàn kết tập hợp mọi lực lượng yêu nước, tạo sức mạnh tổng hợp để giành và bảo vệ độc lập.",
       },
-      // 2 (46)
       {
         id: 2,
-        term: "Bản chất con người (theo Mác – Lênin)",
-        definition: "Tổng hoà các mối quan hệ xã hội.",
+        term: "Vai trò lãnh đạo của Đảng",
+        definition:
+          "Hồ Chí Minh khẳng định sự lãnh đạo đúng đắn của Đảng là nhân tố quan trọng dẫn tới thắng lợi của cách mạng.",
         quiz: {
-          question: "Theo chủ nghĩa Mác – Lênin, bản chất con người là:",
+          question:
+            "Theo tư tưởng Hồ Chí Minh, nhân tố nào giữ vai trò quyết định về phương hướng và tổ chức trong sự nghiệp giành độc lập?",
           options: [
-            "Tổng hoà các mối quan hệ xã hội",
-            "Một thực thể sinh vật thuần tuý",
-            "Một thực thể có lý tính, bất biến",
-            "Một thực thể do thượng đế sinh ra",
+            "Sự lãnh đạo của Đảng",
+            "Sự thỏa hiệp vô nguyên tắc",
+            "Sự ban phát của nước lớn",
+            "Sự trung lập tuyệt đối trong mọi hoàn cảnh",
           ],
           correct: 0,
         },
-        fillAnswer: "Bản chất con người theo Mác – Lênin là ___.",
-        answer: "Tổng hoà các mối quan hệ xã hội",
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nhân tố giữ vai trò quyết định về phương hướng và tổ chức là _______.",
+        answer: "Sự lãnh đạo của Đảng",
         fullFillAnswer:
-          "Bản chất con người là tổng hoà các mối quan hệ xã hội.",
+          "Đảng lãnh đạo thống nhất mục tiêu, đường lối và tổ chức lực lượng để giành thắng lợi.",
       },
-      // 3 (47)
       {
         id: 3,
-        term: "Con người – chủ thể và sản phẩm của lịch sử",
-        definition: "Con người vừa là chủ thể, vừa là sản phẩm của lịch sử.",
+        term: "Liên minh công nhân – nông dân",
+        definition:
+          "Trong tư tưởng Hồ Chí Minh, liên minh công nhân – nông dân là nền tảng của khối đoàn kết trong cách mạng.",
         quiz: {
           question:
-            "Câu “Con người là sản phẩm của lịch sử và của chính bản thân con người” có nghĩa là gì?",
+            "Theo tư tưởng Hồ Chí Minh, nền tảng quan trọng của khối đại đoàn kết trong cách mạng là gì?",
           options: [
-            "Con người tự tạo ra mình mà không cần điều kiện khách quan",
-            "Con người vừa là chủ thể, vừa là sản phẩm của lịch sử",
-            "Lịch sử quyết định hoàn toàn con người",
-            "Con người không thể thay đổi được lịch sử",
+            "Liên minh công nhân – nông dân",
+            "Liên minh giữa các thế lực thực dân",
+            "Sự tách rời các tầng lớp nhân dân",
+            "Sự phụ thuộc vào một lực lượng bên ngoài",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nền tảng quan trọng của khối đại đoàn kết là _______.",
+        answer: "Liên minh công nhân – nông dân",
+        fullFillAnswer:
+          "Liên minh công nhân – nông dân tạo nền tảng xã hội vững chắc cho sự nghiệp giải phóng dân tộc.",
+      },
+      {
+        id: 4,
+        term: "Mặt trận dân tộc thống nhất",
+        definition:
+          "Hồ Chí Minh chủ trương xây dựng mặt trận dân tộc thống nhất để tập hợp rộng rãi mọi lực lượng yêu nước.",
+        quiz: {
+          question:
+            "Hình thức tổ chức quan trọng để tập hợp rộng rãi các lực lượng yêu nước theo Hồ Chí Minh là gì?",
+          options: [
+            "Mặt trận dân tộc thống nhất",
+            "Tổ chức khép kín, loại trừ lực lượng khác",
+            "Liên minh chỉ gồm một nhóm nhỏ",
+            "Tổ chức chỉ mang tính hình thức, không hoạt động",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo Hồ Chí Minh, hình thức tổ chức quan trọng để tập hợp lực lượng yêu nước là _______.",
+        answer: "Mặt trận dân tộc thống nhất",
+        fullFillAnswer:
+          "Mặt trận dân tộc thống nhất giúp mở rộng khối đoàn kết, tạo sức mạnh toàn dân vì độc lập.",
+      },
+      {
+        id: 5,
+        term: "Tự lực tự cường",
+        definition:
+          "Hồ Chí Minh nhấn mạnh phải dựa vào sức mình là chính, coi tự lực tự cường là nguyên tắc quan trọng để giữ độc lập.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng để giữ vững độc lập trong mọi hoàn cảnh là gì?",
+          options: [
+            "Tự lực tự cường",
+            "Phụ thuộc hoàn toàn vào bên ngoài",
+            "Chờ đợi thời cơ do người khác quyết định",
+            "Từ bỏ mục tiêu độc lập khi gặp khó khăn",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng để giữ vững độc lập là _______.",
+        answer: "Tự lực tự cường",
+        fullFillAnswer:
+          "Tự lực tự cường giúp dân tộc chủ động, không bị lệ thuộc, giữ vững chủ quyền thực chất.",
+      },
+      {
+        id: 6,
+        term: "Kết hợp sức mạnh dân tộc và sức mạnh thời đại",
+        definition:
+          "Hồ Chí Minh chủ trương kết hợp nội lực dân tộc với sự ủng hộ tiến bộ của thời đại để tạo sức mạnh tổng hợp.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, cách tạo sức mạnh tổng hợp trong đấu tranh giành độc lập là gì?",
+          options: [
+            "Kết hợp sức mạnh dân tộc và sức mạnh thời đại",
+            "Chỉ dựa vào sức mạnh quân sự thuần túy",
+            "Chỉ dựa vào ngoại giao, không cần nội lực",
+            "Tách rời hoàn toàn yếu tố quốc tế",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, tạo sức mạnh tổng hợp là _______.",
+        answer: "Kết hợp sức mạnh dân tộc và sức mạnh thời đại",
+        fullFillAnswer:
+          "Kết hợp nội lực với sự đồng tình, ủng hộ tiến bộ quốc tế giúp tăng sức mạnh và tính chính nghĩa.",
+      },
+      {
+        id: 7,
+        term: "Kết hợp đấu tranh chính trị và đấu tranh vũ trang",
+        definition:
+          "Trong tư tưởng Hồ Chí Minh, đấu tranh giành độc lập cần phối hợp nhiều hình thức, trong đó có chính trị và vũ trang.",
+        quiz: {
+          question:
+            "Theo Hồ Chí Minh, để giành thắng lợi, cách mạng cần kết hợp những hình thức đấu tranh nào?",
+          options: [
+            "Đấu tranh chính trị và đấu tranh vũ trang",
+            "Chỉ đấu tranh vũ trang",
+            "Chỉ đấu tranh chính trị",
+            "Chỉ đấu tranh kinh tế",
+          ],
+          correct: 0,
+        },
+        fillAnswer: "Theo Hồ Chí Minh, cách mạng cần kết hợp _______.",
+        answer: "Đấu tranh chính trị và đấu tranh vũ trang",
+        fullFillAnswer:
+          "Sự phối hợp các hình thức đấu tranh tạo thế và lực, nâng cao khả năng giành thắng lợi.",
+      },
+      {
+        id: 8,
+        term: "Chiến tranh nhân dân",
+        definition:
+          "Hồ Chí Minh khẳng định bảo vệ độc lập phải dựa vào sức mạnh toàn dân, toàn diện, lấy nhân dân làm gốc.",
+        quiz: {
+          question:
+            "Quan điểm nào sau đây phản ánh đúng tư tưởng Hồ Chí Minh về bảo vệ độc lập trong chiến tranh?",
+          options: [
+            "Chiến tranh nhân dân, dựa vào sức mạnh toàn dân",
+            "Chiến tranh chỉ do một bộ phận nhỏ tiến hành",
+            "Chiến tranh chỉ là việc của quân đội chuyên nghiệp",
+            "Chiến tranh không cần sự tham gia của nhân dân",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, bảo vệ độc lập phải dựa vào _______.",
+        answer: "Chiến tranh nhân dân, dựa vào sức mạnh toàn dân",
+        fullFillAnswer:
+          "Nhân dân là chủ thể, tạo hậu phương và sức mạnh rộng khắp để bảo vệ độc lập.",
+      },
+      {
+        id: 9,
+        term: "Phương châm kháng chiến toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
+        definition:
+          "Tư tưởng kháng chiến nhấn mạnh toàn dân tham gia, toàn diện về mọi mặt, bền bỉ lâu dài và dựa vào sức mình là chính.",
+        quiz: {
+          question:
+            "Phương châm kháng chiến thể hiện đúng tư tưởng Hồ Chí Minh là phương châm nào?",
+          options: [
+            "Toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
+            "Đánh nhanh thắng nhanh bằng mọi giá",
+            "Chỉ dựa vào viện trợ là chính",
+            "Chỉ cần thắng lợi quân sự, không cần các mặt khác",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Phương châm kháng chiến theo tư tưởng Hồ Chí Minh là _______.",
+        answer: "Toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
+        fullFillAnswer:
+          "Phương châm này giúp phát huy sức mạnh tổng hợp, bền bỉ, chủ động và tự chủ trong kháng chiến.",
+      },
+      {
+        id: 10,
+        term: "Mục tiêu tối cao trong đối ngoại",
+        definition:
+          "Đối ngoại phải phục vụ mục tiêu giữ vững độc lập, chủ quyền và lợi ích dân tộc.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, mục tiêu tối cao của hoạt động đối ngoại là gì?",
+          options: [
+            "Giữ vững độc lập, chủ quyền và lợi ích dân tộc",
+            "Đánh đổi chủ quyền để lấy lợi ích ngắn hạn",
+            "Phụ thuộc hoàn toàn vào một nước lớn",
+            "Cô lập đất nước với thế giới",
+          ],
+          correct: 0,
+        },
+        fillAnswer: "Theo tư tưởng Hồ Chí Minh, đối ngoại phải nhằm _______.",
+        answer: "Giữ vững độc lập, chủ quyền và lợi ích dân tộc",
+        fullFillAnswer:
+          "Đối ngoại là mặt trận quan trọng, nhưng luôn phải đặt độc lập, chủ quyền và lợi ích dân tộc lên hàng đầu.",
+      },
+      {
+        id: 11,
+        term: "Kiên định mục tiêu, linh hoạt sách lược",
+        definition:
+          "Hồ Chí Minh nhấn mạnh kiên định mục tiêu độc lập, tự do, đồng thời linh hoạt về phương pháp và sách lược.",
+        quiz: {
+          question:
+            "Quan điểm nào sau đây phù hợp với tư tưởng Hồ Chí Minh về xử lý tình huống phức tạp để giữ độc lập?",
+          options: [
+            "Kiên định mục tiêu độc lập, tự do; linh hoạt sách lược",
+            "Thay đổi mục tiêu theo hoàn cảnh",
+            "Chỉ cứng nhắc, không cần linh hoạt",
+            "Chỉ linh hoạt, không cần nguyên tắc",
+          ],
+          correct: 0,
+        },
+        fillAnswer: "Theo Hồ Chí Minh, để giữ độc lập cần _______.",
+        answer: "Kiên định mục tiêu độc lập, tự do; linh hoạt sách lược",
+        fullFillAnswer:
+          "Giữ vững nguyên tắc cốt lõi nhưng vận dụng linh hoạt để bảo vệ lợi ích dân tộc trong từng hoàn cảnh.",
+      },
+      {
+        id: 12,
+        term: "Tôn trọng quyền dân tộc tự quyết",
+        definition:
+          "Tư tưởng Hồ Chí Minh đề cao quyền dân tộc tự quyết và sự bình đẳng giữa các dân tộc.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng trong quan hệ giữa các dân tộc là gì?",
+          options: [
+            "Tôn trọng quyền dân tộc tự quyết và bình đẳng",
+            "Áp đặt ý chí của nước mạnh",
+            "Can thiệp vào công việc nội bộ của dân tộc khác",
+            "Phủ nhận quyền tự do của các dân tộc nhỏ",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng là _______.",
+        answer: "Tôn trọng quyền dân tộc tự quyết và bình đẳng",
+        fullFillAnswer:
+          "Tôn trọng quyền tự quyết giúp bảo vệ chính nghĩa và củng cố đoàn kết quốc tế vì hòa bình, độc lập.",
+      },
+      {
+        id: 13,
+        term: "Nhà nước của dân, do dân, vì dân",
+        definition:
+          "Giữ vững độc lập gắn với xây dựng nhà nước phục vụ nhân dân, bảo đảm quyền làm chủ của nhân dân.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, xây dựng nhà nước như thế nào sẽ góp phần củng cố độc lập dân tộc?",
+          options: [
+            "Nhà nước của dân, do dân, vì dân",
+            "Nhà nước chỉ phục vụ một nhóm lợi ích",
+            "Nhà nước đứng ngoài đời sống nhân dân",
+            "Nhà nước chỉ chú trọng hình thức, không cần hiệu quả",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, để củng cố độc lập cần xây dựng _______.",
+        answer: "Nhà nước của dân, do dân, vì dân",
+        fullFillAnswer:
+          "Nhà nước dựa vào dân, vì dân sẽ tạo nền tảng chính trị – xã hội vững chắc cho độc lập.",
+      },
+      {
+        id: 14,
+        term: "Đảng trong sạch, vững mạnh",
+        definition:
+          "Hồ Chí Minh nhấn mạnh Đảng phải trong sạch, vững mạnh để xứng đáng lãnh đạo nhân dân giữ vững độc lập.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, để lãnh đạo sự nghiệp giữ vững độc lập, Đảng cần như thế nào?",
+          options: [
+            "Trong sạch, vững mạnh, gắn bó với nhân dân",
+            "Xa rời nhân dân để giữ quyền lực",
+            "Chỉ chú trọng khẩu hiệu, không cần thực chất",
+            "Không cần tự đổi mới, tự chỉnh đốn",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, để lãnh đạo giữ vững độc lập, Đảng cần _______.",
+        answer: "Trong sạch, vững mạnh, gắn bó với nhân dân",
+        fullFillAnswer:
+          "Đảng vững mạnh giúp giữ đúng mục tiêu, tăng uy tín và sức chiến đấu, từ đó củng cố độc lập.",
+      },
+      {
+        id: 15,
+        term: "Lực lượng vũ trang nhân dân",
+        definition:
+          "Bảo vệ độc lập cần xây dựng lực lượng vũ trang nhân dân phù hợp, gắn bó với nhân dân.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, lực lượng nào giữ vai trò nòng cốt trong bảo vệ Tổ quốc?",
+          options: [
+            "Lực lượng vũ trang nhân dân",
+            "Chỉ lực lượng kinh tế",
+            "Chỉ lực lượng ngoại giao",
+            "Chỉ lực lượng truyền thông",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nòng cốt trong bảo vệ Tổ quốc là _______.",
+        answer: "Lực lượng vũ trang nhân dân",
+        fullFillAnswer:
+          "Lực lượng vũ trang nhân dân là trụ cột bảo vệ chủ quyền, đồng thời gắn chặt với sức mạnh toàn dân.",
+      },
+      {
+        id: 16,
+        term: "Ba thứ quân",
+        definition:
+          "Quan điểm tổ chức lực lượng phù hợp chiến tranh nhân dân: bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ.",
+        quiz: {
+          question:
+            "Trong tổ chức lực lượng theo chiến tranh nhân dân, mô hình phù hợp là gì?",
+          options: [
+            "Bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ",
+            "Chỉ bộ đội chủ lực",
+            "Chỉ dân quân tự vệ",
+            "Chỉ lực lượng tình nguyện quốc tế",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Mô hình lực lượng phù hợp chiến tranh nhân dân là _______.",
+        answer: "Bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ",
+        fullFillAnswer:
+          "Ba thứ quân tạo thế trận rộng khắp, linh hoạt, kết hợp sức mạnh tập trung và phân tán.",
+      },
+      {
+        id: 17,
+        term: "Xây dựng hậu phương vững mạnh",
+        definition:
+          "Giữ vững độc lập cần hậu phương vững mạnh về chính trị, kinh tế, văn hóa và tinh thần đoàn kết.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, yếu tố nào giúp tạo nền tảng bền vững để bảo vệ độc lập lâu dài?",
+          options: [
+            "Xây dựng hậu phương vững mạnh",
+            "Chỉ dựa vào thắng lợi nhất thời",
+            "Chỉ dựa vào viện trợ bên ngoài",
+            "Bỏ qua đời sống nhân dân",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nền tảng bền vững để bảo vệ độc lập lâu dài là _______.",
+        answer: "Xây dựng hậu phương vững mạnh",
+        fullFillAnswer:
+          "Hậu phương vững mạnh tạo nguồn lực, niềm tin và sức bền cho cuộc đấu tranh bảo vệ độc lập.",
+      },
+      {
+        id: 18,
+        term: "Yêu nước chân chính gắn với tinh thần quốc tế",
+        definition:
+          "Hồ Chí Minh đề cao lòng yêu nước chân chính, đồng thời coi trọng tinh thần quốc tế trong sáng, đoàn kết với lực lượng tiến bộ.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, lòng yêu nước chân chính cần gắn với điều gì?",
+          options: [
+            "Tinh thần quốc tế trong sáng và đoàn kết với lực lượng tiến bộ",
+            "Chủ nghĩa dân tộc hẹp hòi, bài ngoại",
+            "Cô lập đất nước với thế giới",
+            "Tách rời hoàn toàn phong trào tiến bộ quốc tế",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, yêu nước chân chính cần gắn với _______.",
+        answer:
+          "Tinh thần quốc tế trong sáng và đoàn kết với lực lượng tiến bộ",
+        fullFillAnswer:
+          "Yêu nước gắn với tinh thần quốc tế giúp tăng sự ủng hộ, củng cố chính nghĩa và sức mạnh trong đấu tranh.",
+      },
+      {
+        id: 19,
+        term: "Tranh thủ sự ủng hộ quốc tế",
+        definition:
+          "Hồ Chí Minh chủ trương chủ động tranh thủ sự đồng tình, ủng hộ của nhân dân và lực lượng tiến bộ thế giới.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, trong đấu tranh giành và giữ độc lập cần làm gì với yếu tố quốc tế?",
+          options: [
+            "Chủ động tranh thủ sự ủng hộ của lực lượng tiến bộ quốc tế",
+            "Phủ nhận hoàn toàn sự ủng hộ quốc tế",
+            "Chỉ dựa vào quốc tế, không cần nội lực",
+            "Chỉ quan tâm lợi ích cục bộ, không cần bạn bè",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, cần _______ để tăng sức mạnh cho sự nghiệp độc lập.",
+        answer: "Chủ động tranh thủ sự ủng hộ của lực lượng tiến bộ quốc tế",
+        fullFillAnswer:
+          "Tranh thủ quốc tế đúng đắn giúp tăng thế chính trị – ngoại giao, nhưng vẫn lấy nội lực làm quyết định.",
+      },
+      {
+        id: 20,
+        term: "Độc lập gắn với tự do, hạnh phúc của nhân dân",
+        definition:
+          "Hồ Chí Minh khẳng định độc lập phải hướng đến tự do và hạnh phúc của nhân dân, coi đó là thước đo ý nghĩa của độc lập.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, mục tiêu cốt lõi của độc lập dân tộc hướng tới điều gì?",
+          options: [
+            "Tự do và hạnh phúc của nhân dân",
+            "Lợi ích của một nhóm đặc quyền",
+            "Chỉ danh nghĩa quốc gia, không cần đời sống nhân dân",
+            "Chỉ mở rộng ảnh hưởng ra bên ngoài",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, độc lập dân tộc phải hướng tới _______.",
+        answer: "Tự do và hạnh phúc của nhân dân",
+        fullFillAnswer:
+          "Độc lập có ý nghĩa trọn vẹn khi nhân dân được hưởng tự do, ấm no và hạnh phúc.",
+      },
+    ],
+  },
+  {
+    id: 330039,
+    title: "Phần 4: Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+    description:
+      "Trắc nghiệm về mối quan hệ độc lập dân tộc và chủ nghĩa xã hội.",
+    icon: "🌟",
+    questions: [
+      {
+        id: 1,
+        term: "Độc lập dân tộc gắn liền với chủ nghĩa xã hội (lý do)",
+        definition:
+          "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với chủ nghĩa xã hội để độc lập trọn vẹn và giải phóng triệt để dân tộc bị áp bức.",
+        quiz: {
+          question:
+            "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với chủ nghĩa xã hội vì:",
+          options: [
+            "Độc lập mà không có chủ nghĩa xã hội thì độc lập chưa trọn vẹn",
+            "Chỉ có chủ nghĩa xã hội mới giải phóng hoàn toàn các dân tộc bị áp bức",
+            "Cả A và B đều đúng",
+            "Chỉ có chủ nghĩa tư bản mới đảm bảo độc lập",
+          ],
+          correct: 2,
+        },
+        fillAnswer:
+          "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với chủ nghĩa xã hội vì: (A) độc lập mà không có chủ nghĩa xã hội thì độc lập chưa trọn vẹn; (B) chỉ có chủ nghĩa xã hội mới giải phóng hoàn toàn các dân tộc bị áp bức. Kết luận đúng là _______.",
+        answer: "Cả A và B đều đúng",
+        fullFillAnswer:
+          "Độc lập dân tộc phải gắn liền với chủ nghĩa xã hội để độc lập trọn vẹn và giải phóng triệt để các dân tộc bị áp bức.",
+      },
+      {
+        id: 2,
+        term: "Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được dân tộc bị áp bức",
+        definition:
+          "Câu trích nhấn mạnh tư tưởng độc lập dân tộc gắn liền với chủ nghĩa xã hội.",
+        quiz: {
+          question:
+            "Hồ Chí Minh viết: “Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được các dân tộc bị áp bức và những người lao động trên thế giới khỏi ách nô lệ”. Nội dung nhấn mạnh là:",
+          options: [
+            "Độc lập là mục tiêu trước mắt",
+            "Chủ nghĩa xã hội là mục tiêu lâu dài",
+            "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+            "Đại đoàn kết dân tộc",
+          ],
+          correct: 2,
+        },
+        fillAnswer:
+          "Câu nói “Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được các dân tộc bị áp bức và những người lao động trên thế giới khỏi ách nô lệ” nhấn mạnh _______.",
+        answer: "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+        fullFillAnswer:
+          "Câu trích nhấn mạnh độc lập dân tộc phải gắn liền với chủ nghĩa xã hội.",
+      },
+      {
+        id: 3,
+        term: "Mục tiêu lớn nhất của chủ nghĩa xã hội theo Hồ Chí Minh",
+        definition:
+          "Trọng tâm là giải phóng con người, làm cho mọi người ấm no, tự do, hạnh phúc.",
+        quiz: {
+          question:
+            "Mục tiêu lớn nhất của chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh là:",
+          options: [
+            "Xây dựng kinh tế phát triển cao",
+            "Giải phóng con người, làm cho mọi người có cơm ăn áo mặc, được tự do, hạnh phúc",
+            "Xóa bỏ giai cấp hoàn toàn",
+            "Phát triển khoa học kỹ thuật",
           ],
           correct: 1,
         },
-        fillAnswer: "Con người vừa là ___, vừa là ___ của lịch sử.",
-        answer: "Chủ thể; sản phẩm",
+        fillAnswer:
+          "Mục tiêu lớn nhất của chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh là _______.",
+        answer:
+          "Giải phóng con người, làm cho mọi người có cơm ăn áo mặc, được tự do, hạnh phúc",
         fullFillAnswer:
-          "Con người vừa là chủ thể, vừa là sản phẩm của lịch sử.",
+          "Theo Hồ Chí Minh, mục tiêu lớn nhất của chủ nghĩa xã hội là giải phóng con người và bảo đảm ấm no, tự do, hạnh phúc.",
       },
-      // 4 (48)
       {
         id: 4,
-        term: "Khác biệt căn bản giữa con người và con vật",
-        definition: "Con người biết lao động sản xuất.",
+        term: "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
+        definition:
+          "Chủ nghĩa xã hội được Hồ Chí Minh diễn giải bằng những mục tiêu thiết thực về đời sống.",
         quiz: {
           question:
-            "Theo quan điểm Mác-xít, sự khác biệt căn bản giữa con người và con vật là gì?",
+            "Hồ Chí Minh nhấn mạnh: “Chủ nghĩa xã hội là làm sao cho nhân dân đủ ăn, đủ mặc, ngày càng sung sướng, hạnh phúc”. Câu này thể hiện:",
           options: [
-            "Con người biết sử dụng công cụ",
-            "Con người có ngôn ngữ",
-            "Con người có tư duy",
-            "Con người biết lao động sản xuất",
+            "Chủ nghĩa xã hội là giáo điều",
+            "Chủ nghĩa xã hội là mục tiêu xa vời",
+            "Chủ nghĩa xã hội chỉ tập trung vào kinh tế",
+            "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
           ],
           correct: 3,
         },
-        fillAnswer: "Sự khác biệt căn bản: con người biết ___.",
-        answer: "Lao động sản xuất",
-        fullFillAnswer: "Khác biệt căn bản: con người biết lao động sản xuất.",
+        fillAnswer:
+          "Câu nói “Chủ nghĩa xã hội là làm sao cho nhân dân đủ ăn, đủ mặc, ngày càng sung sướng, hạnh phúc” thể hiện chủ nghĩa xã hội _______.",
+        answer: "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
+        fullFillAnswer:
+          "Hồ Chí Minh coi chủ nghĩa xã hội là mục tiêu thiết thực gắn với đời sống và hạnh phúc của nhân dân.",
       },
-      // 5 (49)
       {
         id: 5,
-        term: "Nguồn gốc tha hoá con người",
+        term: "Đặc điểm xã hội xã hội chủ nghĩa ở Việt Nam (ý loại trừ)",
         definition:
-          "Nảy sinh trong xã hội có chế độ tư hữu, có giai cấp đối kháng.",
+          "Trong giai đoạn xây dựng, không thể đồng nhất với trạng thái “không còn giai cấp nào”.",
         quiz: {
-          question: "Hiện tượng tha hoá con người nảy sinh trong xã hội nào?",
+          question:
+            "Đặc điểm của xã hội xã hội chủ nghĩa ở Việt Nam theo Hồ Chí Minh KHÔNG bao gồm:",
           options: [
-            "Xã hội cộng sản nguyên thuỷ",
-            "Xã hội có chế độ tư hữu, có giai cấp đối kháng",
-            "Xã hội xã hội chủ nghĩa",
-            "Mọi xã hội trong lịch sử",
+            "Nhân dân lao động làm chủ",
+            "Nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu",
+            "Nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+            "Xã hội không có giai cấp nào",
           ],
-          correct: 1,
+          correct: 3,
         },
-        fillAnswer: "Tha hoá nảy sinh trong xã hội có ___ và ___ giai cấp.",
-        answer: "Chế độ tư hữu; đối kháng giai cấp",
+        fillAnswer:
+          "Đặc điểm của xã hội xã hội chủ nghĩa ở Việt Nam theo Hồ Chí Minh không bao gồm _______.",
+        answer: "Xã hội không có giai cấp nào",
         fullFillAnswer:
-          "Tha hoá nảy sinh trong xã hội có tư hữu và đối kháng giai cấp.",
+          "“Xã hội không có giai cấp nào” không phải mô tả trực tiếp đặc điểm xã hội xã hội chủ nghĩa trong giai đoạn xây dựng.",
       },
-      // 6 (50)
       {
         id: 6,
-        term: "Vai trò của quần chúng nhân dân",
+        term: "Nguyên tắc xây dựng chủ nghĩa xã hội ở Việt Nam",
         definition:
-          "Là lực lượng sáng tạo ra lịch sử, quyết định sự phát triển của lịch sử.",
+          "Xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam, tiến hành từng bước vững chắc.",
         quiz: {
-          question: "Vai trò của quần chúng nhân dân trong lịch sử là gì?",
+          question: "Xây dựng chủ nghĩa xã hội ở Việt Nam phải:",
           options: [
-            "Là lực lượng sáng tạo ra lịch sử, quyết định sự phát triển của lịch sử",
-            "Chỉ là đám đông thụ động, bị các vĩ nhân chi phối",
-            "Chỉ đóng vai trò phụ trong các sự kiện lịch sử",
-            "Không có vai trò gì đáng kể",
+            "Xuất phát từ thực tế Việt Nam, từng bước, vững chắc",
+            "Sao chép máy móc mô hình nước ngoài",
+            "Nhảy cóc, nóng vội",
+            "Bỏ qua giai đoạn phát triển kinh tế",
           ],
           correct: 0,
         },
-        fillAnswer: "Quần chúng nhân dân là lực lượng ___ ra lịch sử.",
-        answer: "Sáng tạo",
+        fillAnswer: "Xây dựng chủ nghĩa xã hội ở Việt Nam phải _______.",
+        answer: "Xuất phát từ thực tế Việt Nam, từng bước, vững chắc",
         fullFillAnswer:
-          "Quần chúng nhân dân là lực lượng sáng tạo ra lịch sử, quyết định sự phát triển của lịch sử.",
+          "Theo Hồ Chí Minh, xây dựng chủ nghĩa xã hội phải phù hợp thực tế Việt Nam, tránh nóng vội và sao chép máy móc.",
+      },
+      {
+        id: 7,
+        term: "Tránh chủ quan duy ý chí khi xây dựng chủ nghĩa xã hội",
+        definition:
+          "Hồ Chí Minh nhấn mạnh chống chủ quan, nóng vội, viển vông trong xây dựng chủ nghĩa xã hội.",
+        quiz: {
+          question:
+            "Hồ Chí Minh nhấn mạnh tránh những gì khi xây dựng chủ nghĩa xã hội?",
+          options: [
+            "Đi từng bước vững chắc",
+            "Kế thừa thành tựu nhân loại",
+            "Chủ quan duy ý chí, nóng vội, viển vông",
+            "Kết hợp đổi mới và ổn định",
+          ],
+          correct: 2,
+        },
+        fillAnswer:
+          "Hồ Chí Minh nhấn mạnh cần tránh _______ khi xây dựng chủ nghĩa xã hội.",
+        answer: "Chủ quan duy ý chí, nóng vội, viển vông",
+        fullFillAnswer:
+          "Người nhắc phải tránh chủ quan duy ý chí, nóng vội, viển vông khi xây dựng chủ nghĩa xã hội.",
+      },
+      {
+        id: 8,
+        term: "Cơ chế xây dựng: Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
+        definition:
+          "Đây là cơ chế nòng cốt để xây dựng chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh.",
+        quiz: {
+          question:
+            "Vai trò quyết định trong xây dựng chủ nghĩa xã hội theo Hồ Chí Minh thuộc về:",
+          options: [
+            "Chỉ Nhà nước",
+            "Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
+            "Chỉ nhân dân",
+            "Chỉ Đảng",
+          ],
+          correct: 1,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, cơ chế nòng cốt để xây dựng chủ nghĩa xã hội là _______.",
+        answer: "Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
+        fullFillAnswer:
+          "Theo Hồ Chí Minh, xây dựng chủ nghĩa xã hội cần cơ chế: Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ.",
+      },
+      {
+        id: 9,
+        term: "Sự sáng tạo khi kết hợp độc lập dân tộc với chủ nghĩa xã hội",
+        definition:
+          "Là sự vận dụng sáng tạo chủ nghĩa Mác - Lênin vào điều kiện Việt Nam.",
+        quiz: {
+          question: "Sự kết hợp độc lập dân tộc với chủ nghĩa xã hội là:",
+          options: [
+            "Sự sáng tạo vĩ đại của Hồ Chí Minh khi vận dụng chủ nghĩa Mác - Lênin vào điều kiện Việt Nam",
+            "Sao chép từ Liên Xô",
+            "Mô hình chủ nghĩa tư bản",
+            "Không liên quan đến thực tiễn thuộc địa",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Sự kết hợp độc lập dân tộc với chủ nghĩa xã hội là _______.",
+        answer:
+          "Sự sáng tạo vĩ đại của Hồ Chí Minh khi vận dụng chủ nghĩa Mác - Lênin vào điều kiện Việt Nam",
+        fullFillAnswer:
+          "Đây là sự sáng tạo của Hồ Chí Minh trong vận dụng chủ nghĩa Mác - Lênin phù hợp hoàn cảnh Việt Nam.",
+      },
+      {
+        id: 10,
+        term: "Ý nghĩa hiện nay của việc gắn độc lập dân tộc với chủ nghĩa xã hội",
+        definition:
+          "Tư tưởng này có ý nghĩa định hướng cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế.",
+        quiz: {
+          question:
+            "Ý nghĩa của việc gắn độc lập dân tộc với chủ nghĩa xã hội trong thời đại hiện nay là:",
+          options: [
+            "Kim chỉ nam cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế",
+            "Chỉ có giá trị lịch sử",
+            "Không còn phù hợp",
+            "Chỉ áp dụng cho kháng chiến",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong thời đại hiện nay, việc gắn độc lập dân tộc với chủ nghĩa xã hội có ý nghĩa _______.",
+        answer:
+          "Kim chỉ nam cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế",
+        fullFillAnswer:
+          "Tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội tiếp tục định hướng công cuộc xây dựng và phát triển đất nước.",
+      },
+      {
+        id: 11,
+        term: "Độc lập dân tộc là mục tiêu trước mắt",
+        definition:
+          "Trong tiến trình cách mạng, Hồ Chí Minh xác định độc lập dân tộc là mục tiêu cấp bách trước mắt.",
+        quiz: {
+          question: "Hồ Chí Minh coi độc lập dân tộc là:",
+          options: [
+            "Không liên quan đến chủ nghĩa xã hội",
+            "Mục tiêu lâu dài",
+            "Mục tiêu trước mắt",
+            "Mục tiêu cuối cùng",
+          ],
+          correct: 2,
+        },
+        fillAnswer: "Hồ Chí Minh coi độc lập dân tộc là _______.",
+        answer: "Mục tiêu trước mắt",
+        fullFillAnswer:
+          "Hồ Chí Minh xác định độc lập dân tộc là nhiệm vụ cấp bách, trước mắt của cách mạng.",
+      },
+      {
+        id: 12,
+        term: "Chủ nghĩa xã hội là sự nghiệp toàn diện",
+        definition:
+          "Hồ Chí Minh quan niệm chủ nghĩa xã hội là toàn diện: kinh tế, văn hóa và con người.",
+        quiz: {
+          question: "Chủ nghĩa xã hội theo Hồ Chí Minh tập trung vào:",
+          options: [
+            "Chỉ kinh tế",
+            "Kết hợp kinh tế, văn hóa, con người",
+            "Chỉ văn hóa",
+            "Chỉ chính trị",
+          ],
+          correct: 1,
+        },
+        fillAnswer: "Chủ nghĩa xã hội theo Hồ Chí Minh tập trung vào _______.",
+        answer: "Kết hợp kinh tế, văn hóa, con người",
+        fullFillAnswer:
+          "Hồ Chí Minh quan niệm chủ nghĩa xã hội là một sự nghiệp toàn diện: kinh tế, văn hóa và con người.",
+      },
+      {
+        id: 13,
+        term: "Độc lập dân tộc là điều kiện để xây dựng chủ nghĩa xã hội",
+        definition:
+          "Độc lập dân tộc là tiền đề quan trọng để thực hiện mục tiêu xây dựng và phát triển đất nước theo định hướng chủ nghĩa xã hội.",
+        quiz: {
+          question:
+            "Trong tư tưởng Hồ Chí Minh, độc lập dân tộc có ý nghĩa như thế nào đối với con đường xây dựng chủ nghĩa xã hội?",
+          options: [
+            "Là điều kiện và tiền đề quan trọng để xây dựng chủ nghĩa xã hội",
+            "Không liên quan đến con đường xây dựng chủ nghĩa xã hội",
+            "Chỉ cần độc lập hình thức là đủ để xây dựng chủ nghĩa xã hội",
+            "Chỉ cần viện trợ quốc tế là đủ, không cần độc lập",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong tư tưởng Hồ Chí Minh, độc lập dân tộc là _______ để xây dựng chủ nghĩa xã hội.",
+        answer:
+          "Là điều kiện và tiền đề quan trọng để xây dựng chủ nghĩa xã hội",
+        fullFillAnswer:
+          "Độc lập dân tộc là tiền đề để chủ động lựa chọn con đường phát triển và tổ chức xây dựng chủ nghĩa xã hội.",
+      },
+      {
+        id: 14,
+        term: "Độc lập trọn vẹn gắn với đời sống nhân dân",
+        definition:
+          "Độc lập có ý nghĩa khi đem lại tự do, ấm no và hạnh phúc cho nhân dân; đó cũng là động lực hướng tới chủ nghĩa xã hội.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, vì sao độc lập dân tộc phải gắn với việc chăm lo đời sống nhân dân?",
+          options: [
+            "Vì độc lập phải đem lại tự do, ấm no, hạnh phúc cho nhân dân mới có ý nghĩa",
+            "Vì chỉ cần quốc hiệu và quốc kỳ là đủ",
+            "Vì đời sống nhân dân là vấn đề không quan trọng",
+            "Vì chỉ cần tăng trưởng kinh tế là đủ, không cần quyền lợi nhân dân",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, độc lập dân tộc phải gắn với việc chăm lo đời sống nhân dân vì _______.",
+        answer:
+          "Vì độc lập phải đem lại tự do, ấm no, hạnh phúc cho nhân dân mới có ý nghĩa",
+        fullFillAnswer:
+          "Quan điểm nhất quán: độc lập không tách rời quyền lợi, tự do và hạnh phúc của nhân dân.",
+      },
+      {
+        id: 15,
+        term: "Độc lập danh nghĩa không phải độc lập thật sự",
+        definition:
+          "Nếu không có thực quyền về đối ngoại, quốc phòng, tài chính thì độc lập chỉ là hình thức.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, độc lập danh nghĩa thường biểu hiện ở điểm nào?",
+          options: [
+            "Có tên gọi độc lập nhưng không có thực quyền về đối ngoại, quốc phòng, tài chính",
+            "Có đầy đủ quyền tự quyết trên mọi lĩnh vực",
+            "Có khả năng tự tổ chức và tự bảo vệ đất nước",
+            "Có khả năng quyết định đường lối đối nội và đối ngoại",
+          ],
+          correct: 0,
+        },
+        fillAnswer: "Theo tư tưởng Hồ Chí Minh, độc lập danh nghĩa là _______.",
+        answer:
+          "Có tên gọi độc lập nhưng không có thực quyền về đối ngoại, quốc phòng, tài chính",
+        fullFillAnswer:
+          "Độc lập thật sự phải là chủ quyền thực chất, không chỉ là danh nghĩa hoặc hình thức.",
+      },
+      {
+        id: 16,
+        term: "Mục tiêu của chủ nghĩa xã hội gắn với con người",
+        definition:
+          "Mục tiêu lớn của chủ nghĩa xã hội theo Hồ Chí Minh hướng vào giải phóng con người và bảo đảm đời sống ấm no, tự do, hạnh phúc.",
+        quiz: {
+          question:
+            "Trong tư tưởng Hồ Chí Minh, trọng tâm của mục tiêu chủ nghĩa xã hội gắn trực tiếp với yếu tố nào?",
+          options: [
+            "Con người và đời sống của nhân dân",
+            "Chỉ phát triển công nghiệp nặng",
+            "Chỉ mở rộng thị trường",
+            "Chỉ tăng trưởng kinh tế, không cần công bằng xã hội",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Trong tư tưởng Hồ Chí Minh, trọng tâm của mục tiêu chủ nghĩa xã hội gắn trực tiếp với _______.",
+        answer: "Con người và đời sống của nhân dân",
+        fullFillAnswer:
+          "Mục tiêu chủ nghĩa xã hội theo Hồ Chí Minh hướng vào con người: ấm no, tự do, hạnh phúc và phát triển toàn diện.",
+      },
+      {
+        id: 17,
+        term: "Xây dựng chủ nghĩa xã hội phải phù hợp thực tiễn",
+        definition:
+          "Xây dựng chủ nghĩa xã hội cần xuất phát từ điều kiện cụ thể, tránh máy móc, nóng vội.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, vì sao xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam?",
+          options: [
+            "Vì mỗi quốc gia có điều kiện lịch sử và trình độ phát triển khác nhau, không thể sao chép máy móc",
+            "Vì phải sao chép hoàn toàn mô hình nước ngoài mới thành công",
+            "Vì có thể bỏ qua mọi điều kiện khách quan",
+            "Vì không cần quan tâm đến lực lượng sản xuất",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam vì _______.",
+        answer:
+          "Vì mỗi quốc gia có điều kiện lịch sử và trình độ phát triển khác nhau, không thể sao chép máy móc",
+        fullFillAnswer:
+          "Hồ Chí Minh nhấn mạnh tính phù hợp thực tiễn, tiến hành từng bước vững chắc, tránh rập khuôn.",
+      },
+      {
+        id: 18,
+        term: "Chống nóng vội trong xây dựng chủ nghĩa xã hội",
+        definition:
+          "Chủ quan duy ý chí và nóng vội có thể dẫn đến sai lầm trong tổ chức và quản lý xã hội.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, tác hại trực tiếp của chủ quan duy ý chí và nóng vội trong xây dựng chủ nghĩa xã hội là gì?",
+          options: [
+            "Dễ dẫn đến sai lầm trong đường lối, tổ chức thực hiện và làm giảm hiệu quả xây dựng",
+            "Giúp rút ngắn mọi giai đoạn một cách chắc chắn",
+            "Bảo đảm thành công nhanh chóng mà không cần điều kiện",
+            "Không gây ảnh hưởng gì đến kết quả xây dựng",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, chủ quan duy ý chí và nóng vội trong xây dựng chủ nghĩa xã hội _______.",
+        answer:
+          "Dễ dẫn đến sai lầm trong đường lối, tổ chức thực hiện và làm giảm hiệu quả xây dựng",
+        fullFillAnswer:
+          "Người nhấn mạnh cần thận trọng, vững chắc, chống bệnh chủ quan duy ý chí để tránh sai lầm.",
+      },
+      {
+        id: 19,
+        term: "Vai trò của nhân dân trong sự nghiệp xây dựng",
+        definition:
+          "Nhân dân là chủ thể, đồng thời là mục tiêu của độc lập dân tộc và xây dựng chủ nghĩa xã hội.",
+        quiz: {
+          question:
+            "Theo tư tưởng Hồ Chí Minh, nhân dân có vị trí như thế nào trong sự nghiệp gắn độc lập dân tộc với chủ nghĩa xã hội?",
+          options: [
+            "Nhân dân là chủ thể và cũng là mục tiêu của sự nghiệp đó",
+            "Nhân dân không có vai trò quyết định",
+            "Nhân dân chỉ là đối tượng thụ hưởng, không tham gia xây dựng",
+            "Nhân dân chỉ cần làm theo mệnh lệnh, không cần làm chủ",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo tư tưởng Hồ Chí Minh, nhân dân trong sự nghiệp gắn độc lập dân tộc với chủ nghĩa xã hội là _______.",
+        answer: "Nhân dân là chủ thể và cũng là mục tiêu của sự nghiệp đó",
+        fullFillAnswer:
+          "Quan điểm nhất quán: nhân dân là trung tâm; mọi mục tiêu độc lập và xây dựng chủ nghĩa xã hội đều vì nhân dân và do nhân dân.",
+      },
+      {
+        id: 20,
+        term: "Tính định hướng lâu dài của tư tưởng gắn độc lập với chủ nghĩa xã hội",
+        definition:
+          "Tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có giá trị định hướng lâu dài cho phát triển đất nước.",
+        quiz: {
+          question:
+            "Theo nội dung lý thuyết, tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có vai trò gì trong giai đoạn phát triển hiện nay?",
+          options: [
+            "Định hướng lâu dài cho xây dựng và phát triển đất nước theo mục tiêu độc lập, tự do, hạnh phúc",
+            "Chỉ phù hợp trong thời chiến",
+            "Chỉ là khẩu hiệu, không có giá trị thực tiễn",
+            "Chỉ áp dụng trong quan hệ đối ngoại, không liên quan phát triển trong nước",
+          ],
+          correct: 0,
+        },
+        fillAnswer:
+          "Theo nội dung lý thuyết, tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có vai trò _______ trong giai đoạn phát triển hiện nay.",
+        answer:
+          "Định hướng lâu dài cho xây dựng và phát triển đất nước theo mục tiêu độc lập, tự do, hạnh phúc",
+        fullFillAnswer:
+          "Tư tưởng này giúp giữ vững mục tiêu chiến lược và định hướng hành động trong xây dựng, phát triển và hội nhập.",
       },
     ],
   },
 ];
-
-// --- Rút gọn mô tả chương ---
-for (const c of chapters) {
-  if (c.id === 31001) {
-    c.description = "Nền tảng, cấu trúc và quan hệ giữa tồn tại xã hội & ý thức xã hội.";
-  }
-  if (c.id === 31002) {
-    c.description = "Phương thức sản xuất; lực lượng–quan hệ sản xuất; cơ sở hạ tầng & kiến trúc thượng tầng.";
-  }
-  if (c.id === 31003) {
-    c.description = "Nguồn gốc giai cấp, đấu tranh giai cấp, nhà nước, cách mạng xã hội.";
-  }
-  if (c.id === 31004) {
-    c.description = "Bản chất con người, lao động, tha hoá; vai trò quần chúng; văn hoá.";
-  }
-}
-
-// --- Bổ sung câu hỏi để mỗi chương có ít nhất 20 câu ---
-(function appendMoreQuestions() {
-  /* ========== CHƯƠNG 1: Tồn tại xã hội & Ý thức xã hội ========== */
-  {
-    const ch = chapters.find(c => c.id === 31001);
-    if (ch) {
-      const nextId = () => ch.questions.length + 1;
-
-      while (ch.questions.length < 20) {
-        const need = 20 - ch.questions.length;
-
-        if (need > 0) ch.questions.push({
-          id: nextId(),
-          term: "Phân biệt ý thức thông thường và ý thức lý luận",
-          definition:
-            "Ý thức thông thường hình thành trực tiếp từ trải nghiệm đời sống; ý thức lý luận khái quát có hệ thống dựa trên thực tiễn và tri thức khoa học.",
-          quiz: {
-            question:
-              "Sự khác nhau cơ bản giữa ý thức thông thường và ý thức lý luận là gì?",
-            options: [
-              "Ý thức thông thường luôn đúng, ý thức lý luận chỉ là giả thuyết.",
-              "Ý thức thông thường mang tính kinh nghiệm trực tiếp; ý thức lý luận mang tính khái quát, hệ thống dựa trên khoa học.",
-              "Ý thức thông thường thuộc về cá nhân; ý thức lý luận chỉ thuộc về nhà nước.",
-              "Không có khác biệt đáng kể giữa hai loại ý thức này.",
-            ],
-            correct: 1,
-          },
-          fillAnswer:
-            "Ý thức thông thường mang tính ___; ý thức lý luận mang tính ___ và có cơ sở khoa học.",
-          answer: "Kinh nghiệm trực tiếp; khái quát, hệ thống",
-          fullFillAnswer:
-            "Ý thức thông thường mang tính kinh nghiệm trực tiếp; ý thức lý luận mang tính khái quát, hệ thống và có cơ sở khoa học.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Nguồn gốc xã hội trực tiếp của ý thức",
-          definition:
-            "Lao động và ngôn ngữ là nguồn gốc xã hội trực tiếp của ý thức con người.",
-          quiz: {
-            question:
-              "Nguồn gốc xã hội trực tiếp của ý thức con người là gì?",
-            options: [
-              "Bộ não con người và thế giới khách quan.",
-              "Lao động và ngôn ngữ.",
-              "Cảm xúc và niềm tin cá nhân.",
-              "Thiên tài bẩm sinh.",
-            ],
-            correct: 1,
-          },
-          fillAnswer: "Nguồn gốc xã hội trực tiếp của ý thức là ___ và ___.",
-          answer: "Lao động; ngôn ngữ",
-          fullFillAnswer:
-            "Nguồn gốc xã hội trực tiếp của ý thức là lao động và ngôn ngữ.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Vai trò của thực tiễn đối với nhận thức",
-          definition:
-            "Thực tiễn là cơ sở, mục tiêu và tiêu chuẩn kiểm nghiệm chân lý của nhận thức.",
-          quiz: {
-            question:
-              "Vai trò của thực tiễn đối với nhận thức được khái quát đúng nhất ở mệnh đề nào?",
-            options: [
-              "Thực tiễn chỉ là mục tiêu của nhận thức.",
-              "Thực tiễn là cơ sở của nhận thức, nhưng không liên quan đến chân lý.",
-              "Thực tiễn là cơ sở, mục tiêu và tiêu chuẩn kiểm nghiệm chân lý.",
-              "Thực tiễn đối lập với nhận thức.",
-            ],
-            correct: 2,
-          },
-          fillAnswer:
-            "Thực tiễn là ___, ___ và ___ kiểm nghiệm chân lý của nhận thức.",
-          answer: "Cơ sở; mục tiêu; tiêu chuẩn",
-          fullFillAnswer:
-            "Thực tiễn là cơ sở, mục tiêu và tiêu chuẩn kiểm nghiệm chân lý của nhận thức.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Khắc phục tính lạc hậu của ý thức xã hội",
-          definition:
-            "Phối hợp phát triển kinh tế với giáo dục, pháp luật, truyền thông khoa học và nâng cao đời sống văn hoá để đổi mới ý thức xã hội.",
-          quiz: {
-            question:
-              "Biện pháp cơ bản để khắc phục tính lạc hậu của ý thức xã hội là:",
-            options: [
-              "Chỉ tập trung phát triển kinh tế, không cần giáo dục.",
-              "Kết hợp phát triển kinh tế với giáo dục, pháp luật và nâng cao đời sống văn hoá.",
-              "Bãi bỏ mọi phong tục, tập quán truyền thống.",
-              "Chỉ tuyên truyền bằng khẩu hiệu.",
-            ],
-            correct: 1,
-          },
-          fillAnswer:
-            "Cần kết hợp phát triển ___ với ___, pháp luật và nâng cao đời sống ___.",
-          answer: "Kinh tế; giáo dục; văn hoá",
-          fullFillAnswer:
-            "Cần kết hợp phát triển kinh tế với giáo dục, pháp luật và nâng cao đời sống văn hoá.",
-        });
-      }
-    }
-  }
-
-  /* ========== CHƯƠNG 2: Học thuyết hình thái kinh tế – xã hội ========== */
-  // Đã đủ 20 câu trong dữ liệu gốc → không bổ sung.
-
-  /* ========== CHƯƠNG 3: Giai cấp, Dân tộc, Nhà nước & Cách mạng xã hội ========== */
-  {
-    const ch = chapters.find(c => c.id === 31003);
-    if (ch) {
-      const nextId = () => ch.questions.length + 1;
-
-      while (ch.questions.length < 20) {
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Các hình thức chủ yếu của đấu tranh giai cấp",
-          definition:
-            "Đấu tranh trên ba lĩnh vực chủ yếu: kinh tế, chính trị và tư tưởng – văn hoá.",
-          quiz: {
-            question:
-              "Đấu tranh giai cấp thường diễn ra chủ yếu trên các lĩnh vực nào?",
-            options: [
-              "Kinh tế, chính trị và tư tưởng – văn hoá.",
-              "Quân sự, tôn giáo và gia đình.",
-              "Khoa học, nghệ thuật và thể thao.",
-              "Ngoại giao, du lịch và thương mại điện tử.",
-            ],
-            correct: 0,
-          },
-          fillAnswer:
-            "Đấu tranh giai cấp diễn ra trên ba lĩnh vực: ___, ___ và ___.",
-          answer: "Kinh tế; chính trị; tư tưởng – văn hoá",
-          fullFillAnswer:
-            "Đấu tranh giai cấp diễn ra chủ yếu trên ba lĩnh vực: kinh tế, chính trị và tư tưởng – văn hoá.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Quan hệ giữa vấn đề dân tộc và giai cấp",
-          definition:
-            "Trong cách mạng giải phóng dân tộc, đặt lợi ích dân tộc lên hàng đầu đồng thời gắn với lợi ích của giai cấp và nhân dân lao động.",
-          quiz: {
-            question:
-              "Cách hiểu đúng về quan hệ dân tộc – giai cấp trong cách mạng giải phóng dân tộc là:",
-            options: [
-              "Chỉ ưu tiên lợi ích giai cấp, bỏ qua lợi ích dân tộc.",
-              "Chỉ ưu tiên lợi ích dân tộc, phủ nhận vấn đề giai cấp.",
-              "Kết hợp đúng đắn: đặt lợi ích dân tộc lên hàng đầu và gắn với lợi ích của giai cấp, nhân dân lao động.",
-              "Không có liên hệ giữa hai vấn đề này.",
-            ],
-            correct: 2,
-          },
-          fillAnswer:
-            "Cần đặt lợi ích ___ lên hàng đầu và gắn với lợi ích của ___, ___ lao động.",
-          answer: "Dân tộc; giai cấp; nhân dân",
-          fullFillAnswer:
-            "Cần đặt lợi ích dân tộc lên hàng đầu và gắn với lợi ích của giai cấp, nhân dân lao động.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Phân loại chức năng của nhà nước: đối nội và đối ngoại",
-          definition:
-            "Một cách phân loại chức năng nhà nước là chức năng đối nội và chức năng đối ngoại.",
-          quiz: {
-            question:
-              "Theo cách phân loại phổ biến, chức năng của nhà nước gồm:",
-            options: [
-              "Đối nội và đối ngoại.",
-              "Lập pháp và tư pháp.",
-              "Tài chính và văn hoá.",
-              "Khoa học và giáo dục.",
-            ],
-            correct: 0,
-          },
-          fillAnswer: "Chức năng của nhà nước gồm ___ và ___.",
-          answer: "Đối nội; đối ngoại",
-          fullFillAnswer:
-            "Chức năng của nhà nước có thể phân thành đối nội và đối ngoại.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Điều kiện của cách mạng xã hội",
-          definition:
-            "Cần có điều kiện khách quan chín muồi và nhân tố chủ quan: lực lượng chính trị, tổ chức lãnh đạo, ý thức và sự chuẩn bị của quần chúng.",
-          quiz: {
-            question:
-              "Điều kiện cơ bản để bùng nổ cách mạng xã hội gồm những gì?",
-            options: [
-              "Chỉ cần khủng hoảng kinh tế.",
-              "Chỉ cần có tổ chức lãnh đạo.",
-              "Cả điều kiện khách quan chín muồi và nhân tố chủ quan (lực lượng lãnh đạo, tổ chức, ý thức quần chúng).",
-              "Không cần điều kiện gì đặc biệt.",
-            ],
-            correct: 2,
-          },
-          fillAnswer:
-            "Cách mạng xã hội cần điều kiện ___ chín muồi và nhân tố ___ vững mạnh.",
-          answer: "Khách quan; chủ quan",
-          fullFillAnswer:
-            "Cách mạng xã hội cần điều kiện khách quan chín muồi và nhân tố chủ quan vững mạnh.",
-        });
-
-        if (ch.questions.length < 20) ch.questions.push({
-          id: nextId(),
-          term: "Cải cách xã hội và cách mạng xã hội",
-          definition:
-            "Cải cách xã hội là những biến đổi từng phần trong khuôn khổ trật tự hiện có; cách mạng xã hội là biến đổi căn bản chế độ chính trị – xã hội.",
-          quiz: {
-            question:
-              "Phát biểu nào đúng khi so sánh cải cách xã hội với cách mạng xã hội?",
-            options: [
-              "Cải cách xã hội là biến đổi từng phần; cách mạng xã hội là biến đổi căn bản chế độ.",
-              "Cả hai đều hoàn toàn giống nhau.",
-              "Cải cách xã hội luôn nhanh hơn cách mạng xã hội.",
-              "Cách mạng xã hội luôn xảy ra bằng con đường bạo lực quân sự.",
-            ],
-            correct: 0,
-          },
-          fillAnswer:
-            "Cải cách là biến đổi ___; cách mạng là biến đổi ___ chế độ.",
-          answer: "Từng phần; căn bản",
-          fullFillAnswer:
-            "Cải cách là biến đổi từng phần; cách mạng là biến đổi căn bản chế độ.",
-        });
-      }
-    }
-  }
-
-  /* ========== CHƯƠNG 4: Con người, văn hoá & vai trò quần chúng ========== */
-  {
-    const ch = chapters.find(c => c.id === 31004);
-    if (ch) {
-      const nextId = () => ch.questions.length + 1;
-
-      const add = (obj) => ch.questions.length < 20 && ch.questions.push({ id: nextId(), ...obj });
-
-      add({
-        term: "Nhu cầu, lợi ích và động cơ",
-        definition:
-          "Lợi ích là động lực trực tiếp thúc đẩy hoạt động của con người; nhu cầu là nguồn gốc nảy sinh lợi ích; động cơ định hướng hành vi.",
-        quiz: {
-          question:
-            "Phát biểu nào đúng về vai trò của lợi ích trong đời sống xã hội?",
-          options: [
-            "Lợi ích chỉ là yếu tố phụ trong hành vi.",
-            "Lợi ích là động lực trực tiếp thúc đẩy hoạt động của con người.",
-            "Lợi ích đối lập với đạo đức nên cần loại bỏ.",
-            "Lợi ích chỉ có tính cá nhân, không thể có lợi ích xã hội.",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Lợi ích là ___ trực tiếp thúc đẩy hoạt động.",
-        answer: "Động lực",
-        fullFillAnswer: "Lợi ích là động lực trực tiếp thúc đẩy hoạt động.",
-      });
-
-      add({
-        term: "Phát triển toàn diện con người",
-        definition:
-          "Hài hoà các mặt đức, trí, thể, mỹ và nghề nghiệp; tạo điều kiện cho cá nhân phát triển năng lực và phẩm chất.",
-        quiz: {
-          question:
-            "Mục tiêu của phát triển toàn diện con người theo quan điểm Mác – Lênin là:",
-          options: [
-            "Chỉ chú trọng tri thức.",
-            "Chỉ chú trọng thể lực.",
-            "Phát triển hài hoà đức, trí, thể, mỹ và nghề nghiệp.",
-            "Loại bỏ các giá trị đạo đức truyền thống.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Phát triển toàn diện hướng tới hài hoà ___, ___, ___, ___ và ___.",
-        answer: "Đức; trí; thể; mỹ; nghề nghiệp",
-        fullFillAnswer:
-          "Phát triển toàn diện hướng tới hài hoà đức, trí, thể, mỹ và nghề nghiệp.",
-      });
-
-      add({
-        term: "Tự do và tất yếu",
-        definition:
-          "Tự do là sự nhận thức được quy luật tất yếu và biết cải biến hiện thực theo các quy luật đó.",
-        quiz: {
-          question:
-            "Theo quan điểm duy vật biện chứng, tự do được hiểu là:",
-          options: [
-            "Sự tuỳ tiện không bị ràng buộc.",
-            "Sự phủ nhận mọi quy luật khách quan.",
-            "Sự nhận thức được tất yếu và cải biến hiện thực theo quy luật.",
-            "Sự tách rời con người khỏi xã hội.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Tự do là sự nhận thức ___ và cải biến hiện thực theo ___.",
-        answer: "Tất yếu; quy luật",
-        fullFillAnswer:
-          "Tự do là sự nhận thức được tất yếu và cải biến hiện thực theo quy luật.",
-      });
-
-      add({
-        term: "Lao động sáng tạo nâng tầm con người",
-        definition:
-          "Lao động sáng tạo phát triển năng lực, mở rộng thế giới quan và làm phong phú bản chất xã hội của con người.",
-        quiz: {
-          question:
-            "Vai trò của lao động sáng tạo đối với sự phát triển con người là:",
-          options: [
-            "Không đáng kể so với bẩm sinh.",
-            "Chủ yếu làm tăng thu nhập vật chất.",
-            "Phát triển năng lực, thế giới quan và bản chất xã hội của con người.",
-            "Chỉ cần khi theo đuổi nghệ thuật.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Lao động sáng tạo phát triển ___, mở rộng ___ và làm phong phú bản chất xã hội.",
-        answer: "Năng lực; thế giới quan",
-        fullFillAnswer:
-          "Lao động sáng tạo phát triển năng lực, mở rộng thế giới quan và làm phong phú bản chất xã hội.",
-      });
-
-      add({
-        term: "Biểu hiện của tha hoá trong lao động",
-        definition:
-          "Người lao động bị lệ thuộc vào sản phẩm và quá trình lao động, đánh mất ý nghĩa và tính sáng tạo của lao động.",
-        quiz: {
-          question:
-            "Biểu hiện nào sau đây phản ánh hiện tượng tha hoá trong lao động?",
-          options: [
-            "Người lao động làm chủ công cụ và quá trình lao động.",
-            "Người lao động coi lao động là hoạt động sáng tạo có ý nghĩa.",
-            "Người lao động bị biến thành phụ thuộc máy móc, sản phẩm xa lạ với chính mình.",
-            "Người lao động tự do lựa chọn cách thức lao động.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Tha hoá: người lao động bị ___ máy móc, sản phẩm trở nên ___ với mình.",
-        answer: "Phụ thuộc; xa lạ",
-        fullFillAnswer:
-          "Tha hoá: người lao động bị phụ thuộc máy móc, sản phẩm trở nên xa lạ với mình.",
-      });
-
-      add({
-        term: "Con người và tự nhiên trong phát triển bền vững",
-        definition:
-          "Con người và tự nhiên thống nhất biện chứng; cần khai thác hợp lý, bảo vệ môi trường để phát triển bền vững.",
-        quiz: {
-          question:
-            "Quan điểm đúng về quan hệ con người – tự nhiên là:",
-          options: [
-            "Con người phải khuất phục hoàn toàn trước tự nhiên.",
-            "Con người có thể khai thác tự nhiên vô hạn.",
-            "Thống nhất biện chứng: khai thác hợp lý gắn với bảo vệ môi trường.",
-            "Không có mối liên hệ giữa con người và tự nhiên.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Cần khai thác ___ gắn với ___ môi trường để phát triển bền vững.",
-        answer: "Hợp lý; bảo vệ",
-        fullFillAnswer:
-          "Cần khai thác hợp lý gắn với bảo vệ môi trường để phát triển bền vững.",
-      });
-
-      add({
-        term: "Vai trò của giá trị văn hoá",
-        definition:
-          "Giá trị văn hoá định hướng hành vi, bồi dưỡng nhân cách và củng cố bản sắc cộng đồng.",
-        quiz: {
-          question:
-            "Vai trò cơ bản của giá trị văn hoá đối với phát triển con người là:",
-          options: [
-            "Định hướng hành vi, bồi dưỡng nhân cách, củng cố bản sắc.",
-            "Chỉ phục vụ giải trí.",
-            "Thay thế pháp luật.",
-            "Làm giảm trách nhiệm xã hội.",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Giá trị văn hoá giúp định hướng ___, bồi dưỡng ___ và củng cố ___.",
-        answer: "Hành vi; nhân cách; bản sắc",
-        fullFillAnswer:
-          "Giá trị văn hoá định hướng hành vi, bồi dưỡng nhân cách và củng cố bản sắc.",
-      });
-
-      add({
-        term: "Gia đình – tế bào của xã hội",
-        definition:
-          "Gia đình là môi trường đầu tiên hình thành nhân cách, giáo dục đạo đức và thói quen xã hội.",
-        quiz: {
-          question:
-            "Vì sao gia đình được coi là tế bào của xã hội?",
-          options: [
-            "Vì gia đình chỉ có chức năng kinh tế.",
-            "Vì gia đình là nơi đầu tiên hình thành nhân cách và giáo dục đạo đức.",
-            "Vì gia đình quyết định mọi chính sách xã hội.",
-            "Vì gia đình thay thế nhà trường.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Gia đình là nơi đầu tiên hình thành ___ và giáo dục ___.",
-        answer: "Nhân cách; đạo đức",
-        fullFillAnswer:
-          "Gia đình là nơi đầu tiên hình thành nhân cách và giáo dục đạo đức.",
-      });
-
-      add({
-        term: "Giáo dục và tự giáo dục",
-        definition:
-          "Giáo dục xã hội và tự giáo dục của cá nhân kết hợp mới tạo nên sự phát triển bền vững về phẩm chất và năng lực.",
-        quiz: {
-          question:
-            "Điều kiện để phát triển bền vững phẩm chất và năng lực cá nhân là:",
-          options: [
-            "Chỉ dựa vào giáo dục xã hội.",
-            "Chỉ dựa vào tự giáo dục.",
-            "Kết hợp giáo dục xã hội với tự giáo dục.",
-            "Không cần giáo dục.",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Cần kết hợp giáo dục ___ với ___ để phát triển bền vững.",
-        answer: "Xã hội; tự giáo dục",
-        fullFillAnswer:
-          "Cần kết hợp giáo dục xã hội với tự giáo dục để phát triển bền vững.",
-      });
-
-      add({
-        term: "Vai trò của thanh niên",
-        definition:
-          "Thanh niên là lực lượng xung kích trong đổi mới sáng tạo, tiếp thu khoa học – công nghệ và xây dựng văn hoá mới.",
-        quiz: {
-          question:
-            "Vai trò nổi bật của thanh niên trong phát triển xã hội là:",
-          options: [
-            "Bảo tồn nguyên trạng, hạn chế đổi mới.",
-            "Xung kích trong đổi mới sáng tạo và tiếp thu khoa học – công nghệ.",
-            "Chỉ tham gia hoạt động văn nghệ.",
-            "Hạn chế tham gia vào đời sống chính trị – xã hội.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Thanh niên là lực lượng ___ trong đổi mới và tiếp thu ___.",
-        answer: "Xung kích; khoa học – công nghệ",
-        fullFillAnswer:
-          "Thanh niên là lực lượng xung kích trong đổi mới và tiếp thu khoa học – công nghệ.",
-      });
-
-      add({
-        term: "Đạo đức số trong thời đại công nghệ",
-        definition:
-          "Sử dụng công nghệ có trách nhiệm, tôn trọng quyền riêng tư, trung thực thông tin và tránh gây hại trên không gian mạng.",
-        quiz: {
-          question:
-            "Nội dung cốt lõi của đạo đức số là gì?",
-          options: [
-            "Sử dụng công nghệ không cần tuân thủ pháp luật.",
-            "Sử dụng công nghệ có trách nhiệm, tôn trọng quyền riêng tư và trung thực thông tin.",
-            "Chia sẻ mọi dữ liệu để tiện lợi.",
-            "Chỉ quan tâm hiệu quả kinh tế.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Đạo đức số: sử dụng công nghệ ___, tôn trọng ___ và trung thực ___.",
-        answer: "Có trách nhiệm; quyền riêng tư; thông tin",
-        fullFillAnswer:
-          "Đạo đức số: sử dụng công nghệ có trách nhiệm, tôn trọng quyền riêng tư và trung thực thông tin.",
-      });
-
-      add({
-        term: "Bình đẳng giới trong phát triển con người",
-        definition:
-          "Bảo đảm cơ hội và điều kiện phát triển ngang nhau cho mọi giới trong giáo dục, việc làm, lãnh đạo và đời sống gia đình – xã hội.",
-        quiz: {
-          question:
-            "Bình đẳng giới hướng tới mục tiêu nào sau đây?",
-          options: [
-            "Ưu tiên tuyệt đối một giới.",
-            "Cơ hội và điều kiện phát triển ngang nhau cho mọi giới.",
-            "Không cần quan tâm đến chênh lệch.",
-            "Chỉ tập trung lĩnh vực kinh tế.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Bình đẳng giới: bảo đảm ___ và ___ phát triển ngang nhau.",
-        answer: "Cơ hội; điều kiện",
-        fullFillAnswer:
-          "Bình đẳng giới: bảo đảm cơ hội và điều kiện phát triển ngang nhau.",
-      });
-
-      add({
-        term: "An sinh xã hội và phát triển con người",
-        definition:
-          "Hệ thống an sinh xã hội giúp bảo vệ người yếu thế, giảm bất bình đẳng và tạo nền tảng cho phát triển bền vững.",
-        quiz: {
-          question:
-            "Vai trò của an sinh xã hội đối với phát triển con người là:",
-          options: [
-            "Làm giảm động lực phấn đấu của toàn xã hội.",
-            "Bảo vệ người yếu thế, giảm bất bình đẳng và tạo nền tảng phát triển bền vững.",
-            "Chỉ có ý nghĩa trong thiên tai.",
-            "Chỉ mang tính từ thiện ngắn hạn.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "An sinh xã hội bảo vệ ___, giảm ___ và tạo nền tảng ___ bền vững.",
-        answer: "Người yếu thế; bất bình đẳng; phát triển",
-        fullFillAnswer:
-          "An sinh xã hội bảo vệ người yếu thế, giảm bất bình đẳng và tạo nền tảng phát triển bền vững.",
-      });
-
-      add({
-        term: "Quan hệ giữa hạnh phúc cá nhân và cộng đồng",
-        definition:
-          "Hạnh phúc cá nhân bền vững gắn với hạnh phúc cộng đồng; cá nhân – xã hội thống nhất trong phát triển.",
-        quiz: {
-          question:
-            "Phát biểu nào đúng về quan hệ hạnh phúc cá nhân – cộng đồng?",
-          options: [
-            "Hạnh phúc cá nhân hoàn toàn tách rời hạnh phúc cộng đồng.",
-            "Hạnh phúc cá nhân bền vững gắn với hạnh phúc cộng đồng.",
-            "Chỉ cần cộng đồng hạnh phúc, cá nhân tự khắc hạnh phúc.",
-            "Chỉ cần cá nhân hạnh phúc, không cần quan tâm cộng đồng.",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Hạnh phúc cá nhân bền vững gắn với hạnh phúc ___.",
-        answer: "Cộng đồng",
-        fullFillAnswer:
-          "Hạnh phúc cá nhân bền vững gắn với hạnh phúc cộng đồng.",
-      });
-
-      // Nếu vẫn thiếu do ban đầu số câu < 6, tiếp tục thêm cho đủ 20 (safety)
-      while (ch.questions.length < 20) {
-        ch.questions.push({
-          id: nextId(),
-          term: "Tự hoàn thiện nhân cách",
-          definition:
-            "Quá trình chủ động rèn luyện phẩm chất, tri thức và kỹ năng để đạt mục tiêu sống có ý nghĩa.",
-          quiz: {
-            question:
-              "Tự hoàn thiện nhân cách bao gồm nội dung nào sau đây?",
-            options: [
-              "Tự phát triển phẩm chất, tri thức và kỹ năng.",
-              "Chỉ phát triển thể lực.",
-              "Chỉ tích luỹ bằng cấp.",
-              "Phụ thuộc hoàn toàn vào môi trường.",
-            ],
-            correct: 0,
-          },
-          fillAnswer:
-            "Tự hoàn thiện cần rèn luyện ___, ___ và ___ một cách chủ động.",
-          answer: "Phẩm chất; tri thức; kỹ năng",
-          fullFillAnswer:
-            "Tự hoàn thiện cần rèn luyện phẩm chất, tri thức và kỹ năng một cách chủ động.",
-        });
-      }
-    }
-  }
-})();
-

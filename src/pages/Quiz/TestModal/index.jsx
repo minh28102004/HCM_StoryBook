@@ -1,5 +1,6 @@
 // src/components/TestSetupModal.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Timer,
@@ -133,18 +134,18 @@ export default function TestSetupModal({
   const maxQ = Math.max(1, totalQuestions);
 
   // Required selections
-  const [mode, setMode] = useState(null);         // OFF (chưa chọn)
+  const [mode, setMode] = useState(null); // OFF (chưa chọn)
   const [modeTouched, setModeTouched] = useState(false);
 
-  const [num, setNum] = useState("");             // OFF (trống)
+  const [num, setNum] = useState(""); // OFF (trống)
   const [numTouched, setNumTouched] = useState(false);
 
   // Timer - OFF mặc định
   const presetMins = [5, 10, 15, 20];
-  const [withTimer, setWithTimer] = useState(false);  // OFF khi mở modal
+  const [withTimer, setWithTimer] = useState(false); // OFF khi mở modal
   const [mins, setMins] = useState(null);
   const [custom, setCustom] = useState("");
-  const [timerTouched, setTimerTouched] = useState(true); 
+  const [timerTouched, setTimerTouched] = useState(true);
   // Giải thích: OFF là một lựa chọn hợp lệ => đánh dấu đã "xác nhận" trạng thái thời gian
   // để không bắt user phải bật/tắt lại. Nếu bạn muốn bắt buộc tương tác, đổi true -> false.
 

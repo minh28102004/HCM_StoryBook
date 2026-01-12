@@ -8,6 +8,7 @@ import About from "@pages/About/layoutSection";
 import Chapters from "@pages/Chapters";
 import Quiz from "@pages/Quiz/quizLayout";
 import Resources from "@pages/Resources";
+import QuizTestPage from "@pages/Quiz/TestModal/QuizTestPage";
 // import Faqs from "@pages/HomePage/Faqs";
 import endPoint from "@routes/routes";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         element: <StoryBook />,
       },
     ],
+  },
+  {
+    path: endPoint.QUIZTEST,
+    element: <QuizTestPage />,
   },
 ]);
 

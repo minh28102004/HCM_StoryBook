@@ -13,9 +13,12 @@ import {
   X,
   BookOpen,
   Circle,
+  AlarmClock,
 } from "lucide-react";
 import Tooltip from "@mui/material/Tooltip";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
+import TestSetupModal from "@components/TestSetupModal";
 
 /* ========= Modal Tip (render qua Portal) ========= */
 function TipModal({ open, onClose, darkMode }) {
@@ -47,7 +50,6 @@ function TipModal({ open, onClose, darkMode }) {
     ? "bg-slate-800 border-slate-700 text-slate-100"
     : "bg-white border-slate-200 text-slate-800";
   const subtle = darkMode ? "text-slate-400" : "text-slate-500";
-  const chipBg = darkMode ? "bg-slate-700/60" : "bg-slate-100";
 
   const tabs = [
     { key: "overview", label: "Tổng quan", icon: Lightbulb },
@@ -172,7 +174,7 @@ function TipModal({ open, onClose, darkMode }) {
         <div className={`${wrap} border-t flex-1 min-h-0 flex flex-col`}>
           <div className="px-5 sm:px-6 pt-3">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {tabs.map(({ key, label, icon: Icon }) => {
+              {tabs.map(({ key, label }) => {
                 const active = tab === key;
                 return (
                   <button
@@ -191,7 +193,6 @@ function TipModal({ open, onClose, darkMode }) {
                       }`}
                     aria-pressed={active ? "true" : "false"}
                   >
-                    <Icon className="w-4 h-4" />
                     {label}
                   </button>
                 );
@@ -452,8 +453,11 @@ export default function QuizSidebar({
   setCurrentQuestionIndex,
   calculateProgress,
   onClose,
+  onOpenTest,
 }) {
   const [showTip, setShowTip] = React.useState(false);
+  // NEW: mở modal setup test
+  const [openTestSetup, setOpenTestSetup] = React.useState(false);
 
   const handleClose = () => {
     if (typeof onClose === "function") onClose();
@@ -461,15 +465,36 @@ export default function QuizSidebar({
 
   const openStudyTipModal = () => setShowTip(true);
 
+  const handleOpenTest = () => {
+    setOpenTestSetup(true);
+  };
+  //  tổng câu toàn bộ (để modal dùng)
+  const totalQuestions = React.useMemo(() => {
+    return (chapters || []).reduce(
+      (sum, ch) => sum + (ch?.questions?.length || 0),
+      0
+    );
+  }, [chapters]);
+
+  const footerWrap = darkMode
+    ? "border-slate-800 bg-slate-900"
+    : "border-slate-200 bg-slate-50";
+
+  const footerBtn = darkMode
+    ? "bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-100"
+    : "bg-white hover:bg-amber-50 border-slate-200 text-slate-800";
+
+  const footerSub = darkMode ? "text-slate-400" : "text-slate-500";
+
   return (
     <>
       <aside
-        className={`grid grid-rows-[auto,1fr,auto] h-full w-80 sm:w-88 transition-colors duration-500
-          ${
-            darkMode
-              ? "bg-slate-900 text-slate-200"
-              : "bg-slate-50 border-r border-gray-300 text-slate-800"
-          }`}
+        className={`grid grid-rows-[auto,1fr,auto] h-[100svh] overflow-hidden w-80 sm:w-88 transition-colors duration-500
+    ${
+      darkMode
+        ? "bg-slate-900 text-slate-200"
+        : "bg-slate-50 border-r border-gray-300 text-slate-800"
+    }`}
         role="navigation"
         aria-label="Danh sách chương"
       >
@@ -573,20 +598,28 @@ export default function QuizSidebar({
                       }`}
                   >
                     {/* badge số thứ tự */}
-                    <div className="absolute -top-2 -left-2">
+                    {/* badge số thứ tự (có lớp che góc) */}
+                    <div className="absolute -top-2 -left-2 z-20">
+                      {/* lớp “mask” che góc card */}
                       <div
-                        className={`w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-xs lg:text-sm font-bold
-                          ${
-                            darkMode
-                              ? active
-                                ? "bg-gradient-to-br from-amber-200 to-amber-400 text-slate-900 shadow-md shadow-amber-400/30"
-                                : "bg-slate-700/80 text-slate-300 border border-slate-600 group-hover:border-amber-300/50"
-                              : active
-                              ? "bg-gradient-to-br from-amber-300 to-amber-500 text-slate-800 shadow-md shadow-amber-400/40"
-                              : "bg-slate-200 text-slate-600 border border-slate-300 group-hover:border-amber-400/50"
-                          }`}
+                        className={`p-1 rounded-full ${
+                          darkMode ? "bg-slate-900" : "bg-slate-50"
+                        }`}
                       >
-                        {i + 1}
+                        <div
+                          className={`w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-xs lg:text-sm font-bold
+        ${
+          darkMode
+            ? active
+              ? "bg-gradient-to-br from-amber-200 to-amber-400 text-slate-900 shadow-md shadow-amber-400/30"
+              : "bg-slate-700/80 text-slate-300 border border-slate-600 group-hover:border-amber-300/50"
+            : active
+            ? "bg-gradient-to-br from-amber-300 to-amber-500 text-slate-800 shadow-md shadow-amber-400/40"
+            : "bg-slate-200 text-slate-600 border border-slate-300 group-hover:border-amber-400/50"
+        }`}
+                        >
+                          {i + 1}
+                        </div>
                       </div>
                     </div>
 
@@ -604,7 +637,7 @@ export default function QuizSidebar({
                                 : "text-slate-800"
                             }`}
                         >
-                        {ch.title}
+                          {ch.title}
                         </h3>
                         <span
                           className={`ml-2.5 px-2 py-0.5 rounded-full text-[10px] lg:text-xs font-medium
@@ -679,7 +712,52 @@ export default function QuizSidebar({
             })}
           </div>
         </div>
+        <div className={`shrink-0 border-t px-4 lg:px-6 py-4 ${footerWrap}`}>
+          <button
+            type="button"
+            onClick={handleOpenTest}
+            className={`w-full h-12 rounded-xl border flex items-center justify-between px-3 transition-all hover:scale-[1.01] ${footerBtn}`}
+            aria-label="Mở bài kiểm tra"
+          >
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-amber-400/15 grid place-items-center border border-amber-300/20">
+                <AlarmClock className="w-5 h-5 text-amber-300" />
+              </div>
+              <div className="text-left">
+                <div className="text-sm font-semibold">Kiểm tra</div>
+                <div className={`text-xs ${footerSub}`}>
+                  Tạo bài thi theo số câu / hẹn giờ
+                </div>
+              </div>
+            </div>
+
+            <div className="text-xs px-2 py-1 rounded-lg bg-amber-400/15 border border-amber-300/20 text-amber-200">
+              Start
+            </div>
+          </button>
+        </div>
       </aside>
+      <TestSetupModal
+        open={openTestSetup}
+        onClose={() => setOpenTestSetup(false)}
+        onStart={(cfg) => {
+          // cfg là object modal trả về (chapterIndex, numQuestions, mode, withTimer, minutes, ...)
+          setOpenTestSetup(false);
+
+          // đóng drawer/sidebar mobile sau khi user bấm Start
+          handleClose();
+
+          // parent handle chuyển trang / mở trang test
+          onOpenTest?.(cfg);
+        }}
+        totalQuestions={totalQuestions}
+        chapters={chapters}
+        activeChapter={activeChapter}
+        onPickChapter={(ci) => {
+          setActiveChapter(ci);
+          setCurrentQuestionIndex(0);
+        }}
+      />
 
       {/* Modal Tip */}
       <TipModal

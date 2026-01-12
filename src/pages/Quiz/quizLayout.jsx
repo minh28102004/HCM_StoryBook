@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 // Sections
 import QuizSidebar from "./Quiz_Sidebar";
@@ -8,10 +9,12 @@ import Flashcard from "./Card/Flash_Card";
 import QuizCard from "./Card/Quiz_Card";
 import FillCard from "./Card/Fill_Card";
 import QuestionNavigation from "./Pagination";
+import { useNavigate } from "react-router-dom";
+import endPoint from "@routes/routes";
 
 import {
   selectQuiz,
-  selectQuestionUI,
+  // selectQuestionUI,
   setActiveChapter,
   setCurrentPage,
   setStudyMode,
@@ -28,10 +31,17 @@ const MarxistPhilosophyQuiz = () => {
   const currentChapter = chapters[activeChapter];
   const currentQuestion = currentChapter.questions[currentPage];
 
+  const navigate = useNavigate();
+
+  const handleOpenTest = (cfg) => {
+    setMobileSidebarOpen(false); // nếu đang mở drawer mobile
+    navigate(endPoint.QUIZTEST, { state: { cfg, autoStart: true } });
+  };
+
   // (Giữ nếu component con cần UI tổng quát)
-  const ui = useSelector((state) =>
-    selectQuestionUI(state, activeChapter, currentPage)
-  );
+  // const ui = useSelector((state) =>
+  //   selectQuestionUI(state, activeChapter, currentPage)
+  // );
 
   // Dark mode cục bộ (persist localStorage)
   const [darkMode, setDarkMode] = React.useState(() => {
@@ -186,6 +196,7 @@ const MarxistPhilosophyQuiz = () => {
                 sidebarClasses={sidebarClasses}
                 themeClasses={themeClasses}
                 onClose={() => setMobileSidebarOpen(false)}
+                onOpenTest={handleOpenTest}
               />
             </motion.div>
           </motion.div>
@@ -209,6 +220,7 @@ const MarxistPhilosophyQuiz = () => {
             getStateIcon={getStateIcon}
             sidebarClasses={sidebarClasses}
             themeClasses={themeClasses}
+            onOpenTest={handleOpenTest}
           />
         </div>
 

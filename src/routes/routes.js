@@ -7,6 +7,7 @@ const endPoint = {
   ABOUT: "/about",
   FAQS: "/faqs",
   STORYBOOK: "/storybook",
+  QUIZTEST: "/quiztest",
 };
 
 export default endPoint;
