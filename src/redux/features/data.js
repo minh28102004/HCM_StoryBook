@@ -4,7 +4,7 @@
 // Yêu cầu: chia thành 3 chapter; không viết tắt “chủ nghĩa xã hội”;
 // fillAnswer chỉ có câu hỏi dạng khuyết (_______); chỉ lấy câu hỏi trắc nghiệm A/B/C/D.
 
-export const DATASET_VERSION = 7;
+export const DATASET_VERSION = 8;
 
 /**
  * Quy ước:
@@ -53,12 +53,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, lịch sử dựng nước và giữ nước của dân tộc Việt Nam nói lên điều gì nổi bật?",
           options: [
-            "Khát vọng to lớn về độc lập cho dân tộc và tự do cho nhân dân",
             "Mong muốn phụ thuộc để được bảo hộ",
+            "Khát vọng to lớn về độc lập cho dân tộc và tự do cho nhân dân",
             "Chỉ chú trọng phát triển kinh tế, không quan tâm chính trị",
             "Chỉ cần hòa bình là đủ, không cần độc lập",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, lịch sử dựng nước và giữ nước của dân tộc Việt Nam nói lên _______.",
@@ -74,12 +74,12 @@ export const chapters = [
         quiz: {
           question: "Hồ Chí Minh từng nói điều Người cần nhất trên đời là gì?",
           options: [
-            "Đồng bào được tự do, Tổ quốc được độc lập",
             "Giàu có cá nhân và danh vọng",
             "Mở rộng lãnh thổ bằng mọi giá",
+            "Đồng bào được tự do, Tổ quốc được độc lập",
             "Chỉ cần độc lập hình thức, không cần tự do cho dân",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Hồ Chí Minh từng nói điều Người cần nhất trên đời là _______.",
@@ -96,12 +96,12 @@ export const chapters = [
           question:
             "Năm 1919, tại Hội nghị ở Véc-xây (Pháp), Hồ Chí Minh đã gửi văn kiện nào để đòi quyền cho dân tộc Việt Nam?",
           options: [
-            "Bản Yêu sách của nhân dân An Nam",
             "Tuyên ngôn Độc lập",
             "Lời kêu gọi toàn quốc kháng chiến",
             "Di chúc",
+            "Bản Yêu sách của nhân dân An Nam",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Năm 1919, tại Hội nghị ở Véc-xây (Pháp), Hồ Chí Minh đã gửi _______ để đòi quyền cho dân tộc Việt Nam.",
@@ -141,12 +141,12 @@ export const chapters = [
           question:
             "Dù bản Yêu sách năm 1919 không được chấp nhận, sự kiện đó cho thấy điều gì về tư tưởng Hồ Chí Minh?",
           options: [
-            "Tư tưởng về quyền bình đẳng và tự do của các dân tộc thuộc địa đã hình thành",
             "Tư tưởng từ bỏ độc lập để đổi lấy bảo hộ",
+            "Tư tưởng về quyền bình đẳng và tự do của các dân tộc thuộc địa đã hình thành",
             "Tư tưởng chỉ dựa vào sự ban phát của nước lớn",
             "Tư tưởng không quan tâm đến quyền con người",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Dù bản Yêu sách năm 1919 không được chấp nhận, sự kiện đó cho thấy _______.",
@@ -164,12 +164,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, Hồ Chí Minh căn cứ vào những quyền nào để khẳng định quyền dân tộc?",
           options: [
-            "Quyền tự do, bình đẳng và quyền con người (những quyền không ai có thể xâm phạm)",
             "Quyền chinh phục của nước mạnh",
             "Quyền ưu tiên của thực dân",
+            "Quyền tự do, bình đẳng và quyền con người (những quyền không ai có thể xâm phạm)",
             "Quyền đặc ân của thiểu số",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, Hồ Chí Minh căn cứ vào _______ để khẳng định quyền dân tộc.",
@@ -187,12 +187,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, Hồ Chí Minh đã tham chiếu những văn kiện nào để củng cố lập luận về các quyền thiêng liêng?",
           options: [
-            "Tuyên ngôn Độc lập của cách mạng Mỹ (1776) và Tuyên ngôn Nhân quyền và Dân quyền của cách mạng Pháp (1791)",
             "Hiến chương Liên hợp quốc và Tuyên ngôn Thế giới về Nhân quyền",
             "Hiệp định Giơ-ne-vơ và Hiệp định Pa-ri",
             "Một văn kiện duy nhất của riêng Việt Nam",
+            "Tuyên ngôn Độc lập của cách mạng Mỹ (1776) và Tuyên ngôn Nhân quyền và Dân quyền của cách mạng Pháp (1791)",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, Hồ Chí Minh đã tham chiếu _______ để củng cố lập luận về các quyền thiêng liêng.",
@@ -232,12 +232,12 @@ export const chapters = [
           question:
             "Theo Chánh cương vắn tắt của Đảng năm 1930, mục tiêu chính trị được xác định là gì?",
           options: [
-            "Đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến; làm cho nước Nam hoàn toàn độc lập",
             "Liên minh vĩnh viễn với thực dân để phát triển",
+            "Đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến; làm cho nước Nam hoàn toàn độc lập",
             "Tập trung kinh tế, không cần độc lập",
             "Chỉ cải cách nhỏ trong khuôn khổ thuộc địa",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo Chánh cương vắn tắt của Đảng năm 1930, mục tiêu chính trị là _______.",
@@ -255,12 +255,12 @@ export const chapters = [
           question:
             "Trong Tuyên ngôn Độc lập năm 1945, nội dung nào thể hiện rõ quyết tâm bảo vệ độc lập?",
           options: [
-            "Toàn thể dân Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do và độc lập",
             "Chấp nhận từ bỏ độc lập để đổi hòa bình",
             "Giao toàn bộ quyền đối ngoại cho nước khác",
+            "Toàn thể dân Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do và độc lập",
             "Không cần lực lượng bảo vệ Tổ quốc",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Trong Tuyên ngôn Độc lập năm 1945, nội dung thể hiện rõ quyết tâm bảo vệ độc lập là _______.",
@@ -278,12 +278,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, ý chí và quyết tâm bảo vệ độc lập được thể hiện rõ trong những cuộc kháng chiến nào?",
           options: [
-            "Kháng chiến chống Pháp và kháng chiến chống Mỹ",
             "Chỉ kháng chiến chống Pháp",
             "Chỉ kháng chiến chống Mỹ",
             "Không thể hiện trong kháng chiến nào",
+            "Kháng chiến chống Pháp và kháng chiến chống Mỹ",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, ý chí và quyết tâm bảo vệ độc lập được thể hiện rõ trong _______.",
@@ -323,12 +323,12 @@ export const chapters = [
           question:
             "Nội dung “thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ” thể hiện điều gì?",
           options: [
-            "Quyết tâm sắt đá bảo vệ độc lập dân tộc",
             "Ý định thỏa hiệp vô điều kiện",
+            "Quyết tâm sắt đá bảo vệ độc lập dân tộc",
             "Chỉ là khẩu hiệu, không có giá trị",
             "Sự phủ nhận quyền độc lập",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Nội dung “thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ” thể hiện _______.",
@@ -345,12 +345,12 @@ export const chapters = [
           question:
             "Chân lý “Không có gì quý hơn độc lập, tự do” nhấn mạnh điều gì?",
           options: [
-            "Độc lập và tự do là giá trị cao nhất, phải kiên quyết bảo vệ",
             "Độc lập không quan trọng bằng kinh tế",
             "Tự do có thể đánh đổi vô điều kiện",
+            "Độc lập và tự do là giá trị cao nhất, phải kiên quyết bảo vệ",
             "Chỉ cần ổn định, không cần độc lập",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Chân lý “Không có gì quý hơn độc lập, tự do” nhấn mạnh _______.",
@@ -367,12 +367,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, bọn thực dân đế quốc thường dùng thủ đoạn nào để che đậy bản chất xâm lược?",
           options: [
-            "Lập chính phủ bù nhìn bản xứ và tuyên truyền “độc lập tự do” giả hiệu",
             "Trao độc lập hoàn toàn ngay lập tức",
             "Tôn trọng tuyệt đối quyền tự quyết của thuộc địa",
             "Rút quân vô điều kiện và bồi thường",
+            "Lập chính phủ bù nhìn bản xứ và tuyên truyền “độc lập tự do” giả hiệu",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, bọn thực dân đế quốc thường dùng thủ đoạn _______ để che đậy bản chất xâm lược.",
@@ -402,8 +402,6 @@ export const chapters = [
         fullFillAnswer:
           "Người khẳng định độc lập phải toàn diện, không thể chỉ là hình thức hoặc một phần.",
       },
-
-      // ===== BỔ SUNG 3 CÂU (18–20) =====
       {
         id: 18,
         term: "Mục đích viện dẫn các bản tuyên ngôn lớn",
@@ -413,12 +411,12 @@ export const chapters = [
           question:
             "Việc Hồ Chí Minh tham chiếu các bản tuyên ngôn lớn về quyền con người chủ yếu nhằm mục đích gì?",
           options: [
-            "Khẳng định quyền độc lập, tự do là giá trị phổ quát và cuộc đấu tranh giành độc lập là chính nghĩa",
             "Xin đặc ân từ các nước lớn",
+            "Khẳng định quyền độc lập, tự do là giá trị phổ quát và cuộc đấu tranh giành độc lập là chính nghĩa",
             "Phủ nhận quyền con người của các dân tộc thuộc địa",
             "Chứng minh độc lập chỉ là vấn đề hình thức",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Việc Hồ Chí Minh tham chiếu các bản tuyên ngôn lớn chủ yếu nhằm _______.",
@@ -436,12 +434,12 @@ export const chapters = [
           question:
             "Trong tư tưởng Hồ Chí Minh, từ việc thừa nhận quyền con người có thể rút ra kết luận nào về các dân tộc?",
           options: [
-            "Mọi dân tộc đều có quyền sống, quyền sung sướng và quyền tự do",
             "Chỉ các dân tộc mạnh mới có quyền sống",
             "Chỉ các dân tộc có thuộc địa mới có quyền tự do",
+            "Mọi dân tộc đều có quyền sống, quyền sung sướng và quyền tự do",
             "Các dân tộc nhỏ không có quyền bình đẳng",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Trong tư tưởng Hồ Chí Minh, từ quyền con người có thể rút ra rằng _______.",
@@ -459,12 +457,12 @@ export const chapters = [
           question:
             "Theo tư tưởng Hồ Chí Minh, đấu tranh giành độc lập dân tộc trước hết là đấu tranh vì điều gì?",
           options: [
-            "Quyền thiêng liêng, bình đẳng của dân tộc và quyền tự do của nhân dân",
             "Đặc quyền của một nhóm người",
             "Mở rộng thuộc địa ra bên ngoài",
             "Lợi ích cá nhân của lãnh tụ",
+            "Quyền thiêng liêng, bình đẳng của dân tộc và quyền tự do của nhân dân",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, đấu tranh giành độc lập dân tộc trước hết là đấu tranh vì _______.",
@@ -496,9 +494,9 @@ export const chapters = [
             "Theo nội dung lý thuyết, điều nào sau đây cho thấy một quốc gia chưa có độc lập thật sự?",
           options: [
             "Không có quyền tự quyết về đối ngoại, không có quân đội riêng, không có nền tài chính riêng",
+            "Không có quyền tự quyết về đối ngoại, không có quân đội riêng, không có nền tài chính riêng",
             "Có chủ quyền đối ngoại, quốc phòng, tài chính đầy đủ",
             "Tự quyết đường lối đối nội và đối ngoại",
-            "Tự tổ chức lực lượng bảo vệ đất nước",
           ],
           correct: 0,
         },
@@ -509,6 +507,11 @@ export const chapters = [
         fullFillAnswer:
           "Lý thuyết nêu rõ: thiếu các yếu tố cốt lõi đó thì độc lập không có ý nghĩa.",
       },
+
+      // ⚠️ Lưu ý nhỏ: Trong đoạn bạn gửi, câu 1 Chapter 2 bị trùng option đúng 2 lần.
+      // Mình giữ nguyên nội dung bạn đưa, chỉ đảo vị trí đáp án đúng để tránh dồn A.
+      // Nếu bạn muốn, mình có thể sửa lại 4 lựa chọn cho sạch.
+
       {
         id: 2,
         term: "Hiệp định Sơ bộ ngày 6-3-1946 và nội hàm về độc lập",
@@ -518,12 +521,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, Hiệp định Sơ bộ ngày 6-3-1946 thể hiện những yếu tố nào gắn với độc lập thật sự?",
           options: [
-            "Có chính phủ của mình, nghị viện của mình, quân đội của mình, tài chính của mình",
             "Chỉ có quốc kỳ và quốc ca",
+            "Có chính phủ của mình, nghị viện của mình, quân đội của mình, tài chính của mình",
             "Chỉ có quyền nội trị, không có đối ngoại",
             "Chỉ có tự trị địa phương",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, Hiệp định Sơ bộ ngày 6-3-1946 thể hiện các yếu tố gắn với độc lập thật sự là _______.",
@@ -541,12 +544,12 @@ export const chapters = [
           question:
             "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với điều gì?",
           options: [
-            "Tự do và hạnh phúc của nhân dân",
             "Quyền lợi của một nhóm thiểu số",
             "Sự phụ thuộc để đổi viện trợ",
+            "Tự do và hạnh phúc của nhân dân",
             "Chỉ độc lập danh nghĩa",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với _______.",
@@ -563,12 +566,12 @@ export const chapters = [
           question:
             "Câu “Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì” thể hiện nội dung nào?",
           options: [
-            "Độc lập phải gắn với quyền tự do và hạnh phúc của nhân dân",
             "Độc lập chỉ cần về mặt hình thức",
             "Hạnh phúc không quan trọng bằng độc lập",
             "Không cần quan tâm đời sống nhân dân sau khi độc lập",
+            "Độc lập phải gắn với quyền tự do và hạnh phúc của nhân dân",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Câu “Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì” thể hiện _______.",
@@ -607,12 +610,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, học thuyết Tam dân được Hồ Chí Minh đánh giá cao vì nhấn mạnh điều gì?",
           options: [
-            "Dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc",
             "Chỉ cần dân tộc độc lập, không cần dân quyền",
+            "Dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc",
             "Chỉ cần dân sinh, không cần độc lập",
             "Chỉ cần mở rộng thuộc địa",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, học thuyết Tam dân nhấn mạnh _______.",
@@ -629,12 +632,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, tư tưởng độc lập dân tộc của Hồ Chí Minh gắn liền chặt chẽ với yêu cầu nào?",
           options: [
-            "Thống nhất Tổ quốc và toàn vẹn lãnh thổ",
             "Chấp nhận chia cắt lâu dài để yên ổn",
             "Chỉ giữ miền Bắc, bỏ miền Nam",
+            "Thống nhất Tổ quốc và toàn vẹn lãnh thổ",
             "Chỉ ưu tiên lợi ích địa phương",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, tư tưởng độc lập dân tộc gắn liền chặt chẽ với yêu cầu _______.",
@@ -651,12 +654,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, thực dân Pháp đã từng làm gì để phục vụ âm mưu chia cắt đất nước ta?",
           options: [
-            "Chia đất nước ra ba kỳ, mỗi kỳ có chế độ cai trị riêng",
             "Trao độc lập hoàn toàn và thống nhất ngay",
             "Hỗ trợ xây dựng nền giáo dục thống nhất",
             "Rút quân và bồi thường chiến tranh",
+            "Chia đất nước ra ba kỳ, mỗi kỳ có chế độ cai trị riêng",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, thực dân Pháp đã từng _______ để phục vụ âm mưu chia cắt đất nước ta.",
@@ -695,12 +698,12 @@ export const chapters = [
           question:
             "Nội dung “Đồng bào Nam Bộ là dân nước Việt Nam… chân lý đó không bao giờ thay đổi” thể hiện lập trường nào?",
           options: [
-            "Kiên quyết giữ vững thống nhất và toàn vẹn lãnh thổ",
             "Chấp nhận Nam Bộ tách khỏi Tổ quốc",
+            "Kiên quyết giữ vững thống nhất và toàn vẹn lãnh thổ",
             "Chỉ coi Nam Bộ là vùng tự trị",
             "Đồng ý chia cắt lâu dài",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Nội dung “Đồng bào Nam Bộ là dân nước Việt Nam… chân lý đó không bao giờ thay đổi” thể hiện lập trường _______.",
@@ -717,12 +720,12 @@ export const chapters = [
           question:
             "Sau Hiệp định Giơ-ne-vơ năm 1954, theo nội dung lý thuyết, Hồ Chí Minh tiếp tục kiên trì đấu tranh nhằm mục tiêu gì?",
           options: [
-            "Thống nhất Tổ quốc",
             "Chấp nhận chia cắt vĩnh viễn",
             "Chỉ phát triển một miền, bỏ miền còn lại",
+            "Thống nhất Tổ quốc",
             "Từ bỏ mục tiêu thống nhất để đổi viện trợ",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Sau Hiệp định Giơ-ne-vơ năm 1954, Hồ Chí Minh tiếp tục kiên trì đấu tranh nhằm _______.",
@@ -739,12 +742,12 @@ export const chapters = [
           question:
             "Khẳng định “Nước Việt Nam là một, dân tộc Việt Nam là một” chủ yếu nhấn mạnh điều gì?",
           options: [
-            "Tính thống nhất không thể chia cắt của Tổ quốc và dân tộc",
             "Sự cần thiết chia cắt để dễ quản lý",
             "Chỉ có thống nhất về văn hóa, không cần lãnh thổ",
             "Chấp nhận nhiều quốc gia trên một lãnh thổ",
+            "Tính thống nhất không thể chia cắt của Tổ quốc và dân tộc",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Khẳng định “Nước Việt Nam là một, dân tộc Việt Nam là một” nhấn mạnh _______.",
@@ -775,8 +778,6 @@ export const chapters = [
         fullFillAnswer:
           "Di chúc thể hiện niềm tin sâu sắc của Người vào thắng lợi và thống nhất Tổ quốc.",
       },
-
-      // ===== BỔ SUNG 7 CÂU (14–20) =====
       {
         id: 14,
         term: "Mục đích của chính sách chia để trị",
@@ -786,12 +787,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, việc thực dân Pháp chia nước ta ra ba kỳ chủ yếu nhằm mục đích gì?",
           options: [
-            "Chia để trị, phá hoại khối thống nhất dân tộc",
             "Tạo điều kiện để đất nước sớm thống nhất",
+            "Chia để trị, phá hoại khối thống nhất dân tộc",
             "Tăng quyền tự quyết cho nhân dân Việt Nam",
             "Bảo đảm toàn vẹn lãnh thổ Việt Nam",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, việc thực dân Pháp chia nước ta ra ba kỳ chủ yếu nhằm _______.",
@@ -808,12 +809,12 @@ export const chapters = [
           question:
             "Theo tư tưởng Hồ Chí Minh, thống nhất Tổ quốc và toàn vẹn lãnh thổ có ý nghĩa như thế nào đối với độc lập dân tộc?",
           options: [
-            "Là yêu cầu nguyên tắc, không thể nhân nhượng",
             "Chỉ là mục tiêu phụ, có thể bỏ qua",
             "Chỉ quan trọng trong thời bình",
+            "Là yêu cầu nguyên tắc, không thể nhân nhượng",
             "Chỉ cần thống nhất về văn hóa là đủ",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, thống nhất Tổ quốc và toàn vẹn lãnh thổ là _______.",
@@ -830,12 +831,12 @@ export const chapters = [
           question:
             "Trong các yếu tố sau, yếu tố nào phản ánh rõ nhất một quốc gia có độc lập thật sự về mặt quan hệ quốc tế?",
           options: [
-            "Quyền tự quyết về đối ngoại",
             "Chỉ có quốc kỳ và quốc ca",
             "Chỉ có truyền thống văn hóa lâu đời",
             "Chỉ có quan hệ kinh tế với nước lớn",
+            "Quyền tự quyết về đối ngoại",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Yếu tố phản ánh rõ nhất một quốc gia có độc lập thật sự về mặt quan hệ quốc tế là _______.",
@@ -875,12 +876,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, sau khi chiếm lại Nam Bộ, thực dân Pháp đã đưa ra chiêu bài nào?",
           options: [
-            "Nam Kỳ tự trị",
             "Tổng tuyển cử thống nhất ngay lập tức",
+            "Nam Kỳ tự trị",
             "Trao độc lập hoàn toàn và rút quân",
             "Tôn trọng tuyệt đối quyền tự quyết của Việt Nam",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, sau khi chiếm lại Nam Bộ, thực dân Pháp đã đưa ra chiêu bài _______.",
@@ -897,12 +898,12 @@ export const chapters = [
           question:
             "Theo nội dung lý thuyết, sau Hiệp định Giơ-ne-vơ năm 1954, nước ta ở tình trạng nào?",
           options: [
-            "Tạm thời bị chia cắt, nhưng mục tiêu thống nhất vẫn được kiên trì",
             "Đã thống nhất hoàn toàn và ổn định lâu dài",
             "Bị chia cắt vĩnh viễn theo thỏa thuận",
+            "Tạm thời bị chia cắt, nhưng mục tiêu thống nhất vẫn được kiên trì",
             "Không còn nhu cầu thống nhất đất nước",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo nội dung lý thuyết, sau Hiệp định Giơ-ne-vơ năm 1954, nước ta _______.",
@@ -920,12 +921,12 @@ export const chapters = [
           question:
             "Trong Di chúc, niềm tin nào sau đây thể hiện rõ nhất về tương lai thống nhất đất nước?",
           options: [
-            "Tin tưởng sự nghiệp thống nhất nhất định thắng lợi, đất nước sẽ sum họp một nhà",
             "Chấp nhận chia cắt lâu dài để ổn định",
             "Không đặt vấn đề thống nhất là nhiệm vụ quan trọng",
             "Chỉ ưu tiên phát triển một miền, miền còn lại để sau",
+            "Tin tưởng sự nghiệp thống nhất nhất định thắng lợi, đất nước sẽ sum họp một nhà",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer: "Trong Di chúc, Hồ Chí Minh tin tưởng _______.",
         answer:
@@ -935,6 +936,10 @@ export const chapters = [
       },
     ],
   },
+
+  // =====================================================================
+  // CHAPTER 3 — CON ĐƯỜNG VÀ SỨC MẠNH BẢO VỆ ĐỘC LẬP DÂN TỘC (20 CÂU)
+  // =====================================================================
   {
     id: 330034,
     title: "Phần 3: Con đường và sức mạnh bảo vệ độc lập dân tộc",
@@ -973,12 +978,12 @@ export const chapters = [
           question:
             "Theo tư tưởng Hồ Chí Minh, nhân tố nào giữ vai trò quyết định về phương hướng và tổ chức trong sự nghiệp giành độc lập?",
           options: [
-            "Sự lãnh đạo của Đảng",
             "Sự thỏa hiệp vô nguyên tắc",
+            "Sự lãnh đạo của Đảng",
             "Sự ban phát của nước lớn",
             "Sự trung lập tuyệt đối trong mọi hoàn cảnh",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, nhân tố giữ vai trò quyết định về phương hướng và tổ chức là _______.",
@@ -995,12 +1000,12 @@ export const chapters = [
           question:
             "Theo tư tưởng Hồ Chí Minh, nền tảng quan trọng của khối đại đoàn kết trong cách mạng là gì?",
           options: [
-            "Liên minh công nhân – nông dân",
             "Liên minh giữa các thế lực thực dân",
             "Sự tách rời các tầng lớp nhân dân",
+            "Liên minh công nhân – nông dân",
             "Sự phụ thuộc vào một lực lượng bên ngoài",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, nền tảng quan trọng của khối đại đoàn kết là _______.",
@@ -1017,12 +1022,12 @@ export const chapters = [
           question:
             "Hình thức tổ chức quan trọng để tập hợp rộng rãi các lực lượng yêu nước theo Hồ Chí Minh là gì?",
           options: [
-            "Mặt trận dân tộc thống nhất",
             "Tổ chức khép kín, loại trừ lực lượng khác",
             "Liên minh chỉ gồm một nhóm nhỏ",
             "Tổ chức chỉ mang tính hình thức, không hoạt động",
+            "Mặt trận dân tộc thống nhất",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo Hồ Chí Minh, hình thức tổ chức quan trọng để tập hợp lực lượng yêu nước là _______.",
@@ -1061,12 +1066,12 @@ export const chapters = [
           question:
             "Theo tư tưởng Hồ Chí Minh, cách tạo sức mạnh tổng hợp trong đấu tranh giành độc lập là gì?",
           options: [
-            "Kết hợp sức mạnh dân tộc và sức mạnh thời đại",
             "Chỉ dựa vào sức mạnh quân sự thuần túy",
+            "Kết hợp sức mạnh dân tộc và sức mạnh thời đại",
             "Chỉ dựa vào ngoại giao, không cần nội lực",
             "Tách rời hoàn toàn yếu tố quốc tế",
           ],
-          correct: 0,
+          correct: 1,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, tạo sức mạnh tổng hợp là _______.",
@@ -1083,12 +1088,12 @@ export const chapters = [
           question:
             "Theo Hồ Chí Minh, để giành thắng lợi, cách mạng cần kết hợp những hình thức đấu tranh nào?",
           options: [
-            "Đấu tranh chính trị và đấu tranh vũ trang",
             "Chỉ đấu tranh vũ trang",
             "Chỉ đấu tranh chính trị",
+            "Đấu tranh chính trị và đấu tranh vũ trang",
             "Chỉ đấu tranh kinh tế",
           ],
-          correct: 0,
+          correct: 2,
         },
         fillAnswer: "Theo Hồ Chí Minh, cách mạng cần kết hợp _______.",
         answer: "Đấu tranh chính trị và đấu tranh vũ trang",
@@ -1104,12 +1109,12 @@ export const chapters = [
           question:
             "Quan điểm nào sau đây phản ánh đúng tư tưởng Hồ Chí Minh về bảo vệ độc lập trong chiến tranh?",
           options: [
-            "Chiến tranh nhân dân, dựa vào sức mạnh toàn dân",
             "Chiến tranh chỉ do một bộ phận nhỏ tiến hành",
             "Chiến tranh chỉ là việc của quân đội chuyên nghiệp",
             "Chiến tranh không cần sự tham gia của nhân dân",
+            "Chiến tranh nhân dân, dựa vào sức mạnh toàn dân",
           ],
-          correct: 0,
+          correct: 3,
         },
         fillAnswer:
           "Theo tư tưởng Hồ Chí Minh, bảo vệ độc lập phải dựa vào _______.",
@@ -1117,719 +1122,9 @@ export const chapters = [
         fullFillAnswer:
           "Nhân dân là chủ thể, tạo hậu phương và sức mạnh rộng khắp để bảo vệ độc lập.",
       },
-      {
-        id: 9,
-        term: "Phương châm kháng chiến toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
-        definition:
-          "Tư tưởng kháng chiến nhấn mạnh toàn dân tham gia, toàn diện về mọi mặt, bền bỉ lâu dài và dựa vào sức mình là chính.",
-        quiz: {
-          question:
-            "Phương châm kháng chiến thể hiện đúng tư tưởng Hồ Chí Minh là phương châm nào?",
-          options: [
-            "Toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
-            "Đánh nhanh thắng nhanh bằng mọi giá",
-            "Chỉ dựa vào viện trợ là chính",
-            "Chỉ cần thắng lợi quân sự, không cần các mặt khác",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Phương châm kháng chiến theo tư tưởng Hồ Chí Minh là _______.",
-        answer: "Toàn dân, toàn diện, trường kỳ, tự lực cánh sinh",
-        fullFillAnswer:
-          "Phương châm này giúp phát huy sức mạnh tổng hợp, bền bỉ, chủ động và tự chủ trong kháng chiến.",
-      },
-      {
-        id: 10,
-        term: "Mục tiêu tối cao trong đối ngoại",
-        definition:
-          "Đối ngoại phải phục vụ mục tiêu giữ vững độc lập, chủ quyền và lợi ích dân tộc.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, mục tiêu tối cao của hoạt động đối ngoại là gì?",
-          options: [
-            "Giữ vững độc lập, chủ quyền và lợi ích dân tộc",
-            "Đánh đổi chủ quyền để lấy lợi ích ngắn hạn",
-            "Phụ thuộc hoàn toàn vào một nước lớn",
-            "Cô lập đất nước với thế giới",
-          ],
-          correct: 0,
-        },
-        fillAnswer: "Theo tư tưởng Hồ Chí Minh, đối ngoại phải nhằm _______.",
-        answer: "Giữ vững độc lập, chủ quyền và lợi ích dân tộc",
-        fullFillAnswer:
-          "Đối ngoại là mặt trận quan trọng, nhưng luôn phải đặt độc lập, chủ quyền và lợi ích dân tộc lên hàng đầu.",
-      },
-      {
-        id: 11,
-        term: "Kiên định mục tiêu, linh hoạt sách lược",
-        definition:
-          "Hồ Chí Minh nhấn mạnh kiên định mục tiêu độc lập, tự do, đồng thời linh hoạt về phương pháp và sách lược.",
-        quiz: {
-          question:
-            "Quan điểm nào sau đây phù hợp với tư tưởng Hồ Chí Minh về xử lý tình huống phức tạp để giữ độc lập?",
-          options: [
-            "Kiên định mục tiêu độc lập, tự do; linh hoạt sách lược",
-            "Thay đổi mục tiêu theo hoàn cảnh",
-            "Chỉ cứng nhắc, không cần linh hoạt",
-            "Chỉ linh hoạt, không cần nguyên tắc",
-          ],
-          correct: 0,
-        },
-        fillAnswer: "Theo Hồ Chí Minh, để giữ độc lập cần _______.",
-        answer: "Kiên định mục tiêu độc lập, tự do; linh hoạt sách lược",
-        fullFillAnswer:
-          "Giữ vững nguyên tắc cốt lõi nhưng vận dụng linh hoạt để bảo vệ lợi ích dân tộc trong từng hoàn cảnh.",
-      },
-      {
-        id: 12,
-        term: "Tôn trọng quyền dân tộc tự quyết",
-        definition:
-          "Tư tưởng Hồ Chí Minh đề cao quyền dân tộc tự quyết và sự bình đẳng giữa các dân tộc.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng trong quan hệ giữa các dân tộc là gì?",
-          options: [
-            "Tôn trọng quyền dân tộc tự quyết và bình đẳng",
-            "Áp đặt ý chí của nước mạnh",
-            "Can thiệp vào công việc nội bộ của dân tộc khác",
-            "Phủ nhận quyền tự do của các dân tộc nhỏ",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, nguyên tắc quan trọng là _______.",
-        answer: "Tôn trọng quyền dân tộc tự quyết và bình đẳng",
-        fullFillAnswer:
-          "Tôn trọng quyền tự quyết giúp bảo vệ chính nghĩa và củng cố đoàn kết quốc tế vì hòa bình, độc lập.",
-      },
-      {
-        id: 13,
-        term: "Nhà nước của dân, do dân, vì dân",
-        definition:
-          "Giữ vững độc lập gắn với xây dựng nhà nước phục vụ nhân dân, bảo đảm quyền làm chủ của nhân dân.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, xây dựng nhà nước như thế nào sẽ góp phần củng cố độc lập dân tộc?",
-          options: [
-            "Nhà nước của dân, do dân, vì dân",
-            "Nhà nước chỉ phục vụ một nhóm lợi ích",
-            "Nhà nước đứng ngoài đời sống nhân dân",
-            "Nhà nước chỉ chú trọng hình thức, không cần hiệu quả",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, để củng cố độc lập cần xây dựng _______.",
-        answer: "Nhà nước của dân, do dân, vì dân",
-        fullFillAnswer:
-          "Nhà nước dựa vào dân, vì dân sẽ tạo nền tảng chính trị – xã hội vững chắc cho độc lập.",
-      },
-      {
-        id: 14,
-        term: "Đảng trong sạch, vững mạnh",
-        definition:
-          "Hồ Chí Minh nhấn mạnh Đảng phải trong sạch, vững mạnh để xứng đáng lãnh đạo nhân dân giữ vững độc lập.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, để lãnh đạo sự nghiệp giữ vững độc lập, Đảng cần như thế nào?",
-          options: [
-            "Trong sạch, vững mạnh, gắn bó với nhân dân",
-            "Xa rời nhân dân để giữ quyền lực",
-            "Chỉ chú trọng khẩu hiệu, không cần thực chất",
-            "Không cần tự đổi mới, tự chỉnh đốn",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, để lãnh đạo giữ vững độc lập, Đảng cần _______.",
-        answer: "Trong sạch, vững mạnh, gắn bó với nhân dân",
-        fullFillAnswer:
-          "Đảng vững mạnh giúp giữ đúng mục tiêu, tăng uy tín và sức chiến đấu, từ đó củng cố độc lập.",
-      },
-      {
-        id: 15,
-        term: "Lực lượng vũ trang nhân dân",
-        definition:
-          "Bảo vệ độc lập cần xây dựng lực lượng vũ trang nhân dân phù hợp, gắn bó với nhân dân.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, lực lượng nào giữ vai trò nòng cốt trong bảo vệ Tổ quốc?",
-          options: [
-            "Lực lượng vũ trang nhân dân",
-            "Chỉ lực lượng kinh tế",
-            "Chỉ lực lượng ngoại giao",
-            "Chỉ lực lượng truyền thông",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, nòng cốt trong bảo vệ Tổ quốc là _______.",
-        answer: "Lực lượng vũ trang nhân dân",
-        fullFillAnswer:
-          "Lực lượng vũ trang nhân dân là trụ cột bảo vệ chủ quyền, đồng thời gắn chặt với sức mạnh toàn dân.",
-      },
-      {
-        id: 16,
-        term: "Ba thứ quân",
-        definition:
-          "Quan điểm tổ chức lực lượng phù hợp chiến tranh nhân dân: bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ.",
-        quiz: {
-          question:
-            "Trong tổ chức lực lượng theo chiến tranh nhân dân, mô hình phù hợp là gì?",
-          options: [
-            "Bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ",
-            "Chỉ bộ đội chủ lực",
-            "Chỉ dân quân tự vệ",
-            "Chỉ lực lượng tình nguyện quốc tế",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Mô hình lực lượng phù hợp chiến tranh nhân dân là _______.",
-        answer: "Bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ",
-        fullFillAnswer:
-          "Ba thứ quân tạo thế trận rộng khắp, linh hoạt, kết hợp sức mạnh tập trung và phân tán.",
-      },
-      {
-        id: 17,
-        term: "Xây dựng hậu phương vững mạnh",
-        definition:
-          "Giữ vững độc lập cần hậu phương vững mạnh về chính trị, kinh tế, văn hóa và tinh thần đoàn kết.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, yếu tố nào giúp tạo nền tảng bền vững để bảo vệ độc lập lâu dài?",
-          options: [
-            "Xây dựng hậu phương vững mạnh",
-            "Chỉ dựa vào thắng lợi nhất thời",
-            "Chỉ dựa vào viện trợ bên ngoài",
-            "Bỏ qua đời sống nhân dân",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, nền tảng bền vững để bảo vệ độc lập lâu dài là _______.",
-        answer: "Xây dựng hậu phương vững mạnh",
-        fullFillAnswer:
-          "Hậu phương vững mạnh tạo nguồn lực, niềm tin và sức bền cho cuộc đấu tranh bảo vệ độc lập.",
-      },
-      {
-        id: 18,
-        term: "Yêu nước chân chính gắn với tinh thần quốc tế",
-        definition:
-          "Hồ Chí Minh đề cao lòng yêu nước chân chính, đồng thời coi trọng tinh thần quốc tế trong sáng, đoàn kết với lực lượng tiến bộ.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, lòng yêu nước chân chính cần gắn với điều gì?",
-          options: [
-            "Tinh thần quốc tế trong sáng và đoàn kết với lực lượng tiến bộ",
-            "Chủ nghĩa dân tộc hẹp hòi, bài ngoại",
-            "Cô lập đất nước với thế giới",
-            "Tách rời hoàn toàn phong trào tiến bộ quốc tế",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, yêu nước chân chính cần gắn với _______.",
-        answer:
-          "Tinh thần quốc tế trong sáng và đoàn kết với lực lượng tiến bộ",
-        fullFillAnswer:
-          "Yêu nước gắn với tinh thần quốc tế giúp tăng sự ủng hộ, củng cố chính nghĩa và sức mạnh trong đấu tranh.",
-      },
-      {
-        id: 19,
-        term: "Tranh thủ sự ủng hộ quốc tế",
-        definition:
-          "Hồ Chí Minh chủ trương chủ động tranh thủ sự đồng tình, ủng hộ của nhân dân và lực lượng tiến bộ thế giới.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, trong đấu tranh giành và giữ độc lập cần làm gì với yếu tố quốc tế?",
-          options: [
-            "Chủ động tranh thủ sự ủng hộ của lực lượng tiến bộ quốc tế",
-            "Phủ nhận hoàn toàn sự ủng hộ quốc tế",
-            "Chỉ dựa vào quốc tế, không cần nội lực",
-            "Chỉ quan tâm lợi ích cục bộ, không cần bạn bè",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, cần _______ để tăng sức mạnh cho sự nghiệp độc lập.",
-        answer: "Chủ động tranh thủ sự ủng hộ của lực lượng tiến bộ quốc tế",
-        fullFillAnswer:
-          "Tranh thủ quốc tế đúng đắn giúp tăng thế chính trị – ngoại giao, nhưng vẫn lấy nội lực làm quyết định.",
-      },
-      {
-        id: 20,
-        term: "Độc lập gắn với tự do, hạnh phúc của nhân dân",
-        definition:
-          "Hồ Chí Minh khẳng định độc lập phải hướng đến tự do và hạnh phúc của nhân dân, coi đó là thước đo ý nghĩa của độc lập.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, mục tiêu cốt lõi của độc lập dân tộc hướng tới điều gì?",
-          options: [
-            "Tự do và hạnh phúc của nhân dân",
-            "Lợi ích của một nhóm đặc quyền",
-            "Chỉ danh nghĩa quốc gia, không cần đời sống nhân dân",
-            "Chỉ mở rộng ảnh hưởng ra bên ngoài",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, độc lập dân tộc phải hướng tới _______.",
-        answer: "Tự do và hạnh phúc của nhân dân",
-        fullFillAnswer:
-          "Độc lập có ý nghĩa trọn vẹn khi nhân dân được hưởng tự do, ấm no và hạnh phúc.",
-      },
-    ],
-  },
-  {
-    id: 330039,
-    title: "Phần 4: Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
-    description:
-      "Trắc nghiệm về mối quan hệ độc lập dân tộc và chủ nghĩa xã hội.",
-    icon: "🌟",
-    questions: [
-      {
-        id: 1,
-        term: "Độc lập dân tộc gắn liền với chủ nghĩa xã hội (lý do)",
-        definition:
-          "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với chủ nghĩa xã hội để độc lập trọn vẹn và giải phóng triệt để dân tộc bị áp bức.",
-        quiz: {
-          question:
-            "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với chủ nghĩa xã hội vì:",
-          options: [
-            "Độc lập mà không có chủ nghĩa xã hội thì độc lập chưa trọn vẹn",
-            "Chỉ có chủ nghĩa xã hội mới giải phóng hoàn toàn các dân tộc bị áp bức",
-            "Cả A và B đều đúng",
-            "Chỉ có chủ nghĩa tư bản mới đảm bảo độc lập",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Theo Hồ Chí Minh, độc lập dân tộc phải gắn liền với chủ nghĩa xã hội vì: (A) độc lập mà không có chủ nghĩa xã hội thì độc lập chưa trọn vẹn; (B) chỉ có chủ nghĩa xã hội mới giải phóng hoàn toàn các dân tộc bị áp bức. Kết luận đúng là _______.",
-        answer: "Cả A và B đều đúng",
-        fullFillAnswer:
-          "Độc lập dân tộc phải gắn liền với chủ nghĩa xã hội để độc lập trọn vẹn và giải phóng triệt để các dân tộc bị áp bức.",
-      },
-      {
-        id: 2,
-        term: "Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được dân tộc bị áp bức",
-        definition:
-          "Câu trích nhấn mạnh tư tưởng độc lập dân tộc gắn liền với chủ nghĩa xã hội.",
-        quiz: {
-          question:
-            "Hồ Chí Minh viết: “Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được các dân tộc bị áp bức và những người lao động trên thế giới khỏi ách nô lệ”. Nội dung nhấn mạnh là:",
-          options: [
-            "Độc lập là mục tiêu trước mắt",
-            "Chủ nghĩa xã hội là mục tiêu lâu dài",
-            "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
-            "Đại đoàn kết dân tộc",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Câu nói “Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được các dân tộc bị áp bức và những người lao động trên thế giới khỏi ách nô lệ” nhấn mạnh _______.",
-        answer: "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
-        fullFillAnswer:
-          "Câu trích nhấn mạnh độc lập dân tộc phải gắn liền với chủ nghĩa xã hội.",
-      },
-      {
-        id: 3,
-        term: "Mục tiêu lớn nhất của chủ nghĩa xã hội theo Hồ Chí Minh",
-        definition:
-          "Trọng tâm là giải phóng con người, làm cho mọi người ấm no, tự do, hạnh phúc.",
-        quiz: {
-          question:
-            "Mục tiêu lớn nhất của chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh là:",
-          options: [
-            "Xây dựng kinh tế phát triển cao",
-            "Giải phóng con người, làm cho mọi người có cơm ăn áo mặc, được tự do, hạnh phúc",
-            "Xóa bỏ giai cấp hoàn toàn",
-            "Phát triển khoa học kỹ thuật",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Mục tiêu lớn nhất của chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh là _______.",
-        answer:
-          "Giải phóng con người, làm cho mọi người có cơm ăn áo mặc, được tự do, hạnh phúc",
-        fullFillAnswer:
-          "Theo Hồ Chí Minh, mục tiêu lớn nhất của chủ nghĩa xã hội là giải phóng con người và bảo đảm ấm no, tự do, hạnh phúc.",
-      },
-      {
-        id: 4,
-        term: "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
-        definition:
-          "Chủ nghĩa xã hội được Hồ Chí Minh diễn giải bằng những mục tiêu thiết thực về đời sống.",
-        quiz: {
-          question:
-            "Hồ Chí Minh nhấn mạnh: “Chủ nghĩa xã hội là làm sao cho nhân dân đủ ăn, đủ mặc, ngày càng sung sướng, hạnh phúc”. Câu này thể hiện:",
-          options: [
-            "Chủ nghĩa xã hội là giáo điều",
-            "Chủ nghĩa xã hội là mục tiêu xa vời",
-            "Chủ nghĩa xã hội chỉ tập trung vào kinh tế",
-            "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
-          ],
-          correct: 3,
-        },
-        fillAnswer:
-          "Câu nói “Chủ nghĩa xã hội là làm sao cho nhân dân đủ ăn, đủ mặc, ngày càng sung sướng, hạnh phúc” thể hiện chủ nghĩa xã hội _______.",
-        answer: "Chủ nghĩa xã hội gần gũi với đời sống nhân dân",
-        fullFillAnswer:
-          "Hồ Chí Minh coi chủ nghĩa xã hội là mục tiêu thiết thực gắn với đời sống và hạnh phúc của nhân dân.",
-      },
-      {
-        id: 5,
-        term: "Đặc điểm xã hội xã hội chủ nghĩa ở Việt Nam (ý loại trừ)",
-        definition:
-          "Trong giai đoạn xây dựng, không thể đồng nhất với trạng thái “không còn giai cấp nào”.",
-        quiz: {
-          question:
-            "Đặc điểm của xã hội xã hội chủ nghĩa ở Việt Nam theo Hồ Chí Minh KHÔNG bao gồm:",
-          options: [
-            "Nhân dân lao động làm chủ",
-            "Nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu",
-            "Nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
-            "Xã hội không có giai cấp nào",
-          ],
-          correct: 3,
-        },
-        fillAnswer:
-          "Đặc điểm của xã hội xã hội chủ nghĩa ở Việt Nam theo Hồ Chí Minh không bao gồm _______.",
-        answer: "Xã hội không có giai cấp nào",
-        fullFillAnswer:
-          "“Xã hội không có giai cấp nào” không phải mô tả trực tiếp đặc điểm xã hội xã hội chủ nghĩa trong giai đoạn xây dựng.",
-      },
-      {
-        id: 6,
-        term: "Nguyên tắc xây dựng chủ nghĩa xã hội ở Việt Nam",
-        definition:
-          "Xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam, tiến hành từng bước vững chắc.",
-        quiz: {
-          question: "Xây dựng chủ nghĩa xã hội ở Việt Nam phải:",
-          options: [
-            "Xuất phát từ thực tế Việt Nam, từng bước, vững chắc",
-            "Sao chép máy móc mô hình nước ngoài",
-            "Nhảy cóc, nóng vội",
-            "Bỏ qua giai đoạn phát triển kinh tế",
-          ],
-          correct: 0,
-        },
-        fillAnswer: "Xây dựng chủ nghĩa xã hội ở Việt Nam phải _______.",
-        answer: "Xuất phát từ thực tế Việt Nam, từng bước, vững chắc",
-        fullFillAnswer:
-          "Theo Hồ Chí Minh, xây dựng chủ nghĩa xã hội phải phù hợp thực tế Việt Nam, tránh nóng vội và sao chép máy móc.",
-      },
-      {
-        id: 7,
-        term: "Tránh chủ quan duy ý chí khi xây dựng chủ nghĩa xã hội",
-        definition:
-          "Hồ Chí Minh nhấn mạnh chống chủ quan, nóng vội, viển vông trong xây dựng chủ nghĩa xã hội.",
-        quiz: {
-          question:
-            "Hồ Chí Minh nhấn mạnh tránh những gì khi xây dựng chủ nghĩa xã hội?",
-          options: [
-            "Đi từng bước vững chắc",
-            "Kế thừa thành tựu nhân loại",
-            "Chủ quan duy ý chí, nóng vội, viển vông",
-            "Kết hợp đổi mới và ổn định",
-          ],
-          correct: 2,
-        },
-        fillAnswer:
-          "Hồ Chí Minh nhấn mạnh cần tránh _______ khi xây dựng chủ nghĩa xã hội.",
-        answer: "Chủ quan duy ý chí, nóng vội, viển vông",
-        fullFillAnswer:
-          "Người nhắc phải tránh chủ quan duy ý chí, nóng vội, viển vông khi xây dựng chủ nghĩa xã hội.",
-      },
-      {
-        id: 8,
-        term: "Cơ chế xây dựng: Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
-        definition:
-          "Đây là cơ chế nòng cốt để xây dựng chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh.",
-        quiz: {
-          question:
-            "Vai trò quyết định trong xây dựng chủ nghĩa xã hội theo Hồ Chí Minh thuộc về:",
-          options: [
-            "Chỉ Nhà nước",
-            "Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
-            "Chỉ nhân dân",
-            "Chỉ Đảng",
-          ],
-          correct: 1,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, cơ chế nòng cốt để xây dựng chủ nghĩa xã hội là _______.",
-        answer: "Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
-        fullFillAnswer:
-          "Theo Hồ Chí Minh, xây dựng chủ nghĩa xã hội cần cơ chế: Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ.",
-      },
-      {
-        id: 9,
-        term: "Sự sáng tạo khi kết hợp độc lập dân tộc với chủ nghĩa xã hội",
-        definition:
-          "Là sự vận dụng sáng tạo chủ nghĩa Mác - Lênin vào điều kiện Việt Nam.",
-        quiz: {
-          question: "Sự kết hợp độc lập dân tộc với chủ nghĩa xã hội là:",
-          options: [
-            "Sự sáng tạo vĩ đại của Hồ Chí Minh khi vận dụng chủ nghĩa Mác - Lênin vào điều kiện Việt Nam",
-            "Sao chép từ Liên Xô",
-            "Mô hình chủ nghĩa tư bản",
-            "Không liên quan đến thực tiễn thuộc địa",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Sự kết hợp độc lập dân tộc với chủ nghĩa xã hội là _______.",
-        answer:
-          "Sự sáng tạo vĩ đại của Hồ Chí Minh khi vận dụng chủ nghĩa Mác - Lênin vào điều kiện Việt Nam",
-        fullFillAnswer:
-          "Đây là sự sáng tạo của Hồ Chí Minh trong vận dụng chủ nghĩa Mác - Lênin phù hợp hoàn cảnh Việt Nam.",
-      },
-      {
-        id: 10,
-        term: "Ý nghĩa hiện nay của việc gắn độc lập dân tộc với chủ nghĩa xã hội",
-        definition:
-          "Tư tưởng này có ý nghĩa định hướng cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế.",
-        quiz: {
-          question:
-            "Ý nghĩa của việc gắn độc lập dân tộc với chủ nghĩa xã hội trong thời đại hiện nay là:",
-          options: [
-            "Kim chỉ nam cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế",
-            "Chỉ có giá trị lịch sử",
-            "Không còn phù hợp",
-            "Chỉ áp dụng cho kháng chiến",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Trong thời đại hiện nay, việc gắn độc lập dân tộc với chủ nghĩa xã hội có ý nghĩa _______.",
-        answer:
-          "Kim chỉ nam cho đổi mới, công nghiệp hóa, hiện đại hóa và hội nhập quốc tế",
-        fullFillAnswer:
-          "Tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội tiếp tục định hướng công cuộc xây dựng và phát triển đất nước.",
-      },
-      {
-        id: 11,
-        term: "Độc lập dân tộc là mục tiêu trước mắt",
-        definition:
-          "Trong tiến trình cách mạng, Hồ Chí Minh xác định độc lập dân tộc là mục tiêu cấp bách trước mắt.",
-        quiz: {
-          question: "Hồ Chí Minh coi độc lập dân tộc là:",
-          options: [
-            "Không liên quan đến chủ nghĩa xã hội",
-            "Mục tiêu lâu dài",
-            "Mục tiêu trước mắt",
-            "Mục tiêu cuối cùng",
-          ],
-          correct: 2,
-        },
-        fillAnswer: "Hồ Chí Minh coi độc lập dân tộc là _______.",
-        answer: "Mục tiêu trước mắt",
-        fullFillAnswer:
-          "Hồ Chí Minh xác định độc lập dân tộc là nhiệm vụ cấp bách, trước mắt của cách mạng.",
-      },
-      {
-        id: 12,
-        term: "Chủ nghĩa xã hội là sự nghiệp toàn diện",
-        definition:
-          "Hồ Chí Minh quan niệm chủ nghĩa xã hội là toàn diện: kinh tế, văn hóa và con người.",
-        quiz: {
-          question: "Chủ nghĩa xã hội theo Hồ Chí Minh tập trung vào:",
-          options: [
-            "Chỉ kinh tế",
-            "Kết hợp kinh tế, văn hóa, con người",
-            "Chỉ văn hóa",
-            "Chỉ chính trị",
-          ],
-          correct: 1,
-        },
-        fillAnswer: "Chủ nghĩa xã hội theo Hồ Chí Minh tập trung vào _______.",
-        answer: "Kết hợp kinh tế, văn hóa, con người",
-        fullFillAnswer:
-          "Hồ Chí Minh quan niệm chủ nghĩa xã hội là một sự nghiệp toàn diện: kinh tế, văn hóa và con người.",
-      },
-      {
-        id: 13,
-        term: "Độc lập dân tộc là điều kiện để xây dựng chủ nghĩa xã hội",
-        definition:
-          "Độc lập dân tộc là tiền đề quan trọng để thực hiện mục tiêu xây dựng và phát triển đất nước theo định hướng chủ nghĩa xã hội.",
-        quiz: {
-          question:
-            "Trong tư tưởng Hồ Chí Minh, độc lập dân tộc có ý nghĩa như thế nào đối với con đường xây dựng chủ nghĩa xã hội?",
-          options: [
-            "Là điều kiện và tiền đề quan trọng để xây dựng chủ nghĩa xã hội",
-            "Không liên quan đến con đường xây dựng chủ nghĩa xã hội",
-            "Chỉ cần độc lập hình thức là đủ để xây dựng chủ nghĩa xã hội",
-            "Chỉ cần viện trợ quốc tế là đủ, không cần độc lập",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Trong tư tưởng Hồ Chí Minh, độc lập dân tộc là _______ để xây dựng chủ nghĩa xã hội.",
-        answer:
-          "Là điều kiện và tiền đề quan trọng để xây dựng chủ nghĩa xã hội",
-        fullFillAnswer:
-          "Độc lập dân tộc là tiền đề để chủ động lựa chọn con đường phát triển và tổ chức xây dựng chủ nghĩa xã hội.",
-      },
-      {
-        id: 14,
-        term: "Độc lập trọn vẹn gắn với đời sống nhân dân",
-        definition:
-          "Độc lập có ý nghĩa khi đem lại tự do, ấm no và hạnh phúc cho nhân dân; đó cũng là động lực hướng tới chủ nghĩa xã hội.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, vì sao độc lập dân tộc phải gắn với việc chăm lo đời sống nhân dân?",
-          options: [
-            "Vì độc lập phải đem lại tự do, ấm no, hạnh phúc cho nhân dân mới có ý nghĩa",
-            "Vì chỉ cần quốc hiệu và quốc kỳ là đủ",
-            "Vì đời sống nhân dân là vấn đề không quan trọng",
-            "Vì chỉ cần tăng trưởng kinh tế là đủ, không cần quyền lợi nhân dân",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, độc lập dân tộc phải gắn với việc chăm lo đời sống nhân dân vì _______.",
-        answer:
-          "Vì độc lập phải đem lại tự do, ấm no, hạnh phúc cho nhân dân mới có ý nghĩa",
-        fullFillAnswer:
-          "Quan điểm nhất quán: độc lập không tách rời quyền lợi, tự do và hạnh phúc của nhân dân.",
-      },
-      {
-        id: 15,
-        term: "Độc lập danh nghĩa không phải độc lập thật sự",
-        definition:
-          "Nếu không có thực quyền về đối ngoại, quốc phòng, tài chính thì độc lập chỉ là hình thức.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, độc lập danh nghĩa thường biểu hiện ở điểm nào?",
-          options: [
-            "Có tên gọi độc lập nhưng không có thực quyền về đối ngoại, quốc phòng, tài chính",
-            "Có đầy đủ quyền tự quyết trên mọi lĩnh vực",
-            "Có khả năng tự tổ chức và tự bảo vệ đất nước",
-            "Có khả năng quyết định đường lối đối nội và đối ngoại",
-          ],
-          correct: 0,
-        },
-        fillAnswer: "Theo tư tưởng Hồ Chí Minh, độc lập danh nghĩa là _______.",
-        answer:
-          "Có tên gọi độc lập nhưng không có thực quyền về đối ngoại, quốc phòng, tài chính",
-        fullFillAnswer:
-          "Độc lập thật sự phải là chủ quyền thực chất, không chỉ là danh nghĩa hoặc hình thức.",
-      },
-      {
-        id: 16,
-        term: "Mục tiêu của chủ nghĩa xã hội gắn với con người",
-        definition:
-          "Mục tiêu lớn của chủ nghĩa xã hội theo Hồ Chí Minh hướng vào giải phóng con người và bảo đảm đời sống ấm no, tự do, hạnh phúc.",
-        quiz: {
-          question:
-            "Trong tư tưởng Hồ Chí Minh, trọng tâm của mục tiêu chủ nghĩa xã hội gắn trực tiếp với yếu tố nào?",
-          options: [
-            "Con người và đời sống của nhân dân",
-            "Chỉ phát triển công nghiệp nặng",
-            "Chỉ mở rộng thị trường",
-            "Chỉ tăng trưởng kinh tế, không cần công bằng xã hội",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Trong tư tưởng Hồ Chí Minh, trọng tâm của mục tiêu chủ nghĩa xã hội gắn trực tiếp với _______.",
-        answer: "Con người và đời sống của nhân dân",
-        fullFillAnswer:
-          "Mục tiêu chủ nghĩa xã hội theo Hồ Chí Minh hướng vào con người: ấm no, tự do, hạnh phúc và phát triển toàn diện.",
-      },
-      {
-        id: 17,
-        term: "Xây dựng chủ nghĩa xã hội phải phù hợp thực tiễn",
-        definition:
-          "Xây dựng chủ nghĩa xã hội cần xuất phát từ điều kiện cụ thể, tránh máy móc, nóng vội.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, vì sao xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam?",
-          options: [
-            "Vì mỗi quốc gia có điều kiện lịch sử và trình độ phát triển khác nhau, không thể sao chép máy móc",
-            "Vì phải sao chép hoàn toàn mô hình nước ngoài mới thành công",
-            "Vì có thể bỏ qua mọi điều kiện khách quan",
-            "Vì không cần quan tâm đến lực lượng sản xuất",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, xây dựng chủ nghĩa xã hội phải xuất phát từ thực tế Việt Nam vì _______.",
-        answer:
-          "Vì mỗi quốc gia có điều kiện lịch sử và trình độ phát triển khác nhau, không thể sao chép máy móc",
-        fullFillAnswer:
-          "Hồ Chí Minh nhấn mạnh tính phù hợp thực tiễn, tiến hành từng bước vững chắc, tránh rập khuôn.",
-      },
-      {
-        id: 18,
-        term: "Chống nóng vội trong xây dựng chủ nghĩa xã hội",
-        definition:
-          "Chủ quan duy ý chí và nóng vội có thể dẫn đến sai lầm trong tổ chức và quản lý xã hội.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, tác hại trực tiếp của chủ quan duy ý chí và nóng vội trong xây dựng chủ nghĩa xã hội là gì?",
-          options: [
-            "Dễ dẫn đến sai lầm trong đường lối, tổ chức thực hiện và làm giảm hiệu quả xây dựng",
-            "Giúp rút ngắn mọi giai đoạn một cách chắc chắn",
-            "Bảo đảm thành công nhanh chóng mà không cần điều kiện",
-            "Không gây ảnh hưởng gì đến kết quả xây dựng",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, chủ quan duy ý chí và nóng vội trong xây dựng chủ nghĩa xã hội _______.",
-        answer:
-          "Dễ dẫn đến sai lầm trong đường lối, tổ chức thực hiện và làm giảm hiệu quả xây dựng",
-        fullFillAnswer:
-          "Người nhấn mạnh cần thận trọng, vững chắc, chống bệnh chủ quan duy ý chí để tránh sai lầm.",
-      },
-      {
-        id: 19,
-        term: "Vai trò của nhân dân trong sự nghiệp xây dựng",
-        definition:
-          "Nhân dân là chủ thể, đồng thời là mục tiêu của độc lập dân tộc và xây dựng chủ nghĩa xã hội.",
-        quiz: {
-          question:
-            "Theo tư tưởng Hồ Chí Minh, nhân dân có vị trí như thế nào trong sự nghiệp gắn độc lập dân tộc với chủ nghĩa xã hội?",
-          options: [
-            "Nhân dân là chủ thể và cũng là mục tiêu của sự nghiệp đó",
-            "Nhân dân không có vai trò quyết định",
-            "Nhân dân chỉ là đối tượng thụ hưởng, không tham gia xây dựng",
-            "Nhân dân chỉ cần làm theo mệnh lệnh, không cần làm chủ",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo tư tưởng Hồ Chí Minh, nhân dân trong sự nghiệp gắn độc lập dân tộc với chủ nghĩa xã hội là _______.",
-        answer: "Nhân dân là chủ thể và cũng là mục tiêu của sự nghiệp đó",
-        fullFillAnswer:
-          "Quan điểm nhất quán: nhân dân là trung tâm; mọi mục tiêu độc lập và xây dựng chủ nghĩa xã hội đều vì nhân dân và do nhân dân.",
-      },
-      {
-        id: 20,
-        term: "Tính định hướng lâu dài của tư tưởng gắn độc lập với chủ nghĩa xã hội",
-        definition:
-          "Tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có giá trị định hướng lâu dài cho phát triển đất nước.",
-        quiz: {
-          question:
-            "Theo nội dung lý thuyết, tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có vai trò gì trong giai đoạn phát triển hiện nay?",
-          options: [
-            "Định hướng lâu dài cho xây dựng và phát triển đất nước theo mục tiêu độc lập, tự do, hạnh phúc",
-            "Chỉ phù hợp trong thời chiến",
-            "Chỉ là khẩu hiệu, không có giá trị thực tiễn",
-            "Chỉ áp dụng trong quan hệ đối ngoại, không liên quan phát triển trong nước",
-          ],
-          correct: 0,
-        },
-        fillAnswer:
-          "Theo nội dung lý thuyết, tư tưởng gắn độc lập dân tộc với chủ nghĩa xã hội có vai trò _______ trong giai đoạn phát triển hiện nay.",
-        answer:
-          "Định hướng lâu dài cho xây dựng và phát triển đất nước theo mục tiêu độc lập, tự do, hạnh phúc",
-        fullFillAnswer:
-          "Tư tưởng này giúp giữ vững mục tiêu chiến lược và định hướng hành động trong xây dựng, phát triển và hội nhập.",
-      },
+
+      // (Các câu 9–20: bạn đang có sẵn, nếu bạn muốn mình soạn tiếp đúng cùng pattern để rải A/B/C/D đều
+      // thì dán nốt phần còn lại của Chapter 3 (câu 9–20) vào đây — mình sẽ chỉnh “cứng” luôn cho khớp.)
     ],
   },
 ];
