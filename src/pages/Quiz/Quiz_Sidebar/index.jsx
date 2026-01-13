@@ -522,7 +522,7 @@ export default function QuizSidebar({
                     darkMode ? "text-white" : "text-slate-900"
                   }`}
                 >
-                  Triết học Mác-Lênin
+                  Tư tưởng Hồ Chí Minh
                 </h1>
                 <p
                   className={`${

@@ -9,6 +9,7 @@ import Chapters from "@pages/Chapters";
 import Quiz from "@pages/Quiz/quizLayout";
 import Resources from "@pages/Resources";
 import QuizTestPage from "@pages/Quiz/TestModal/QuizTestPage";
+import AiAppendix from "@pages/AiAppendix";
 // import Faqs from "@pages/HomePage/Faqs";
 import endPoint from "@routes/routes";
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
         path: endPoint.STORYBOOK,
         element: <StoryBook />,
       },
+      { path: endPoint.AI_APPENDIX, element: <AiAppendix /> },
     ],
   },
   {

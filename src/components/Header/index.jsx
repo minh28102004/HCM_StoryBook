@@ -9,6 +9,7 @@ import {
   X,
   ChevronDown,
   ArrowRight,
+  Bot,
 } from "lucide-react";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import endPoint from "@routes/routes";
@@ -29,6 +30,7 @@ const navItems = [
     to: "storybook",
   },
   { label: "Ôn tập", icon: Layers, to: endPoint.QUIZ },
+  { label: "Phụ lục AI", icon: Bot, to: endPoint.AI_APPENDIX },
 ];
 
 // Dropdown component
