@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import { useDispatch, useSelector } from "react-redux";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Modal } from "antd";
 import {
@@ -63,7 +64,9 @@ const beep = async () => {
       o.stop();
       ctx.close?.();
     }, 450);
-  } catch {}
+  } catch (err) {
+    console.debug("[beep] failed:", err);
+  }
 };
 
 // dataset: question ở quiz.question
@@ -797,7 +800,9 @@ export default function QuizTestPage({ embedded = false, onExit }) {
         >
           <div className="max-w-3xl mx-auto px-4 py-3">
             <div className={`border rounded-3xl ${card}`}>
-              <div className="px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+              {/* 👇 2 hàng: (1) tiêu đề + stats, (2) actions nằm ngang bên dưới ở desktop */}
+              <div className="px-4 py-3 flex flex-col gap-3">
+                {/* Title + meta */}
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 min-w-0">
                     <BookOpen className="w-5 h-5 text-amber-400 shrink-0" />
@@ -840,13 +845,14 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                {/* Actions (desktop: 1 hàng ngang dưới title, mobile: tự xuống hàng) */}
+                <div className="w-full flex flex-wrap md:flex-nowrap items-center gap-2 justify-start md:justify-end">
                   {/* Mobile open question list */}
                   <motion.button
                     {...hoverLift(reduceMotion)}
                     onClick={() => setMobileNavOpen(true)}
                     className={[
-                      "xl:hidden px-3 h-10 rounded-2xl border flex items-center gap-2 text-sm font-medium transition-colors",
+                      "xl:hidden flex-1 md:flex-none px-3 h-10 rounded-2xl border flex items-center justify-center gap-2 text-sm font-medium transition-colors whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/20 hover:bg-slate-700/35"
                         : "border-slate-200 bg-white hover:bg-slate-50",
@@ -864,7 +870,7 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                       setViewMode((v) => (v === "single" ? "list" : "single"))
                     }
                     className={[
-                      "px-3 h-10 rounded-2xl border flex items-center gap-2 text-sm font-medium transition-colors",
+                      "flex-1 md:flex-none px-3 h-10 rounded-2xl border flex items-center justify-center gap-2 text-sm font-medium transition-colors whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/20 hover:bg-slate-700/35"
                         : "border-slate-200 bg-white hover:bg-slate-50",
@@ -875,11 +881,13 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                       <>
                         <List className="w-4 h-4" />
                         <span className="hidden sm:inline">Danh sách</span>
+                        <span className="sm:hidden">DS</span>
                       </>
                     ) : (
                       <>
                         <LayoutGrid className="w-4 h-4" />
                         <span className="hidden sm:inline">Từng câu</span>
+                        <span className="sm:hidden">1 câu</span>
                       </>
                     )}
                   </motion.button>
@@ -887,7 +895,7 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                   {/* Timer */}
                   <div
                     className={[
-                      "flex items-center gap-2 px-3 h-10 rounded-2xl border",
+                      "flex-1 md:flex-none flex items-center justify-center gap-2 px-3 h-10 rounded-2xl border whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/18"
                         : "border-slate-200 bg-white/70",
@@ -913,7 +921,7 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                     onClick={toggleReveal}
                     disabled={!canToggleReveal}
                     className={[
-                      "px-3 h-10 rounded-2xl border text-sm font-medium transition-colors",
+                      "flex-1 md:flex-none px-3 h-10 rounded-2xl border text-sm font-medium transition-colors whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/20 hover:bg-slate-700/35"
                         : "border-slate-200 bg-white hover:bg-slate-50",
@@ -934,7 +942,7 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                     onClick={finishNow}
                     disabled={finished}
                     className={[
-                      "px-3 h-10 rounded-2xl bg-amber-400 text-slate-900 font-medium flex items-center gap-2 transition",
+                      "flex-1 md:flex-none px-3 h-10 rounded-2xl bg-amber-400 text-slate-900 font-medium flex items-center justify-center gap-2 transition whitespace-nowrap",
                       finished
                         ? "opacity-70 cursor-not-allowed"
                         : "hover:brightness-95",
@@ -945,12 +953,12 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                     Nộp
                   </motion.button>
 
-                  {/* Exit */}
+                  {/* Exit: full on md+, icon-only on mobile (tuỳ bạn) */}
                   <motion.button
                     {...hoverLift(reduceMotion)}
                     onClick={requestExit}
                     className={[
-                      "px-3 h-10 rounded-2xl border flex items-center gap-2 transition-colors",
+                      "hidden md:flex px-3 h-10 rounded-2xl border items-center justify-center gap-2 transition-colors whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/18 hover:bg-slate-700/35"
                         : "border-slate-200 bg-white hover:bg-slate-50",
@@ -958,14 +966,14 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                     title="Thoát về Quiz"
                   >
                     <LogOut className="w-4 h-4" />
-                    <span className="hidden sm:inline">Thoát</span>
+                    <span>Thoát</span>
                   </motion.button>
 
                   <motion.button
                     {...hoverLift(reduceMotion)}
                     onClick={requestExit}
                     className={[
-                      "px-3 h-10 rounded-2xl border transition-colors",
+                      "md:hidden flex-1 px-3 h-10 rounded-2xl border flex items-center justify-center gap-2 transition-colors whitespace-nowrap",
                       darkMode
                         ? "border-slate-600/60 bg-slate-700/18 hover:bg-slate-700/35"
                         : "border-slate-200 bg-white hover:bg-slate-50",
@@ -973,6 +981,7 @@ export default function QuizTestPage({ embedded = false, onExit }) {
                     title="Thoát"
                   >
                     <X className="w-4 h-4" />
+                    <span>Thoát</span>
                   </motion.button>
                 </div>
               </div>
@@ -1312,7 +1321,7 @@ function QuizBlock({
         const style = (() => {
           if (!reveal) {
             if (selected) return "border-amber-300/80 bg-amber-300/10";
-            says: return optionIdle; // keep
+            return optionIdle;
           }
           if (isCorrectPick) return "border-emerald-400/80 bg-emerald-400/12";
           if (isWrongPick) return "border-red-400/80 bg-red-400/10";
