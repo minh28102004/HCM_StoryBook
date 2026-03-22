@@ -1,5 +1,3 @@
-// src/pages/MarxismPhilosophyPage/data.ts
-// ✅ Import ảnh nội bộ (Vite/CRA đều hỗ trợ). Lưu ý: path tương đối từ file này.
 import Home2 from "../../assets/picture/intro.png";
 import sophie0 from "../../assets/picture/ph1.png";
 import sophie1 from "../../assets/picture/ph2.png";
@@ -10,102 +8,90 @@ import sophie5 from "../../assets/picture/ph6.png";
 import sophie6 from "../../assets/picture/ph7.png";
 
 const sections = [
-  // 0) HOME
   {
     title: "Trang đầu",
-    subtitle: "Tư tưởng Hồ Chí Minh • Ngọn đuốc soi đường cho cách mạng Việt Nam",
+    subtitle:
+      "Tôn giáo ở Việt Nam • Đa dạng, đan xen và chung sống hòa bình",
     description:
-      "Từ bóng tối nô lệ, dân tộc Việt Nam tìm thấy “ngọn đuốc” dẫn đường: Tư tưởng Hồ Chí Minh — hệ thống quan điểm về giải phóng dân tộc và xây dựng xã hội mới.\n\nHành trình gồm 7 phần, giúp bạn nắm nhanh: khái niệm, quá trình hình thành, các tư tưởng cốt lõi và giá trị vận dụng hôm nay.",
-    quote: "Không có gì quý hơn độc lập, tự do.",
-    author: "Hồ Chí Minh",
+      "Việt Nam là quốc gia có nhiều tôn giáo cùng tồn tại, phát triển và gắn bó với đời sống dân tộc. Bức tranh tôn giáo ở nước ta vừa phong phú về nguồn gốc, vừa thể hiện rõ nét văn hóa Việt Nam trong quá trình tiếp biến.\n\nHành trình này giúp bạn nắm nhanh hai mảng trọng tâm: các đặc điểm cơ bản của tôn giáo ở Việt Nam và chính sách nhất quán của Đảng, Nhà nước đối với tín ngưỡng, tôn giáo hiện nay.",
+    quote: "Tín ngưỡng, tôn giáo là nhu cầu tinh thần của một bộ phận nhân dân.",
+    author: "Quan điểm của Đảng",
     backgroundImage: Home2,
     hint: "Nhấn Space/PageDown để bắt đầu từ Phần 1.",
   },
-
-  // 1) PHẦN 1
   {
-    title: "Phần 1: Khởi đầu hành trình",
-    subtitle: "Chương I • Khái niệm, đối tượng, phương pháp và ý nghĩa học tập",
+    title: "Phần 1: Bức tranh chung",
+    subtitle: "Nhiều tôn giáo, nhiều hình thức tồn tại",
     description:
-      "Tư tưởng Hồ Chí Minh không chỉ gắn với một con người, mà là hệ thống quan điểm toàn diện về cách mạng Việt Nam — từ độc lập dân tộc đến con đường đi lên CNXH.\n\nNó kết tinh từ chủ nghĩa Mác–Lênin, truyền thống dân tộc và tinh hoa nhân loại. Học không phải để thuộc lòng, mà để soi sáng hành động: yêu nước, yêu dân, yêu tự do một cách khoa học và sáng tạo.",
-    quote: "Học để làm việc, làm người, làm cán bộ.",
-    author: "Hồ Chí Minh",
+      "Hiện nay, Việt Nam có 43 tổ chức thuộc 16 tôn giáo đã được công nhận và cấp đăng ký hoạt động, với khoảng 57.000 chức sắc, 157.000 chức việc và hơn 29.000 cơ sở thờ tự.\n\nTrong đời sống tôn giáo nước ta có cả tôn giáo du nhập từ bên ngoài như Phật giáo, Công giáo, Tin Lành, Hồi giáo, và các tôn giáo nội sinh như Cao Đài, Hòa Hảo.",
+    quote: "Việt Nam là một quốc gia có nhiều tôn giáo.",
+    author: "Khái quát chung",
     backgroundImage: sophie0,
     hint: "Kéo xuống để vào Phần 2.",
   },
-
-  // 2) PHẦN 2
   {
-    title: "Phần 2: Hành trình hình thành",
-    subtitle: "Chương II • Cơ sở, quá trình hình thành và phát triển",
+    title: "Phần 2: Đan xen hòa bình",
+    subtitle: "Đa dạng nguồn gốc, không có xung đột tôn giáo",
     description:
-      "Năm 1911, Nguyễn Tất Thành rời bến Nhà Rồng, mở hành trình bôn ba nhiều nước để tìm đường cứu nước, chứng kiến bất công và tham gia đấu tranh.\n\nTừ truyền thống yêu nước kết hợp ánh sáng Mác–Lênin, Người hình thành tư tưởng riêng: không sao chép máy móc, mà vận dụng linh hoạt vào thực tiễn Việt Nam. Tư tưởng ấy phát triển qua nhiều giai đoạn, gắn với từng bước ngoặt cách mạng.",
+      "Các tôn giáo ở Việt Nam đa dạng, đan xen và cùng tồn tại trên nhiều địa bàn, nhưng thực tế chưa từng xảy ra chiến tranh hay xung đột tôn giáo. Tín đồ của các tôn giáo khác nhau vẫn chung sống hòa bình và tôn trọng niềm tin của nhau.\n\nMỗi tôn giáo khi vào Việt Nam đều ít nhiều mang dấu ấn bản sắc văn hóa Việt Nam, tạo nên diện mạo riêng của đời sống tôn giáo trong nước.",
     quote:
-      "Muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.",
-    author: "Hồ Chí Minh",
+      "Các tôn giáo ở Việt Nam đa dạng, đan xen, chung sống hòa bình và không có xung đột, chiến tranh tôn giáo.",
+    author: "Thực tiễn tôn giáo Việt Nam",
     backgroundImage: sophie1,
     hint: "Tiếp tục xuống để vào Phần 3.",
   },
-
-  // 3) PHẦN 3
   {
-    title: "Phần 3: Ngọn cờ đầu tiên",
-    subtitle: "Chương III • Độc lập dân tộc gắn liền với CNXH",
+    title: "Phần 3: Tín đồ và chức sắc",
+    subtitle: "Lực lượng xã hội có vai trò quan trọng",
     description:
-      "Độc lập dân tộc phải gắn với CNXH, nếu không dễ rơi vào “độc lập hình thức”, nhân dân vẫn khổ.\n\nCách mạng muốn thắng phải dựa vào sức mạnh toàn dân, kết hợp đấu tranh chính trị và vũ trang. Mục tiêu hướng đến là xã hội công bằng, dân chủ, văn minh — con người được phát triển toàn diện.",
-    quote: "Không có gì quý hơn độc lập, tự do.",
-    author: "Hồ Chí Minh",
+      "Tín đồ các tôn giáo ở Việt Nam có thành phần rất đa dạng, nhưng phần lớn là nhân dân lao động, có lòng yêu nước, tinh thần dân tộc và mong muốn sống “tốt đời, đẹp đạo”.\n\nHàng ngũ chức sắc giữ vai trò truyền bá giáo lý, tổ chức sinh hoạt tôn giáo, quản lý tổ chức giáo hội và có uy tín lớn đối với tín đồ. Vì vậy, đây là lực lượng có ảnh hưởng rõ rệt trong đời sống tôn giáo và xã hội.",
+    quote: "Đa số tín đồ các tôn giáo đều có tinh thần yêu nước, gắn bó với dân tộc.",
+    author: "Đặc điểm xã hội của tôn giáo",
     backgroundImage: sophie2,
     hint: "Kéo xuống để vào Phần 4.",
   },
-
-  // 4) PHẦN 4
   {
-    title: "Phần 4: Người lái đò vững chắc",
-    subtitle: "Chương IV • Đảng và Nhà nước của dân, do dân, vì dân",
+    title: "Phần 4: Quan hệ quốc tế",
+    subtitle: "Mở rộng giao lưu nhưng giữ vững chủ quyền",
     description:
-      "Muốn thắng lợi phải có Đảng cách mạng chân chính: trong sạch, vững mạnh, gắn bó với nhân dân, lấy nền tảng Mác–Lênin.\n\nNhà nước là của dân và vì dân: cán bộ không phải “quan”, mà là người phục vụ. Tư tưởng dân chủ, pháp quyền và quyền làm chủ của nhân dân là trục xuyên suốt.",
-    quote: "Cán bộ là đầy tớ trung thành của nhân dân.",
-    author: "Hồ Chí Minh",
+      "Các tôn giáo ở Việt Nam, dù là ngoại nhập hay nội sinh, đều có quan hệ nhất định với tổ chức, cá nhân tôn giáo ở nước ngoài hoặc các tổ chức tôn giáo quốc tế.\n\nVì vậy, việc giải quyết vấn đề tôn giáo phải kết hợp giữa mở rộng giao lưu hợp tác quốc tế với bảo đảm độc lập, chủ quyền quốc gia, không để các thế lực xấu lợi dụng vấn đề dân chủ, nhân quyền và tự do tôn giáo để can thiệp vào công việc nội bộ của nước ta.",
+    quote:
+      "Mở rộng giao lưu hợp tác quốc tế phải đi đôi với bảo đảm độc lập, chủ quyền.",
+    author: "Yêu cầu quản lý trong giai đoạn hiện nay",
     backgroundImage: sophie3,
     hint: "Kéo xuống để vào Phần 5.",
   },
-
-  // 5) PHẦN 5
   {
-    title: "Phần 5: Sức mạnh vô địch",
-    subtitle: "Chương V • Đại đoàn kết toàn dân tộc & đoàn kết quốc tế",
+    title: "Phần 5: Chính sách nhất quán",
+    subtitle:
+      "Tôn trọng tự do tín ngưỡng, bình đẳng trước pháp luật",
     description:
-      "Đại đoàn kết là then chốt: không phân biệt giai cấp, tôn giáo, dân tộc — miễn là cùng mục tiêu yêu nước và chống xâm lược.\n\nĐồng thời phải đoàn kết quốc tế: kết hợp sức mạnh dân tộc với sức mạnh thời đại, ủng hộ các dân tộc bị áp bức để tạo sức mạnh tổng hợp.",
+      "Đảng và Nhà nước nhất quán tôn trọng và bảo đảm quyền tự do tín ngưỡng, theo hoặc không theo một tín ngưỡng, tôn giáo nào; đồng thời bảo đảm quyền sinh hoạt tín ngưỡng, tôn giáo bình thường theo đúng pháp luật.\n\nCác tôn giáo hoạt động trong khuôn khổ pháp luật, bình đẳng trước pháp luật. Cùng với đó là chính sách đại đoàn kết dân tộc, đoàn kết đồng bào theo đạo và không theo đạo vì mục tiêu chung của đất nước.",
     quote:
-      "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công.",
-    author: "Hồ Chí Minh",
+      "Các tôn giáo hoạt động trong khuôn khổ pháp luật, bình đẳng trước pháp luật.",
+    author: "Chính sách của Nhà nước Việt Nam",
     backgroundImage: sophie4,
     hint: "Kéo xuống để vào Phần 6.",
   },
-
-  // 6) PHẦN 6
   {
-    title: "Phần 6: Xây dựng con người mới",
-    subtitle: "Chương VI • Văn hóa, đạo đức và con người",
+    title: "Phần 6: Công tác tôn giáo",
+    subtitle: "Nội dung cốt lõi là vận động quần chúng",
     description:
-      "Cách mạng không chỉ đổi xã hội mà còn phải bồi dưỡng con người. Văn hóa là nền tảng tinh thần, cần vừa tiên tiến vừa đậm đà bản sắc.\n\nĐạo đức cách mạng nhấn mạnh: cần, kiệm, liêm, chính, chí công vô tư. Con người mới phát triển cả tri thức, sức khỏe, đạo đức và thẩm mỹ để phụng sự Tổ quốc, nhân dân.",
-    quote: "Cần, kiệm, liêm, chính, chí công vô tư.",
-    author: "Hồ Chí Minh",
+      "Công tác tôn giáo trước hết là công tác vận động quần chúng, nhằm động viên đồng bào tôn giáo phát huy tinh thần yêu nước, ý thức bảo vệ độc lập và thống nhất đất nước.\n\nMuốn làm tốt công tác này phải gắn với phát triển kinh tế, xã hội, văn hóa ở vùng đồng bào có đạo, nâng cao đời sống vật chất, tinh thần và trình độ của nhân dân, đồng thời tăng cường quản lý nhà nước đối với hoạt động tôn giáo.",
+    quote: "Công tác tôn giáo là trách nhiệm của cả hệ thống chính trị.",
+    author: "Quan điểm chỉ đạo",
     backgroundImage: sophie5,
     hint: "Kéo xuống để vào Phần 7.",
   },
-
-  // 7) PHẦN 7
   {
-    title: "Phần 7: Di sản bất diệt",
-    subtitle: "Kết nối • Ánh sáng soi đường hôm nay và mai sau",
+    title: "Phần 7: Theo đạo và truyền đạo",
+    subtitle: "Tự do hành đạo hợp pháp, nghiêm cấm lợi dụng tôn giáo",
     description:
-      "Ngọn đuốc tư tưởng vẫn tiếp tục soi đường cho công cuộc đổi mới, hội nhập và xây dựng đất nước.\n\nHọc tập Tư tưởng Hồ Chí Minh là để tiếp nối mục tiêu: dân giàu, nước mạnh, dân chủ, công bằng, văn minh — vững vàng trước mọi thử thách.",
-    quote: "Dễ trăm lần không dân cũng chịu, khó vạn lần dân liệu cũng xong.",
-    author: "Hồ Chí Minh",
+      "Mọi tín đồ đều có quyền tự do hành đạo tại gia đình và cơ sở thờ tự hợp pháp theo quy định của pháp luật; các tổ chức tôn giáo được Nhà nước thừa nhận thì được hoạt động theo pháp luật và được pháp luật bảo hộ.\n\nTuy nhiên, mọi hoạt động theo đạo và truyền đạo phải tuân thủ Hiến pháp, pháp luật; không được lợi dụng tôn giáo để tuyên truyền tà đạo, mê tín dị đoan, ép buộc người khác theo đạo hay tiến hành các hoạt động trái phép, trái pháp luật.",
+    quote: "Không được lợi dụng tôn giáo để hoạt động trái pháp luật.",
+    author: "Nguyên tắc thực hiện",
     backgroundImage: sophie6,
-    hint: "Kết thúc: quay lại Trang đầu hoặc sang bài tiếp theo.",
+    hint: "Kết thúc: quay lại Trang đầu hoặc sang phần ôn tập.",
   },
 ];
 

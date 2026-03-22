@@ -280,10 +280,11 @@ const TimelineSection = ({ visibleSections }) => {
         }}
       >
         <h2 className="text-3xl md:text-4xl font-extrabold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-400 leading-snug">
-          Dòng Chảy của Lịch Sử
+          Dòng Chảy Nội Dung
         </h2>
         <p className="text-lg md:text-xl text-slate-300/95 max-w-3xl mx-auto leading-relaxed">
-          Theo dõi hành trình phát triển của tư tưởng Mác – Lênin qua các thời kỳ lịch sử
+          Theo dõi từng lớp nội dung để thấy rõ đặc điểm tôn giáo ở Việt Nam và
+          những nguyên tắc chính trong công tác tôn giáo hiện nay
         </p>
       </motion.header>
     ),

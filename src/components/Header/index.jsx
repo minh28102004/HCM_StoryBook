@@ -182,7 +182,7 @@ const EnhancedDropdown = ({ children, isOpen, onClose }) => {
                 <Book size={11} className="mr-1" />
                 {children.length} chương
               </span>
-              <span className="text-slate-400">Triết học Mác-Lênin</span>
+              <span className="text-slate-400">Tín ngưỡng &amp; tôn giáo</span>
             </div>
           </div>
         </div>
@@ -226,10 +226,10 @@ const MobileNav = ({ isOpen, onClose }) => {
           <div className="relative flex items-center justify-between">
             <div>
               <h2 className="text-amber-100 text-xl font-semibold tracking-wide drop-shadow-md">
-                Triết học Mác – Lênin
+                Tôn giáo Việt Nam
               </h2>
               <p className="text-amber-200 text-sm italic font-[Georgia] mt-1.5 font-light drop-shadow-sm">
-                Dòng chảy của tri thức
+                Đa dạng, hòa hợp, thượng tôn pháp luật
               </p>
             </div>
 
@@ -360,7 +360,7 @@ const MobileNav = ({ isOpen, onClose }) => {
         <div className="absolute bottom-4 left-4 right-4">
           <div className="h-[2px] bg-gradient-to-r from-transparent via-amber-300/20 to-transparent"></div>
           <p className="text-center text-xs text-amber-300/80 mt-3 italic font-[Georgia]">
-            "Thực tiễn là tiêu chuẩn của chân lý"
+            "Tôn trọng khác biệt, giữ vững đoàn kết"
           </p>
         </div>
       </div>
@@ -411,7 +411,7 @@ export default function Header() {
       group-hover:text-amber-100 transition-all duration-300 hover:scale-105
       hover:drop-shadow-[0_0_2px_rgba(255,191,0,0.7)]"
               >
-                HCM-BookStory
+                Tôn Giáo Việt Nam
               </h2>
             </a>
           </div>

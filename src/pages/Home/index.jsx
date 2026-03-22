@@ -480,7 +480,7 @@ export default function MarxismPhilosophyPage() {
       {/* watermark & depth overlay */}
       <div className="fixed bottom-3 left-3 z-30 opacity-60">
         <div className="text-white/60 text-xs">
-          Tư tưởng Hồ Chí Minh • Khoa học và cách mạng
+          Tôn giáo ở Việt Nam • Đa dạng và đoàn kết
         </div>
       </div>
       <div className="fixed inset-0 pointer-events-none z-5">

@@ -16,12 +16,12 @@ const CoreSection = ({ visibleSections }) => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl md:text-4xl font-bold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-400 leading-snug">
-              Các Khái Niệm Cốt Lõi
+              Những Nội Dung Cốt Lõi
             </h2>
 
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              3–4 “ô tư tưởng” giúp bạn nắm nhanh tinh thần trung tâm của môn học
-              Tư tưởng Hồ Chí Minh.
+              Bốn mảng nội dung dưới đây giúp bạn nắm nhanh đặc điểm tôn giáo ở
+              Việt Nam và định hướng chính sách tôn giáo hiện nay.
             </p>
           </div>
 

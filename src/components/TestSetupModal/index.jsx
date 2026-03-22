@@ -209,8 +209,8 @@ export default function TestSetupModal({
   chapters = [],
   activeChapter = 0,
   darkMode: darkModeProp,
-  topicTitle = "Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội",
-  topicSubtitle = "I. Tư tưởng Hồ Chí Minh về độc lập dân tộc.",
+  topicTitle = "Tôn giáo ở Việt Nam và chính sách tôn giáo hiện nay",
+  topicSubtitle = "Ôn tập đặc điểm tôn giáo, chính sách hiện hành và công tác tôn giáo.",
 }) {
   const reduceMotion = useReducedMotion();
   const darkMode = darkModeProp ?? true;

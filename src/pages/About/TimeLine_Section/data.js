@@ -1,83 +1,83 @@
 export const timelineEvents = [
   {
-    year: "1890",
-    title: "Khởi đầu hành trình",
-    subtitle: "Sinh ra tại Làng Sen",
+    year: "01",
+    title: "Nhiều tôn giáo cùng tồn tại",
+    subtitle: "Một đặc điểm rõ nét của Việt Nam",
     description:
-      "Khởi nguồn từ một cậu bé Nguyễn Sinh Cung ở Nghệ An trong bối cảnh đất nước mất độc lập, hun đúc sớm tinh thần yêu nước và khát vọng giải phóng dân tộc.",
-    quote: "Không có gì quý hơn độc lập, tự do.",
-    author: "Hồ Chí Minh",
+      "Việt Nam là quốc gia có nhiều tôn giáo cùng hiện diện trong đời sống xã hội, bao gồm cả các tôn giáo du nhập từ bên ngoài và các tôn giáo hình thành trong nước.",
+    quote: "Việt Nam là một quốc gia có nhiều tôn giáo.",
+    author: "Khái quát chung",
     details:
-      "Từ nền tảng truyền thống gia đình và quê hương, hình thành ý chí học hỏi, rèn luyện và tìm con đường cứu nước cho dân tộc.",
+      "Hiện nay có 43 tổ chức thuộc 16 tôn giáo đã được công nhận và cấp đăng ký hoạt động.",
   },
   {
-    year: "1911",
-    title: "Bước ngoặt vĩ đại",
-    subtitle: "Bến Nhà Rồng – Ra đi tìm đường cứu nước",
+    year: "02",
+    title: "Đa dạng, đan xen, chung sống hòa bình",
+    subtitle: "Không có xung đột, chiến tranh tôn giáo",
     description:
-      "Ngày 5/6/1911, Người rời Sài Gòn trên tàu Amiral Latouche Tréville, bắt đầu hành trình bôn ba nhiều châu lục để tìm con đường giải phóng dân tộc.",
+      "Các tôn giáo ở Việt Nam có nguồn gốc, truyền thống lịch sử khác nhau nhưng cùng tồn tại trên một không gian xã hội tương đối hài hòa và tôn trọng lẫn nhau.",
     quote:
-      "Muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.",
-    author: "Hồ Chí Minh",
+      "Tín đồ của các tôn giáo khác nhau cùng chung sống hòa bình trên một địa bàn.",
+    author: "Thực tiễn tôn giáo Việt Nam",
     details:
-      "Trong hành trình, Người quan sát thực tiễn các nước, tiếp xúc nhiều luồng tư tưởng, dần tìm thấy ánh sáng của chủ nghĩa Mác–Lênin để vận dụng vào Việt Nam.",
+      "Mỗi tôn giáo du nhập vào Việt Nam đều chịu ảnh hưởng và mang dấu ấn của bản sắc văn hóa Việt Nam.",
   },
   {
-    year: "1930",
-    title: "Đặt nền móng lãnh đạo",
-    subtitle: "Thành lập Đảng Cộng sản Việt Nam",
+    year: "03",
+    title: "Tín đồ phần lớn là nhân dân lao động",
+    subtitle: "Có lòng yêu nước, tinh thần dân tộc",
     description:
-      "Sự ra đời của Đảng Cộng sản Việt Nam đánh dấu bước ngoặt tổ chức và đường lối, thống nhất phong trào cách mạng, xác lập vai trò lãnh đạo của giai cấp công nhân.",
-    quote: "Đảng có vững cách mệnh mới thành công.",
-    author: "Hồ Chí Minh",
+      "Đồng bào theo đạo là một bộ phận của khối đại đoàn kết dân tộc, cùng tham gia xây dựng và bảo vệ Tổ quốc trong các giai đoạn lịch sử khác nhau.",
+    quote: "Sống tốt đời, đẹp đạo.",
+    author: "Nguyện vọng chung của đồng bào có đạo",
     details:
-      "Đường lối giải phóng dân tộc gắn với mục tiêu lâu dài: xây dựng xã hội mới, bảo đảm quyền làm chủ và hạnh phúc của nhân dân.",
+      "Đa số tín đồ các tôn giáo đều có lòng yêu nước, gắn bó với dân tộc và tích cực tham gia các hoạt động xã hội.",
   },
   {
-    year: "1945",
-    title: "Mùa thu độc lập",
-    subtitle: "Cách mạng Tháng Tám – Tuyên ngôn Độc lập",
+    year: "04",
+    title: "Chức sắc có uy tín và ảnh hưởng lớn",
+    subtitle: "Giữ vai trò quan trọng trong giáo hội",
     description:
-      "Thắng lợi của Cách mạng Tháng Tám mở ra kỷ nguyên độc lập. Tuyên ngôn Độc lập khẳng định quyền tự do, tự chủ của dân tộc Việt Nam trước thế giới.",
-    quote: "Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do độc lập.",
-    author: "Hồ Chí Minh",
-    details:
-      "Độc lập không chỉ là chủ quyền quốc gia mà còn gắn với đời sống nhân dân: độc lập phải đi cùng quyền, lợi ích và hạnh phúc của mọi người dân.",
-  },
-  {
-    year: "1954",
-    title: "Chiến thắng vang dội",
-    subtitle: "Điện Biên Phủ – Chấn động địa cầu",
-    description:
-      "Chiến thắng Điện Biên Phủ khẳng định sức mạnh của ý chí độc lập và đại đoàn kết toàn dân tộc, tạo bước chuyển lớn trên bàn cờ giải phóng thuộc địa.",
+      "Chức sắc tôn giáo đảm nhận việc truyền bá giáo lý, thực hành nghi lễ, quản lý tổ chức giáo hội và chăm lo đời sống tâm linh của tín đồ.",
     quote:
-      "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công.",
-    author: "Hồ Chí Minh",
+      "Chức sắc các tôn giáo có vai trò, vị trí quan trọng trong giáo hội, có uy tín, ảnh hưởng với tín đồ.",
+    author: "Đặc điểm tổ chức tôn giáo",
     details:
-      "Đây là minh chứng rõ nét cho đường lối chiến tranh nhân dân, kết hợp sức mạnh dân tộc với sức mạnh thời đại, đồng thời củng cố niềm tin vào con đường cách mạng.",
+      "Trong bối cảnh hiện nay, đội ngũ chức sắc chịu tác động của nhiều yếu tố chính trị - xã hội, nhưng xu hướng tiến bộ nhìn chung ngày càng phát triển.",
   },
   {
-    year: "1969",
-    title: "Di sản bất diệt",
-    subtitle: "Ánh sáng vĩnh cửu",
+    year: "05",
+    title: "Quan hệ quốc tế của các tôn giáo",
+    subtitle: "Mở rộng giao lưu nhưng giữ vững chủ quyền",
     description:
-      "Người đi xa nhưng tư tưởng, đạo đức, phong cách để lại trở thành tài sản tinh thần vô giá, tiếp tục soi đường cho sự nghiệp cách mạng, xây dựng và bảo vệ Tổ quốc.",
+      "Các tôn giáo ở nước ta đều có những mối liên hệ nhất định với tổ chức, cá nhân tôn giáo ở nước ngoài hoặc các tổ chức tôn giáo quốc tế.",
     quote:
-      "Vì lợi ích mười năm thì phải trồng cây, vì lợi ích trăm năm thì phải trồng người.",
-    author: "Hồ Chí Minh",
+      "Giải quyết vấn đề tôn giáo phải kết hợp giữa mở rộng giao lưu hợp tác quốc tế với bảo đảm độc lập, chủ quyền.",
+    author: "Yêu cầu quản lý hiện nay",
     details:
-      "Di sản nhấn mạnh xây dựng con người mới, văn hóa mới và một Nhà nước của dân–do dân–vì dân; đặt nền tảng cho mục tiêu phát triển bền vững và nhân văn.",
+      "Cần ngăn chặn mọi âm mưu lợi dụng vấn đề tôn giáo, dân chủ, nhân quyền để can thiệp vào công việc nội bộ của Việt Nam.",
   },
   {
-    year: "Hiện tại",
-    title: "Di sản sống động",
-    subtitle: "Kim chỉ nam cho đổi mới & hội nhập",
+    year: "06",
+    title: "Chính sách nhất quán của Đảng và Nhà nước",
+    subtitle: "Tôn trọng tự do tín ngưỡng, tôn giáo",
     description:
-      "Trong bối cảnh đổi mới và hội nhập, tư tưởng Hồ Chí Minh tiếp tục được vận dụng như ngọn đuốc soi đường: gắn phát triển với tiến bộ, công bằng xã hội và sức mạnh đoàn kết.",
+      "Đảng và Nhà nước bảo đảm quyền tự do tín ngưỡng, theo hoặc không theo tôn giáo, đồng thời thực hiện chính sách đại đoàn kết dân tộc và bình đẳng trước pháp luật.",
     quote:
-      "Tư tưởng Hồ Chí Minh là tài sản vô giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của nhân dân ta.",
-    author: "Đảng Cộng sản Việt Nam",
+      "Các tôn giáo hoạt động trong khuôn khổ pháp luật, bình đẳng trước pháp luật.",
+    author: "Chính sách hiện hành",
     details:
-      "Trọng tâm vận dụng: phát triển kinh tế đi đôi xây dựng văn hóa–đạo đức, củng cố Nhà nước pháp quyền, phát huy dân chủ và khơi dậy khát vọng Việt Nam hùng cường.",
+      "Nhà nước nghiêm cấm mọi hành vi chia rẽ, phân biệt đối xử hoặc lợi dụng tôn giáo để vi phạm pháp luật và phương hại đến lợi ích quốc gia.",
+  },
+  {
+    year: "07",
+    title: "Công tác tôn giáo trong giai đoạn hiện nay",
+    subtitle: "Vận động quần chúng, phát huy đoàn kết",
+    description:
+      "Nội dung cốt lõi của công tác tôn giáo là công tác vận động quần chúng, gắn với phát triển kinh tế, văn hóa, xã hội ở vùng đồng bào có đạo và tăng cường quản lý nhà nước.",
+    quote: "Công tác tôn giáo là trách nhiệm của cả hệ thống chính trị.",
+    author: "Quan điểm chỉ đạo",
+    details:
+      "Mọi hoạt động theo đạo và truyền đạo đều phải tuân thủ Hiến pháp, pháp luật; nghiêm cấm truyền đạo trái phép, mê tín dị đoan và ép buộc người dân theo đạo.",
   },
 ];

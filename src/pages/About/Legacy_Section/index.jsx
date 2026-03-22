@@ -62,7 +62,7 @@ const TrademarkFooter = () => (
         />
       </svg>
       <span className="text-sm md:text-base font-semibold text-amber-200">
-        © 2026 HCMBookStory – All Rights Reserved
+        © 2026 Tôn Giáo Việt Nam • StoryBook
       </span>
     </div>
   </div>
@@ -100,17 +100,17 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
         </div>
 
         <h2 className="pt-3 text-3xl md:text-4xl font-extrabold pb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-200 to-amber-400 leading-snug">
-          Kết thúc hành trình – Mở ra tương lai mới
+          Kết thúc phần học – Mở ra góc nhìn đúng đắn
         </h2>
 
         <p className="text-lg md:text-xl text-slate-300/95 max-w-4xl mx-auto leading-relaxed">
-          Những nguyên lý sống động của{" "}
+          Hiểu đúng về{" "}
           <span className="text-amber-200 font-semibold">
-            Tư tưởng Hồ Chí Minh
+            tôn giáo ở Việt Nam
           </span>{" "}
-          không dừng ở trang sách. Hãy nhận thức, vận dụng sáng tạo vào thực
-          tiễn bản thân, góp phần xây dựng đất nước Việt Nam xã hội chủ nghĩa
-          giàu mạnh, dân chủ, công bằng, văn minh.
+          không dừng ở ghi nhớ khái niệm. Điều quan trọng là biết tôn trọng sự
+          khác biệt, củng cố đoàn kết dân tộc và nhận diện rõ những hành vi lợi
+          dụng tôn giáo trái pháp luật trong đời sống thực tiễn.
         </p>
       </motion.div>
     ),
@@ -142,7 +142,7 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
             className="inline-flex items-center gap-2 rounded-xl px-5 py-3 md:px-6 md:py-3.5 font-semibold text-slate-900 bg-amber-300 hover:bg-amber-200 active:bg-amber-300/90 transition-colors"
           >
             <Compass className="h-5 w-5" />
-            Bắt đầu lộ trình học
+            Mở sách tóm tắt
             <ArrowRight className="h-5 w-5" />
           </motion.button>
 
@@ -154,7 +154,7 @@ const FinaleSection = ({ onPrimary, onSecondary, visibleSections }) => {
             className="inline-flex items-center gap-2 rounded-xl px-5 py-3 md:px-6 md:py-3.5 font-semibold text-amber-200/90 ring-1 ring-amber-300/30 hover:bg-amber-400/10 transition-colors"
           >
             <BookOpenCheck className="h-5 w-5" />
-            Khám phá nội dung
+            Luyện câu hỏi
           </motion.button>
         </motion.div>
 

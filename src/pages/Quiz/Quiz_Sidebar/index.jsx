@@ -522,14 +522,14 @@ export default function QuizSidebar({
                     darkMode ? "text-white" : "text-slate-900"
                   }`}
                 >
-                  Tư tưởng Hồ Chí Minh
+                  Tôn giáo Việt Nam
                 </h1>
                 <p
                   className={`${
                     darkMode ? "text-slate-400" : "text-slate-600"
                   } text-xs lg:text-sm`}
                 >
-                  Hệ thống học tập thông minh
+                  Hệ thống ôn tập thông minh
                 </p>
               </div>
             </div>

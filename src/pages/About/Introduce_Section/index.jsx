@@ -91,10 +91,10 @@ const IntroduceSection = ({ visibleSections }) => {
         <div className="text-center mb-10 md:mb-14">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-amber-400 text-sm font-medium tracking-wider border border-amber-400/25 bg-amber-400/10">
             <BookOpen className="w-5 h-5 mr-2" />
-            Hành trình tư tưởng cách mạng
+            Bức tranh tôn giáo Việt Nam
           </div>
           <h2 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-400">
-            Khám phá câu chuyện hình thành và lan tỏa
+            Khám phá đặc điểm và chính sách tôn giáo hiện nay
           </h2>
         </div>
 
@@ -180,32 +180,35 @@ const IntroduceSection = ({ visibleSections }) => {
           >
             <div className="space-y-6">
               <p className="text-[1.05rem] md:text-lg leading-7 md:leading-8 text-slate-200">
-                <span className="text-amber-400 font-semibold">Tư tưởng Hồ Chí Minh</span>{" "}
-                là hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản
-                của cách mạng Việt Nam — kết tinh từ{" "}
-                <span className="text-amber-400 font-semibold">chủ nghĩa Mác–Lênin</span>,
-                truyền thống tốt đẹp dân tộc và tinh hoa văn hóa nhân loại.
+                <span className="text-amber-400 font-semibold">Tôn giáo ở Việt Nam</span>{" "}
+                là một chỉnh thể phong phú, bao gồm nhiều tôn giáo khác nhau cùng
+                tồn tại, phát triển và gắn bó với đời sống dân tộc. Mỗi tôn giáo
+                khi hiện diện ở nước ta đều ít nhiều mang dấu ấn của{" "}
+                <span className="text-amber-400 font-semibold">bản sắc văn hóa Việt Nam</span>.
               </p>
 
               <p className="text-[1.05rem] md:text-lg leading-7 md:leading-8 text-slate-200">
-                Nó không chỉ là lý thuyết, mà là{" "}
+                Chính sách của Đảng và Nhà nước không chỉ dừng ở việc ghi nhận
+                hiện trạng, mà còn nhấn mạnh{" "}
                 <span className="text-amber-400 font-semibold">
-                  ngọn đuốc soi đường — kim chỉ nam cho hành động
+                  quyền tự do tín ngưỡng, tôn giáo đi đôi với khuôn khổ pháp luật
                 </span>{" "}
-                của Đảng và nhân dân Việt Nam, dẫn dắt sự nghiệp cách mạng, đổi mới và hội nhập.
+                nhằm giữ vững đoàn kết dân tộc, ổn định xã hội và ngăn chặn việc
+                lợi dụng tôn giáo để vi phạm pháp luật.
               </p>
 
               <p className="text-[1.05rem] md:text-lg leading-7 md:leading-8 text-slate-300">
-                Theo dõi các mốc và câu chuyện dưới đây để thấy hành trình hình thành,
-                phát triển và giá trị bền vững của tư tưởng ấy trong thời đại mới.
+                Theo dõi các lát cắt dưới đây để nắm nhanh những đặc điểm nổi bật
+                của đời sống tôn giáo Việt Nam, đồng thời hiểu được nội dung cốt
+                lõi của công tác tôn giáo trong giai đoạn hiện nay.
               </p>
 
               <div className="py-4 px-4 bg-slate-800 rounded-xl border-l-4 border-amber-400 shadow-lg">
                 <Quote className="w-6 h-6 text-amber-400 mb-4" />
                 <blockquote className="text-lg italic text-slate-300 mb-4">
-                  "Không có gì quý hơn độc lập, tự do."
+                  "Các tôn giáo hoạt động trong khuôn khổ pháp luật, bình đẳng trước pháp luật."
                 </blockquote>
-                <cite className="text-amber-400 font-medium">— Hồ Chí Minh</cite>
+                <cite className="text-amber-400 font-medium">— Chính sách hiện hành</cite>
               </div>
             </div>
           </div>
@@ -229,7 +232,7 @@ const IntroduceSection = ({ visibleSections }) => {
         >
           <div className="flex items-center gap-2 text-slate-200 mb-4">
             <Layers className="w-5 h-5 text-amber-400" />
-            <h3 className="text-lg md:text-xl font-semibold">Dòng chảy của lịch sử</h3>
+            <h3 className="text-lg md:text-xl font-semibold">Những ý chính cần nhớ</h3>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
